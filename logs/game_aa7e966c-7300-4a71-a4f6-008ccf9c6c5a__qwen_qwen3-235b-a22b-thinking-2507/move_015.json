@@ -1,0 +1,1001 @@
+{
+  "game_id": "aa7e966c-7300-4a71-a4f6-008ccf9c6c5a",
+  "move_number": 15,
+  "timestamp": "2026-03-06T14:18:55",
+  "outcome": "server_error_409",
+  "model_pricing": {
+    "prompt_per_1m_usd": 0.0,
+    "completion_per_1m_usd": 0.0,
+    "source": "openrouter_api"
+  },
+  "server_interactions": [
+    {
+      "endpoint": "/state",
+      "method": "GET",
+      "response_raw": {
+        "game_id": "aa7e966c-7300-4a71-a4f6-008ccf9c6c5a",
+        "board": [
+          {
+            "notation": "A1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B1",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "D2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "A8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "C7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "J7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "K7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "L7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "J12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "K11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "L11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "A5",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E9",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "C3",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "D5",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "K5",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C6",
+            "type": "K",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E2",
+            "type": "Q",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A4",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A3",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "J10",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "I9",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "H10",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "G2",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D1",
+            "type": "K",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F9",
+            "type": "Q",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I10",
+            "type": "K",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          }
+        ],
+        "current_player": "white",
+        "legal_moves": {
+          "A1": [
+            "A2"
+          ],
+          "H1": [
+            "E1",
+            "F1",
+            "G1",
+            "H2",
+            "H3",
+            "H4",
+            "H9"
+          ],
+          "B2": [
+            "B3",
+            "B4"
+          ],
+          "D2": [
+            "D3",
+            "D4"
+          ],
+          "C3": [
+            "C4"
+          ],
+          "E2": [
+            "A6",
+            "B5",
+            "C4",
+            "D3",
+            "E1",
+            "E3",
+            "E4",
+            "E9",
+            "F1",
+            "F2",
+            "F3",
+            "G4",
+            "H9"
+          ],
+          "G2": [
+            "D5",
+            "E4",
+            "F1",
+            "F3",
+            "H3",
+            "I9"
+          ],
+          "D1": [
+            "E1"
+          ]
+        },
+        "promotion_moves": [],
+        "last_move": {
+          "from_square": "I11",
+          "to_square": "I10",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "prev_move": {
+          "from_square": "F12",
+          "to_square": "F9",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "players": [
+          {
+            "color": "white",
+            "name": "LLM_OpenRouter_qwen/qwen3-235b-a22b-thinking-2507",
+            "player_type": "llm",
+            "model": "qwen/qwen3-235b-a22b-thinking-2507",
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "black",
+            "name": "SmartBot-Black",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "red",
+            "name": "SmartBot-Red",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "in_check",
+            "is_replacement": false
+          }
+        ],
+        "move_number": 15,
+        "game_status": "playing",
+        "check": null,
+        "position_3pf": "wRA1,wPA3,rNA4,bPA5,bRA8,wNB1,wPB2,bPB7,bNB8,wBC1,wPC3,bKC6,bPC7,bBC8,wKD1,wPD2,bPD5,wQE2,bPE9,bQF9,wBG2,wRH1,wPH10,rPH11,rPI9,rKI10,bPJ7,rPJ10,rBJ12,rBK5,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 w w-.b-.r- - aac 4 15",
+        "server_version": "0.1.0"
+      }
+    }
+  ],
+  "server_state_raw": {
+    "game_id": "aa7e966c-7300-4a71-a4f6-008ccf9c6c5a",
+    "board": [
+      {
+        "notation": "A1",
+        "type": "R",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "B1",
+        "type": "N",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "C1",
+        "type": "B",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "H1",
+        "type": "R",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "B2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "D2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "A8",
+        "type": "R",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "B8",
+        "type": "N",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "C8",
+        "type": "B",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "K8",
+        "type": "N",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L8",
+        "type": "R",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "B7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "C7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "J7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "K7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "L7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "J12",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "K12",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L12",
+        "type": "R",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "H11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "K11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "L11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "A5",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "E9",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "C3",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "D5",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "K5",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "C6",
+        "type": "K",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "E2",
+        "type": "Q",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "A4",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "A3",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "J10",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "I9",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "H10",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "G2",
+        "type": "B",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "D1",
+        "type": "K",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "F9",
+        "type": "Q",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I10",
+        "type": "K",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      }
+    ],
+    "current_player": "white",
+    "legal_moves": {
+      "A1": [
+        "A2"
+      ],
+      "H1": [
+        "E1",
+        "F1",
+        "G1",
+        "H2",
+        "H3",
+        "H4",
+        "H9"
+      ],
+      "B2": [
+        "B3",
+        "B4"
+      ],
+      "D2": [
+        "D3",
+        "D4"
+      ],
+      "C3": [
+        "C4"
+      ],
+      "E2": [
+        "A6",
+        "B5",
+        "C4",
+        "D3",
+        "E1",
+        "E3",
+        "E4",
+        "E9",
+        "F1",
+        "F2",
+        "F3",
+        "G4",
+        "H9"
+      ],
+      "G2": [
+        "D5",
+        "E4",
+        "F1",
+        "F3",
+        "H3",
+        "I9"
+      ],
+      "D1": [
+        "E1"
+      ]
+    },
+    "promotion_moves": [],
+    "last_move": {
+      "from_square": "I11",
+      "to_square": "I10",
+      "move_type": "normal",
+      "promotion": null,
+      "captured": null
+    },
+    "prev_move": {
+      "from_square": "F12",
+      "to_square": "F9",
+      "move_type": "normal",
+      "promotion": null,
+      "captured": null
+    },
+    "players": [
+      {
+        "color": "white",
+        "name": "LLM_OpenRouter_qwen/qwen3-235b-a22b-thinking-2507",
+        "player_type": "llm",
+        "model": "qwen/qwen3-235b-a22b-thinking-2507",
+        "status": "active",
+        "is_replacement": false
+      },
+      {
+        "color": "black",
+        "name": "SmartBot-Black",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "active",
+        "is_replacement": false
+      },
+      {
+        "color": "red",
+        "name": "SmartBot-Red",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "in_check",
+        "is_replacement": false
+      }
+    ],
+    "move_number": 15,
+    "game_status": "playing",
+    "check": null,
+    "position_3pf": "wRA1,wPA3,rNA4,bPA5,bRA8,wNB1,wPB2,bPB7,bNB8,wBC1,wPC3,bKC6,bPC7,bBC8,wKD1,wPD2,bPD5,wQE2,bPE9,bQF9,wBG2,wRH1,wPH10,rPH11,rPI9,rKI10,bPJ7,rPJ10,rBJ12,rBK5,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 w w-.b-.r- - aac 4 15",
+    "server_version": "0.1.0"
+  },
+  "prompt_pipeline": {
+    "system_prompt": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.",
+    "user_template": "Position (3PF): {position_3pf}\nYour color: {color}\nMove number: {move_number}\nLast move: {last_move}\n\nLegal moves:\n{legal_moves}\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q",
+    "additional_rules": "",
+    "response_format_instruction": "Respond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"from\": \"E2\", \"to\": \"E4\"}\nFor promotion: {\"thinking\": \"...\", \"from\": \"E7\", \"to\": \"E8\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list.",
+    "rendered_system": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.\n\nOUTPUT FORMAT:\nRespond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"from\": \"E2\", \"to\": \"E4\"}\nFor promotion: {\"thinking\": \"...\", \"from\": \"E7\", \"to\": \"E8\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list.",
+    "rendered_user_prompt": "Position (3PF): wRA1,wPA3,rNA4,bPA5,bRA8,wNB1,wPB2,bPB7,bNB8,wBC1,wPC3,bKC6,bPC7,bBC8,wKD1,wPD2,bPD5,wQE2,bPE9,bQF9,wBG2,wRH1,wPH10,rPH11,rPI9,rKI10,bPJ7,rPJ10,rBJ12,rBK5,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 w w-.b-.r- - aac 4 15\nYour color: WHITE\nMove number: 15\nLast move: I11 → I10\n\nLegal moves:\n  A1: A2\n  B2: B3, B4\n  C3: C4\n  D1: E1\n  D2: D3, D4\n  E2: A6, B5, C4, D3, E1, E3, E4, E9, F1, F2, F3, G4, H9\n  G2: D5, E4, F1, F3, H3, I9\n  H1: E1, F1, G1, H2, H3, H4, H9\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q\n\nBoard:\n  BLACK: BC8 KC6 NB8 NK8 PA5 PB7 PC7 PD5 PE9 PJ7 PK7 PL7 QF9 RA8 RL8\n  RED: BJ12 BK5 KI10 NA4 NK12 PH11 PI9 PJ10 PK11 PL11 RL12\n  WHITE ← YOU: BC1 BG2 KD1 NB1 PA3 PB2 PC3 PD2 PH10 QE2 RA1 RH1"
+  },
+  "llm_requests": [
+    {
+      "attempt": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.\n\nOUTPUT FORMAT:\nRespond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"from\": \"E2\", \"to\": \"E4\"}\nFor promotion: {\"thinking\": \"...\", \"from\": \"E7\", \"to\": \"E8\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list."
+        },
+        {
+          "role": "user",
+          "content": "Position (3PF): wRA1,wPA3,rNA4,bPA5,bRA8,wNB1,wPB2,bPB7,bNB8,wBC1,wPC3,bKC6,bPC7,bBC8,wKD1,wPD2,bPD5,wQE2,bPE9,bQF9,wBG2,wRH1,wPH10,rPH11,rPI9,rKI10,bPJ7,rPJ10,rBJ12,rBK5,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 w w-.b-.r- - aac 4 15\nYour color: WHITE\nMove number: 15\nLast move: I11 → I10\n\nLegal moves:\n  A1: A2\n  B2: B3, B4\n  C3: C4\n  D1: E1\n  D2: D3, D4\n  E2: A6, B5, C4, D3, E1, E3, E4, E9, F1, F2, F3, G4, H9\n  G2: D5, E4, F1, F3, H3, I9\n  H1: E1, F1, G1, H2, H3, H4, H9\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q\n\nBoard:\n  BLACK: BC8 KC6 NB8 NK8 PA5 PB7 PC7 PD5 PE9 PJ7 PK7 PL7 QF9 RA8 RL8\n  RED: BJ12 BK5 KI10 NA4 NK12 PH11 PI9 PJ10 PK11 PL11 RL12\n  WHITE ← YOU: BC1 BG2 KD1 NB1 PA3 PB2 PC3 PD2 PH10 QE2 RA1 RH1"
+        }
+      ]
+    }
+  ],
+  "llm_responses": [
+    {
+      "attempt": 1,
+      "raw_response": "{\"thinking\": \"As White, my king is at D1, which is currently safe but vulnerable if I move the pawns in front of it (B2 or C3) without considering the Red knight at A4. That knight can move to B2 or C3 to deliver check, so moving PB2 or PC3 is risky unless Black captures the knight first. Black has a pawn at A5 that can capture the knight at A4, which they likely will on their turn, but I shouldn't rely on that.\\n\\nThe queen at E2 has many options, but capturing the Black pawn at E9 (E2xE9) is bad because Black's queen at F9 can recapture, losing my queen for a pawn. Moving the queen or bishop to E4 is also bad because the Black pawn at D5 can capture them immediately.\\n\\nThe pawn at PH10 in the Red segment is under threat from the Red king at I10 and cannot be defended in time, so it will likely be lost—this is unavoidable and not a priority.\\n\\nCenter control is critical. D4 is a triple junction (a key central square), and moving the pawn from D2 to D4 gains space, supports future operations, and doesn't expose the king. The Black pawn at D5 cannot capture it directly (pawns capture diagonally, not straight), and no enemy pieces can immediately threaten D4. This move also avoids weakening the king's position like moving B2 or C3 might.\\n\\nOther moves: \\n- King to E1: Unnecessary and exposes the king.\\n- Rook A1 to A2: Develops but on the edge; less impactful than center control.\\n- Pawn B2 to B4: Gains space but risks the Red knight check if Black doesn't capture it; D4 is more central.\\n- Pawn C3 to C4: Solid but C4 isn't a triple junction like D4.\\n\\nD2 to D4 is the best move for center control, development, and safety.\", \"from\": \"D2\", \"to\": \"D4\"}",
+      "response_chars": 1679,
+      "time_sec": 368.155,
+      "usage": {
+        "prompt_tokens": 981,
+        "completion_tokens": 15714,
+        "reasoning_tokens": 15267,
+        "total_tokens": 16695,
+        "provider_reported_cost_usd": null
+      },
+      "cost": {
+        "input_cost_usd": 0.0,
+        "output_cost_usd": 0.0,
+        "reasoning_cost_usd": 0.0,
+        "total_cost_usd": 0.0,
+        "provider_reported_cost_usd": null
+      }
+    }
+  ],
+  "parser_attempts": [
+    {
+      "attempt": 1,
+      "coordinates_found": [
+        "D1",
+        "B2",
+        "C3",
+        "A4",
+        "B2",
+        "C3",
+        "B2",
+        "C3",
+        "A5",
+        "A4",
+        "E2",
+        "E9",
+        "E2",
+        "E9",
+        "F9",
+        "E4",
+        "D5",
+        "H10",
+        "I10",
+        "D4",
+        "D2",
+        "D4",
+        "D5",
+        "D4",
+        "B2",
+        "C3",
+        "E1",
+        "A1",
+        "A2",
+        "B2",
+        "B4",
+        "D4",
+        "C3",
+        "C4",
+        "C4",
+        "D4",
+        "D2",
+        "D4",
+        "D2",
+        "D4"
+      ],
+      "pairs_tested": [
+        "D1→B2(ILLEGAL)",
+        "B2→C3(ILLEGAL)",
+        "C3→A4(ILLEGAL)",
+        "A4→B2(ILLEGAL)",
+        "B2→C3(ILLEGAL)",
+        "C3→B2(ILLEGAL)",
+        "B2→C3(ILLEGAL)",
+        "C3→A5(ILLEGAL)",
+        "A5→A4(ILLEGAL)",
+        "A4→E2(ILLEGAL)",
+        "E2→E9(OK)",
+        "E9→E2(ILLEGAL)",
+        "E2→E9(OK)",
+        "E9→F9(ILLEGAL)",
+        "F9→E4(ILLEGAL)",
+        "E4→D5(ILLEGAL)",
+        "D5→H10(ILLEGAL)",
+        "H10→I10(ILLEGAL)",
+        "I10→D4(ILLEGAL)",
+        "D4→D2(ILLEGAL)",
+        "D2→D4(OK)",
+        "D4→D5(ILLEGAL)",
+        "D5→D4(ILLEGAL)",
+        "D4→B2(ILLEGAL)",
+        "B2→C3(ILLEGAL)",
+        "C3→E1(ILLEGAL)",
+        "E1→A1(ILLEGAL)",
+        "A1→A2(OK)",
+        "A2→B2(ILLEGAL)",
+        "B2→B4(OK)",
+        "B4→D4(ILLEGAL)",
+        "D4→C3(ILLEGAL)",
+        "C3→C4(OK)",
+        "C4→C4(ILLEGAL)",
+        "C4→D4(ILLEGAL)",
+        "D4→D2(ILLEGAL)",
+        "D2→D4(OK)",
+        "D4→D2(ILLEGAL)",
+        "D2→D4(OK)"
+      ],
+      "valid": true
+    }
+  ],
+  "move_selected": {
+    "from": "D2",
+    "to": "D4",
+    "promotion": null
+  },
+  "server_move_request": {
+    "from": "D2",
+    "to": "D4",
+    "move_number": 15
+  },
+  "server_move_response": {
+    "status_code": 409,
+    "data": {
+      "detail": "Неверный move_number: ожидается 17"
+    }
+  },
+  "statistics": {
+    "time_total_sec": 369.874,
+    "llm_time_sec": 368.155,
+    "prompt_chars": 2365,
+    "response_chars": 1679,
+    "total_llm_chars": 4044,
+    "llm_calls": 1,
+    "retries": 0,
+    "total_prompt_tokens": 981,
+    "total_completion_tokens": 15714,
+    "total_reasoning_tokens": 15267,
+    "total_tokens": 16695,
+    "total_cost_usd": 0.0,
+    "provider_reported_cost_usd": null,
+    "model_pricing": {
+      "prompt_per_1m_usd": 0.0,
+      "completion_per_1m_usd": 0.0,
+      "source": "openrouter_api"
+    }
+  }
+}
