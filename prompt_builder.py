@@ -97,7 +97,7 @@ class PromptBuilder:
         subs = {
             "move_number": str(move_num),
             "current_player": current.upper(),
-            "position_3pf": pos3pf,
+            "position_3pf": "" if use_tri else pos3pf,
             "legal_moves": legal_text,
             "last_move": last_text,
             "board": board_text,
@@ -141,8 +141,10 @@ class PromptBuilder:
     def _adapt_format_for_tri(self, fmt_instruction: str) -> str:
         """Replace server-notation examples with Triumvirate examples."""
         replacements = {
+            # Coordinate examples in plain text
             "E2 E4": "W2/R2.3 C/W.R",
             "E7 E8": "W2/R1.3 W3/R0.3",
+            # JSON value examples
             '"E2"': '"W2/R2.3"',
             '"E4"': '"C/W.R"',
             '"E7"': '"W2/R1.3"',

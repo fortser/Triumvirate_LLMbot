@@ -1,0 +1,2099 @@
+{
+  "game_id": "f0c2cec3-4038-4c66-99c6-1492db0a9bfd",
+  "move_number": 10,
+  "timestamp": "2026-03-06T18:50:20",
+  "outcome": "success",
+  "model_pricing": {
+    "prompt_per_1m_usd": 0.3,
+    "completion_per_1m_usd": 2.5,
+    "source": "openrouter_api"
+  },
+  "server_interactions": [
+    {
+      "endpoint": "/state",
+      "method": "GET",
+      "response_raw": {
+        "game_id": "f0c2cec3-4038-4c66-99c6-1492db0a9bfd",
+        "board": [
+          {
+            "notation": "A1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E1",
+            "type": "K",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G1",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "B2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "F2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "A8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I8",
+            "type": "Q",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "B7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "D7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "J7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "K7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "L7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I12",
+            "type": "K",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "G11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "F11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "J11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "K11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "L11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "E4",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D5",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C6",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I6",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "L9",
+            "type": "Q",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I5",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G4",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "D6",
+            "type": "K",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          }
+        ],
+        "current_player": "white",
+        "legal_moves": {
+          "A1": [
+            "B1"
+          ],
+          "C1": [
+            "D2",
+            "E3",
+            "F4",
+            "G9",
+            "H10"
+          ],
+          "E1": [
+            "D1",
+            "D2",
+            "E2"
+          ],
+          "F1": [
+            "A6",
+            "B5",
+            "C4",
+            "D3",
+            "E2",
+            "G2",
+            "H3"
+          ],
+          "G1": [
+            "E2",
+            "F3",
+            "H3"
+          ],
+          "A2": [
+            "A3",
+            "A4"
+          ],
+          "B2": [
+            "B3",
+            "B4"
+          ],
+          "F2": [
+            "F3",
+            "F4"
+          ],
+          "H2": [
+            "H3",
+            "H4"
+          ],
+          "D5": [
+            "C6",
+            "I6"
+          ],
+          "I5": [
+            "C4",
+            "C6",
+            "D3",
+            "D7",
+            "E10",
+            "F9",
+            "J10",
+            "J7",
+            "K6",
+            "K9"
+          ],
+          "G4": [
+            "G9"
+          ]
+        },
+        "promotion_moves": [],
+        "last_move": {
+          "from_square": "F9",
+          "to_square": "E4",
+          "move_type": "capture",
+          "promotion": null,
+          "captured": "Q"
+        },
+        "prev_move": {
+          "from_square": "C7",
+          "to_square": "D6",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "players": [
+          {
+            "color": "white",
+            "name": "LLM_OpenRouter_google/gemini-2.5-flash",
+            "player_type": "llm",
+            "model": "google/gemini-2.5-flash",
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "black",
+            "name": "SmartBot-Black",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "red",
+            "name": "SmartBot-Red",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          }
+        ],
+        "move_number": 10,
+        "game_status": "playing",
+        "check": null,
+        "position_3pf": "wRA1,wPA2,bPA7,bRA8,wPB2,bPB7,wBC1,bPC6,bBC8,wPD5,bKD6,bPD7,wKE1,rBE4,rPE11,wBF1,wPF2,rPF11,rBF12,wNG1,wPG4,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,wNI5,bPI6,bQI8,rKI12,bPJ7,bBJ8,rPJ11,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rQL9,rPL11,rRL12 w wKQ.b-.rKQ - aaa 0 10",
+        "server_version": "0.1.0"
+      }
+    }
+  ],
+  "server_state_raw": {
+    "game_id": "f0c2cec3-4038-4c66-99c6-1492db0a9bfd",
+    "board": [
+      {
+        "notation": "A1",
+        "type": "R",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "C1",
+        "type": "B",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "E1",
+        "type": "K",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "F1",
+        "type": "B",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "G1",
+        "type": "N",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "H1",
+        "type": "R",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "A2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "B2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "F2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "H2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "A8",
+        "type": "R",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "C8",
+        "type": "B",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I8",
+        "type": "Q",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "J8",
+        "type": "B",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "K8",
+        "type": "N",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L8",
+        "type": "R",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "A7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "B7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "D7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "J7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "K7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "L7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "H12",
+        "type": "R",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "G12",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "F12",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I12",
+        "type": "K",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "K12",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L12",
+        "type": "R",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "H11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "G11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "F11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "E11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "J11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "K11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "L11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "E4",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "D5",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "C6",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "I6",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "L9",
+        "type": "Q",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I5",
+        "type": "N",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "G4",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "D6",
+        "type": "K",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      }
+    ],
+    "current_player": "white",
+    "legal_moves": {
+      "A1": [
+        "B1"
+      ],
+      "C1": [
+        "D2",
+        "E3",
+        "F4",
+        "G9",
+        "H10"
+      ],
+      "E1": [
+        "D1",
+        "D2",
+        "E2"
+      ],
+      "F1": [
+        "A6",
+        "B5",
+        "C4",
+        "D3",
+        "E2",
+        "G2",
+        "H3"
+      ],
+      "G1": [
+        "E2",
+        "F3",
+        "H3"
+      ],
+      "A2": [
+        "A3",
+        "A4"
+      ],
+      "B2": [
+        "B3",
+        "B4"
+      ],
+      "F2": [
+        "F3",
+        "F4"
+      ],
+      "H2": [
+        "H3",
+        "H4"
+      ],
+      "D5": [
+        "C6",
+        "I6"
+      ],
+      "I5": [
+        "C4",
+        "C6",
+        "D3",
+        "D7",
+        "E10",
+        "F9",
+        "J10",
+        "J7",
+        "K6",
+        "K9"
+      ],
+      "G4": [
+        "G9"
+      ]
+    },
+    "promotion_moves": [],
+    "last_move": {
+      "from_square": "F9",
+      "to_square": "E4",
+      "move_type": "capture",
+      "promotion": null,
+      "captured": "Q"
+    },
+    "prev_move": {
+      "from_square": "C7",
+      "to_square": "D6",
+      "move_type": "normal",
+      "promotion": null,
+      "captured": null
+    },
+    "players": [
+      {
+        "color": "white",
+        "name": "LLM_OpenRouter_google/gemini-2.5-flash",
+        "player_type": "llm",
+        "model": "google/gemini-2.5-flash",
+        "status": "active",
+        "is_replacement": false
+      },
+      {
+        "color": "black",
+        "name": "SmartBot-Black",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "active",
+        "is_replacement": false
+      },
+      {
+        "color": "red",
+        "name": "SmartBot-Red",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "active",
+        "is_replacement": false
+      }
+    ],
+    "move_number": 10,
+    "game_status": "playing",
+    "check": null,
+    "position_3pf": "wRA1,wPA2,bPA7,bRA8,wPB2,bPB7,wBC1,bPC6,bBC8,wPD5,bKD6,bPD7,wKE1,rBE4,rPE11,wBF1,wPF2,rPF11,rBF12,wNG1,wPG4,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,wNI5,bPI6,bQI8,rKI12,bPJ7,bBJ8,rPJ11,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rQL9,rPL11,rRL12 w wKQ.b-.rKQ - aaa 0 10",
+    "server_version": "0.1.0"
+  },
+  "prompt_pipeline": {
+    "system_prompt": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.",
+    "user_template": "Position (3PF): {position_3pf}\nYour color: {color}\nMove number: {move_number}\nLast move: {last_move}\n\nLegal moves:\n{legal_moves}\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q",
+    "additional_rules": "",
+    "response_format_instruction": "Respond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"move_from\": \"E2\", \"move_to\": \"E4\"}\nFor promotion: {\"thinking\": \"...\", \"move_from\": \"E7\", \"move_to\": \"E8\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list.",
+    "rendered_system": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.\n\nTRIUMVIRATE POSITION FORMAT:\n\nRegular cells: [Sector][Ring]/[Opponent][Depth].[Flank]\n  Sector: W = White, B = Black, R = Red.\n  Ring (1-3): Distance from board center. 1 = inner zone, 3 = edge.\n  Opponent: Which enemy sector this cell faces (W/B/R).\n  Depth (0-3): Steps to front line (row 4). 0 = front line, 3 = rear.\n  Flank (0-3): Steps to border with that opponent. 0 = at border, 3 = center.\n\nRosette cells: C/[Source].[Neighbor]\n  C = Center (rosette, ring 0). Strongest position on board.\n  Source: Sector with direct access to this cell (W/B/R).\n  Neighbor: Second adjacent sector (W/B/R).\n\nReading examples:\n  W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n  C/W.B = Center rosette, accessible from White, bordering Black.\n\nSTRATEGY: Lower numbers = stronger. Buried level = Ring + Depth, keep below 4.\n\nPieces: L = Leader (King), M = Marshal (Queen), T = Train (Rook),\n        D = Drone (Bishop), N = Noctis (Knight), P = Private (Pawn).\n\nOUTPUT FORMAT:\nRespond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\nFor promotion: {\"thinking\": \"...\", \"move_from\": \"W2/R1.3\", \"move_to\": \"W3/R0.3\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list.",
+    "rendered_user_prompt": "Position (3PF): wRA1,wPA2,bPA7,bRA8,wPB2,bPB7,wBC1,bPC6,bBC8,wPD5,bKD6,bPD7,wKE1,rBE4,rPE11,wBF1,wPF2,rPF11,rBF12,wNG1,wPG4,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,wNI5,bPI6,bQI8,rKI12,bPJ7,bBJ8,rPJ11,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rQL9,rPL11,rRL12 w wKQ.b-.rKQ - aaa 0 10\nYour color: WHITE\nMove number: 10\nLast move: R1/W0.2 → C/W.R (capture)\n\nLegal moves:\n  C/B.R: B1/R1.2, B1/W1.3\n  C/B.W: B1/R1.2, B2/R2.3, B2/W1.1, B2/W2.2, R1/B1.2, R1/W0.2, R1/W1.3, R2/B0.1, W1/B0.2, W1/B1.3\n  W2/B2.1: W2/B0.1, W2/B1.1\n  W2/R0.1: R2/W0.1\n  W2/R2.2: W1/R0.2, W1/R1.2\n  W3/B2.0: W3/B0.0, W3/B1.0\n  W3/B3.0: W3/B3.1\n  W3/B3.2: R2/W0.1, R3/W1.0, W1/R0.2, W1/R1.3, W2/B2.3\n  W3/R2.0: W3/R0.0, W3/R1.0\n  W3/R3.1: W1/R1.2, W2/R2.3, W3/R1.0\n  W3/R3.2: B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.1, W2/R2.3, W3/R1.0\n  W3/R3.3: W2/B2.3, W2/R2.3, W3/B3.3\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q\n\nBoard:\n  BLACK: BB3/R3.2 BB3/W3.2 KB1/R1.3 NB3/W3.1 PB1/R1.2 PB1/W1.3 PB2/R2.1 PB2/R2.3 PB2/W2.1 PB2/W2.2 PB3/R2.0 PB3/W2.0 QB3/W3.3 RB3/R3.0 RB3/W3.0\n  RED: BC/W.R BR3/W3.2 KR3/B3.3 NR3/B3.1 NR3/W3.1 PR2/B2.1 PR2/B2.2 PR2/W2.1 PR2/W2.2 PR2/W2.3 PR3/B2.0 PR3/W2.0 QR3/B0.0 RR3/B3.0 RR3/W3.0\n  WHITE ← YOU: BW3/B3.2 BW3/R3.2 KW3/R3.3 NC/B.W NW3/R3.1 PC/B.R PW2/B2.1 PW2/R0.1 PW2/R2.2 PW3/B2.0 PW3/R2.0 RW3/B3.0 RW3/R3.0",
+    "use_triumvirate_notation": true
+  },
+  "llm_requests": [
+    {
+      "attempt": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.\n\nTRIUMVIRATE POSITION FORMAT:\n\nRegular cells: [Sector][Ring]/[Opponent][Depth].[Flank]\n  Sector: W = White, B = Black, R = Red.\n  Ring (1-3): Distance from board center. 1 = inner zone, 3 = edge.\n  Opponent: Which enemy sector this cell faces (W/B/R).\n  Depth (0-3): Steps to front line (row 4). 0 = front line, 3 = rear.\n  Flank (0-3): Steps to border with that opponent. 0 = at border, 3 = center.\n\nRosette cells: C/[Source].[Neighbor]\n  C = Center (rosette, ring 0). Strongest position on board.\n  Source: Sector with direct access to this cell (W/B/R).\n  Neighbor: Second adjacent sector (W/B/R).\n\nReading examples:\n  W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n  C/W.B = Center rosette, accessible from White, bordering Black.\n\nSTRATEGY: Lower numbers = stronger. Buried level = Ring + Depth, keep below 4.\n\nPieces: L = Leader (King), M = Marshal (Queen), T = Train (Rook),\n        D = Drone (Bishop), N = Noctis (Knight), P = Private (Pawn).\n\nOUTPUT FORMAT:\nRespond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\nFor promotion: {\"thinking\": \"...\", \"move_from\": \"W2/R1.3\", \"move_to\": \"W3/R0.3\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list."
+        },
+        {
+          "role": "user",
+          "content": "Position (3PF): wRA1,wPA2,bPA7,bRA8,wPB2,bPB7,wBC1,bPC6,bBC8,wPD5,bKD6,bPD7,wKE1,rBE4,rPE11,wBF1,wPF2,rPF11,rBF12,wNG1,wPG4,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,wNI5,bPI6,bQI8,rKI12,bPJ7,bBJ8,rPJ11,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rQL9,rPL11,rRL12 w wKQ.b-.rKQ - aaa 0 10\nYour color: WHITE\nMove number: 10\nLast move: R1/W0.2 → C/W.R (capture)\n\nLegal moves:\n  C/B.R: B1/R1.2, B1/W1.3\n  C/B.W: B1/R1.2, B2/R2.3, B2/W1.1, B2/W2.2, R1/B1.2, R1/W0.2, R1/W1.3, R2/B0.1, W1/B0.2, W1/B1.3\n  W2/B2.1: W2/B0.1, W2/B1.1\n  W2/R0.1: R2/W0.1\n  W2/R2.2: W1/R0.2, W1/R1.2\n  W3/B2.0: W3/B0.0, W3/B1.0\n  W3/B3.0: W3/B3.1\n  W3/B3.2: R2/W0.1, R3/W1.0, W1/R0.2, W1/R1.3, W2/B2.3\n  W3/R2.0: W3/R0.0, W3/R1.0\n  W3/R3.1: W1/R1.2, W2/R2.3, W3/R1.0\n  W3/R3.2: B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.1, W2/R2.3, W3/R1.0\n  W3/R3.3: W2/B2.3, W2/R2.3, W3/B3.3\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q\n\nBoard:\n  BLACK: BB3/R3.2 BB3/W3.2 KB1/R1.3 NB3/W3.1 PB1/R1.2 PB1/W1.3 PB2/R2.1 PB2/R2.3 PB2/W2.1 PB2/W2.2 PB3/R2.0 PB3/W2.0 QB3/W3.3 RB3/R3.0 RB3/W3.0\n  RED: BC/W.R BR3/W3.2 KR3/B3.3 NR3/B3.1 NR3/W3.1 PR2/B2.1 PR2/B2.2 PR2/W2.1 PR2/W2.2 PR2/W2.3 PR3/B2.0 PR3/W2.0 QR3/B0.0 RR3/B3.0 RR3/W3.0\n  WHITE ← YOU: BW3/B3.2 BW3/R3.2 KW3/R3.3 NC/B.W NW3/R3.1 PC/B.R PW2/B2.1 PW2/R0.1 PW2/R2.2 PW3/B2.0 PW3/R2.0 RW3/B3.0 RW3/R3.0"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.\n\nTRIUMVIRATE POSITION FORMAT:\n\nRegular cells: [Sector][Ring]/[Opponent][Depth].[Flank]\n  Sector: W = White, B = Black, R = Red.\n  Ring (1-3): Distance from board center. 1 = inner zone, 3 = edge.\n  Opponent: Which enemy sector this cell faces (W/B/R).\n  Depth (0-3): Steps to front line (row 4). 0 = front line, 3 = rear.\n  Flank (0-3): Steps to border with that opponent. 0 = at border, 3 = center.\n\nRosette cells: C/[Source].[Neighbor]\n  C = Center (rosette, ring 0). Strongest position on board.\n  Source: Sector with direct access to this cell (W/B/R).\n  Neighbor: Second adjacent sector (W/B/R).\n\nReading examples:\n  W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n  C/W.B = Center rosette, accessible from White, bordering Black.\n\nSTRATEGY: Lower numbers = stronger. Buried level = Ring + Depth, keep below 4.\n\nPieces: L = Leader (King), M = Marshal (Queen), T = Train (Rook),\n        D = Drone (Bishop), N = Noctis (Knight), P = Private (Pawn).\n\nOUTPUT FORMAT:\nRespond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\nFor promotion: {\"thinking\": \"...\", \"move_from\": \"W2/R1.3\", \"move_to\": \"W3/R0.3\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list."
+        },
+        {
+          "role": "user",
+          "content": "Position (3PF): wRA1,wPA2,bPA7,bRA8,wPB2,bPB7,wBC1,bPC6,bBC8,wPD5,bKD6,bPD7,wKE1,rBE4,rPE11,wBF1,wPF2,rPF11,rBF12,wNG1,wPG4,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,wNI5,bPI6,bQI8,rKI12,bPJ7,bBJ8,rPJ11,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rQL9,rPL11,rRL12 w wKQ.b-.rKQ - aaa 0 10\nYour color: WHITE\nMove number: 10\nLast move: R1/W0.2 → C/W.R (capture)\n\nLegal moves:\n  C/B.R: B1/R1.2, B1/W1.3\n  C/B.W: B1/R1.2, B2/R2.3, B2/W1.1, B2/W2.2, R1/B1.2, R1/W0.2, R1/W1.3, R2/B0.1, W1/B0.2, W1/B1.3\n  W2/B2.1: W2/B0.1, W2/B1.1\n  W2/R0.1: R2/W0.1\n  W2/R2.2: W1/R0.2, W1/R1.2\n  W3/B2.0: W3/B0.0, W3/B1.0\n  W3/B3.0: W3/B3.1\n  W3/B3.2: R2/W0.1, R3/W1.0, W1/R0.2, W1/R1.3, W2/B2.3\n  W3/R2.0: W3/R0.0, W3/R1.0\n  W3/R3.1: W1/R1.2, W2/R2.3, W3/R1.0\n  W3/R3.2: B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.1, W2/R2.3, W3/R1.0\n  W3/R3.3: W2/B2.3, W2/R2.3, W3/B3.3\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q\n\nBoard:\n  BLACK: BB3/R3.2 BB3/W3.2 KB1/R1.3 NB3/W3.1 PB1/R1.2 PB1/W1.3 PB2/R2.1 PB2/R2.3 PB2/W2.1 PB2/W2.2 PB3/R2.0 PB3/W2.0 QB3/W3.3 RB3/R3.0 RB3/W3.0\n  RED: BC/W.R BR3/W3.2 KR3/B3.3 NR3/B3.1 NR3/W3.1 PR2/B2.1 PR2/B2.2 PR2/W2.1 PR2/W2.2 PR2/W2.3 PR3/B2.0 PR3/W2.0 QR3/B0.0 RR3/B3.0 RR3/W3.0\n  WHITE ← YOU: BW3/B3.2 BW3/R3.2 KW3/R3.3 NC/B.W NW3/R3.1 PC/B.R PW2/B2.1 PW2/R0.1 PW2/R2.2 PW3/B2.0 PW3/R2.0 RW3/B3.0 RW3/R3.0"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"thinking\": \"The last move was R1/W0.2 (Red Rook) to C/W.R (Center). This means Red captured a White piece on C/W.R. The board state shows a Red Rook on C/W.R.\n\nMy goal is to checkmate both opponents. I need to develop my pieces, control the center, and ensure king safety.\n\nLet's analyze the available moves for White.\n\nMy pieces:\n- Bishop W3/B3.2\n- Bishop W3/R3.2\n- King W3/R3.3\n- Knight C/B.W\n- Knight W3/R3.1\n- Pawn W2/B2.1\n- Pawn W2/R0.1\n- Pawn W2/R2.2\n- Pawn W3/B2.0\n- Pawn W3/R2.0\n- Rook W3/B3.0\n- Rook W3/R3.0\n\nThe Red Rook is now on C/W.R, which is a central and strong position. It is attacking my pawn on W2/R0.1.\n\nLet's evaluate the legal moves:\n\n1.  **C/B.R**: This is a Black pawn on C/B.R.\n    *   `B1/R1.2`: This is a Black pawn.\n    *   `B1/W1.3`: This is a Black pawn.\n    *   These moves are for Black pawns, not my pieces.\n\n2.  **C/B.W**: This is my Knight.\n    *   `B1/R1.2`: Black pawn.\n    *   `B2/R2.3`: Black pawn.\n    *   `B2/W1.1`: Black pawn.\n    *   `B2/W2.2`: Black pawn.\n    *   `R1/B1.2`: Red pawn.\n    *   `R1/W0.2`: Red pawn.\n    *   `R1/W1.3`: Red pawn.\n    *   `R2/B0.1`: Red pawn.\n    *   `W1/B0.2`: White pawn.\n    *   `W1/B1.3`: White pawn.\n    *   These are all pawn moves, not for my Knight on C/B.W. This suggests the legal moves list is showing all possible moves *to* a square, not *from* a square. I need to re-interpret the legal moves list.\n\nThe legal moves list is structured as `[FROM]: [TO1], [TO2], ...`.\n\nLet's re-evaluate based on this understanding:\n\n**My pieces and their legal moves:**\n\n*   **Knight C/B.W**:\n    *   `C/B.W` to `B1/R1.2` (Black pawn) - This means my Knight can capture the Black pawn on B1/R1.2. This is a good move, capturing an enemy pawn and developing the knight.\n    *   `C/B.W` to `B2/R2.3` (Black pawn) - Captures a Black pawn.\n    *   `C/B.W` to `B2/W1.1` (Black pawn) - Captures a Black pawn.\n    *   `C/B.W` to `B2/W2.2` (Black pawn) - Captures a Black pawn.\n    *   `C/B.W` to `R1/B1.2` (Red pawn) - Captures a Red pawn.\n    *   `C/B.W` to `R1/W0.2` (Red pawn) - Captures a Red pawn.\n    *   `C/B.W` to `R1/W1.3` (Red pawn) - Captures a Red pawn.\n    *   `C/B.W` to `R2/B0.1` (Red pawn) - Captures a Red pawn.\n    *   `C/B.W` to `W1/B0.2` (White pawn) - Captures my own pawn, illegal.\n    *   `C/B.W` to `W1/B1.3` (White pawn) - Captures my own pawn, illegal.\n\n    The Knight on C/B.W is very active and can capture many pawns. Capturing a pawn is generally good.\n\n*   **Pawn W2/B2.1**:\n    *   `W2/B2.1` to `W2/B0.1` (empty square) - A pawn move.\n    *   `W2/B2.1` to `W2/B1.1` (empty square) - A pawn move.\n\n*   **Pawn W2/R0.1**:\n    *   `W2/R0.1` to `R2/W0.1` (Red pawn) - Captures a Red pawn. This pawn is currently attacked by the Red Rook on C/W.R. Capturing the Red pawn would be good.\n\n*   **Pawn W2/R2.2**:\n    *   `W2/R2.2` to `W1/R0.2` (empty square) - A pawn move.\n    *   `W2/R2.2` to `W1/R1.2` (empty square) - A pawn move.\n\n*   **Pawn W3/B2.0**:\n    *   `W3/B2.0` to `W3/B0.0` (empty square) - A pawn move.\n    *   `W3/B2.0` to `W3/B1.0` (empty square) - A pawn move.\n\n*   **Pawn W3/B3.0**: (This was listed as W3/B3.0, but the piece list says RW3/B3.0, which is a Rook. I will assume the legal moves list refers to a Rook.)\n    *   `W3/B3.0` to `W3/B3.1` (empty square) - A Rook move.\n\n*   **Pawn W3/B3.2**: (This was listed as W3/B3.2, but the piece list says BW3/B3.2, which is a Bishop. I will assume the legal moves list refers to a Bishop.)\n    *   `W3/B3.2` to `R2/W0.1` (Red pawn) - Captures a Red pawn.\n    *   `W3/B3.2` to `R3/W1.0` (empty square) - A Bishop move.\n    *   `W3/B3.2` to `W1/R0.2` (empty square) - A Bishop move.\n    *   `W3/B3.2` to `W1/R1.3` (empty square) - A Bishop move.\n    *   `W3/B3.2` to `W2/B2.3` (empty square) - A Bishop move.\n\n*   **Pawn W3/R2.0**:\n    *   `W3/R2.0` to `W3/R0.0` (empty square) - A pawn move.\n    *   `W3/R2.0` to `W3/R1.0` (empty square) - A pawn move.\n\n*   **Knight W3/R3.1**:\n    *   `W3/R3.1` to `W1/R1.2` (empty square) - A Knight move.\n    *   `W3/R3.1` to `W2/R2.3` (empty square) - A Knight move.\n    *   `W3/R3.1` to `W3/R1.0` (empty square) - A Knight move.\n\n*   **Pawn W3/R3.2**: (This was listed as W3/R3.2, but the piece list says BW3/R3.2, which is a Bishop. I will assume the legal moves list refers to a Bishop.)\n    *   `W3/R3.2` to `B2/R0.1` (Black pawn) - Captures a Black pawn.\n    *   `W3/R3.2` to `B3/R1.0` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W1/B0.2` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W1/B1.3` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W2/R2.1` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W2/R2.3` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W3/R1.0` (empty square) - A Bishop move.\n\n*   **King W3/R3.3**:\n    *   `W3/R3.3` to `W2/B2.3` (empty square) - A King move.\n    *   `W3/R3.3` to `W2/R2.3` (empty square) - A King move.\n    *   `W3/R3.3` to `W3/B3.3` (empty square) - A King move.\n\nThe Red Rook on C/W.R is a threat. It attacks my pawn on W2/R0.1.\nI have a pawn on W2/R0.1 that can capture a Red pawn on R2/W0.1. This is a good exchange, and also removes a pawn that is under attack.\n\nLet's consider the capture: `W2/R0.1` to `R2/W0.1`. This captures a Red pawn. This also opens up the line for my Rook on W3/R3.0.\n\nMy Knight on C/B.W is very powerful. It can capture several pawns.\n*   `C/B.W` to `B1/R1.2` (Black pawn)\n*   `C/B.W` to `B2/R2.3` (Black pawn)\n*   `C/B.W` to `B2/W1.1` (Black pawn)\n*   `C/B.W` to `B2/W2.2` (Black pawn)\n*   `C/B.W` to `R1/B1.2` (Red pawn)\n*   `C/B.W` to `R1/W0.2` (Red pawn)\n*   `C/B.W` to `R1/W1.3` (Red pawn)\n*   `C/B.W` to `R2/B0.1` (Red pawn)\n\nCapturing a pawn with the Knight on C/B.W seems like a strong move. It develops the knight further and gains material.\nThe Red Rook on C/W.R is a major threat. I need to address it.\nMoving my pawn W2/R0.1 to capture R2/W0.1 is a good defensive and offensive move. It removes the attacked pawn and captures an enemy pawn.\n\nLet's prioritize:\n1.  King safety: My King is on W3/R3.3, it seems safe for now.\n2.  Material: Capturing an enemy pawn is good.\n3.  Center control: My Knight on C/B.W is already central. The Red Rook on C/W.R is a strong central piece.\n4.  Development: Moving pawns and knights is good for development.\n\nThe move `W2/R0.1` to `R2/W0.1` captures a Red pawn and removes a pawn that was attacked by the Red Rook. This seems like a very solid move.\n\nLet's consider other options:\n*   Moving the Knight from C/B.W to capture a pawn. For example, `C/B.W` to `R1/W0.2`. This captures a Red pawn. It also keeps the Knight active.\n*   Moving a Bishop. For example, `W3/B3.2` to `R2/W0.1`. This also captures the Red pawn, but it's a Bishop for a pawn, which is not as good as a pawn for a pawn. And it exposes the Bishop.\n\nThe move `W2/R0.1` to `R2/W0.1` is a pawn capture, which is a good exchange. It also defends against the Red Rook's attack on that pawn.\n\nLet's double-check the piece list and legal moves for any discrepancies.\nThe piece list shows `wPG4` which corresponds to `W2/R0.1`.\nThe piece list shows `rPG11` which corresponds to `R2/W0.1`.\nSo, `W2/R0.1` to `R2/W0.1` is indeed a pawn capturing a pawn. This is a strong move.\n\nConsider the consequences for Red and Black.\nAfter `W2/R0.1` takes `R2/W0.1`, my pawn is now on `R2/W0.1`. This pawn is now further advanced and potentially closer to promotion.\nThe Red Rook on C/W.R still has a strong position, but it doesn't immediately threaten any of my other pieces.\n\nWhat if I move my Knight on C/B.W?\nIf `C/B.W` to `R1/W0.2`, I capture a Red pawn. This is also a good move.\nWhich is better? Pawn for pawn, or Knight for pawn?\nPawn for pawn keeps my knight on the strong central square.\nKnight for pawn develops the knight further, but it's already well-developed.\n\nI think `W2/R0.1` to `R2/W0.1` is a more immediate and safer move. It removes a threat and gains material. It also opens up the diagonal for my Bishop on W3/R3.2.\n\nLet's consider the pawn moves.\n`W2/B2.1` to `W2/B0.1` or `W2/B1.1` - These are good developing moves for pawns.\n`W2/R2.2` to `W1/R0.2` or `W1/R1.2` - These are good developing moves for pawns.\n`W3/B2.0` to `W3/B0.0` or `W3/B1.0` - These are good developing moves for pawns.\n`W3/R2.0` to `W3/R0.0` or `W3/R1.0` - These are good developing moves for pawns.\n\nHowever, capturing a pawn that is under attack is generally a higher priority.\n\nFinal decision: `W2/R0.1` to `R2/W0.1`. This captures a Red pawn and removes my pawn from attack by the Red Rook. It also advances my pawn. This is a solid move that improves my material and position.\"}"
+        },
+        {
+          "role": "user",
+          "content": "Your previous response could not be parsed into a valid move.\nYou MUST respond with a JSON object containing \"move_from\" and \"move_to\" keys.\nExample: {\"thinking\": \"...\", \"move_from\": \"W3/B2.0\", \"move_to\": \"W3/B1.0\"}\nYou MUST choose ONLY from the legal moves provided.\nLegal FROM squares: C/B.R, C/B.W, W2/B2.1, W2/R0.1, W2/R2.2, W3/B2.0, W3/B3.0, W3/B3.2, W3/R2.0, W3/R3.1, W3/R3.2, W3/R3.3\nSample: W3/B3.0→[W3/B3.1]; W3/B3.2→[W2/B2.3,W1/R1.3,W1/R0.2,R2/W0.1,...]; W3/R3.3→[W3/B3.3,W2/B2.3,W2/R2.3]; W3/R3.2→[B3/R1.0,B2/R0.1,W1/B0.2,W1/B1.3,...]; W3/R3.1→[W2/R2.3,W1/R1.2,W3/R1.0]; W3/B2.0→[W3/B1.0,W3/B0.0]\nDo NOT repeat the same move."
+        }
+      ]
+    }
+  ],
+  "llm_responses": [
+    {
+      "attempt": 1,
+      "raw_response": "{\"thinking\": \"The last move was R1/W0.2 (Red Rook) to C/W.R (Center). This means Red captured a White piece on C/W.R. The board state shows a Red Rook on C/W.R.\n\nMy goal is to checkmate both opponents. I need to develop my pieces, control the center, and ensure king safety.\n\nLet's analyze the available moves for White.\n\nMy pieces:\n- Bishop W3/B3.2\n- Bishop W3/R3.2\n- King W3/R3.3\n- Knight C/B.W\n- Knight W3/R3.1\n- Pawn W2/B2.1\n- Pawn W2/R0.1\n- Pawn W2/R2.2\n- Pawn W3/B2.0\n- Pawn W3/R2.0\n- Rook W3/B3.0\n- Rook W3/R3.0\n\nThe Red Rook is now on C/W.R, which is a central and strong position. It is attacking my pawn on W2/R0.1.\n\nLet's evaluate the legal moves:\n\n1.  **C/B.R**: This is a Black pawn on C/B.R.\n    *   `B1/R1.2`: This is a Black pawn.\n    *   `B1/W1.3`: This is a Black pawn.\n    *   These moves are for Black pawns, not my pieces.\n\n2.  **C/B.W**: This is my Knight.\n    *   `B1/R1.2`: Black pawn.\n    *   `B2/R2.3`: Black pawn.\n    *   `B2/W1.1`: Black pawn.\n    *   `B2/W2.2`: Black pawn.\n    *   `R1/B1.2`: Red pawn.\n    *   `R1/W0.2`: Red pawn.\n    *   `R1/W1.3`: Red pawn.\n    *   `R2/B0.1`: Red pawn.\n    *   `W1/B0.2`: White pawn.\n    *   `W1/B1.3`: White pawn.\n    *   These are all pawn moves, not for my Knight on C/B.W. This suggests the legal moves list is showing all possible moves *to* a square, not *from* a square. I need to re-interpret the legal moves list.\n\nThe legal moves list is structured as `[FROM]: [TO1], [TO2], ...`.\n\nLet's re-evaluate based on this understanding:\n\n**My pieces and their legal moves:**\n\n*   **Knight C/B.W**:\n    *   `C/B.W` to `B1/R1.2` (Black pawn) - This means my Knight can capture the Black pawn on B1/R1.2. This is a good move, capturing an enemy pawn and developing the knight.\n    *   `C/B.W` to `B2/R2.3` (Black pawn) - Captures a Black pawn.\n    *   `C/B.W` to `B2/W1.1` (Black pawn) - Captures a Black pawn.\n    *   `C/B.W` to `B2/W2.2` (Black pawn) - Captures a Black pawn.\n    *   `C/B.W` to `R1/B1.2` (Red pawn) - Captures a Red pawn.\n    *   `C/B.W` to `R1/W0.2` (Red pawn) - Captures a Red pawn.\n    *   `C/B.W` to `R1/W1.3` (Red pawn) - Captures a Red pawn.\n    *   `C/B.W` to `R2/B0.1` (Red pawn) - Captures a Red pawn.\n    *   `C/B.W` to `W1/B0.2` (White pawn) - Captures my own pawn, illegal.\n    *   `C/B.W` to `W1/B1.3` (White pawn) - Captures my own pawn, illegal.\n\n    The Knight on C/B.W is very active and can capture many pawns. Capturing a pawn is generally good.\n\n*   **Pawn W2/B2.1**:\n    *   `W2/B2.1` to `W2/B0.1` (empty square) - A pawn move.\n    *   `W2/B2.1` to `W2/B1.1` (empty square) - A pawn move.\n\n*   **Pawn W2/R0.1**:\n    *   `W2/R0.1` to `R2/W0.1` (Red pawn) - Captures a Red pawn. This pawn is currently attacked by the Red Rook on C/W.R. Capturing the Red pawn would be good.\n\n*   **Pawn W2/R2.2**:\n    *   `W2/R2.2` to `W1/R0.2` (empty square) - A pawn move.\n    *   `W2/R2.2` to `W1/R1.2` (empty square) - A pawn move.\n\n*   **Pawn W3/B2.0**:\n    *   `W3/B2.0` to `W3/B0.0` (empty square) - A pawn move.\n    *   `W3/B2.0` to `W3/B1.0` (empty square) - A pawn move.\n\n*   **Pawn W3/B3.0**: (This was listed as W3/B3.0, but the piece list says RW3/B3.0, which is a Rook. I will assume the legal moves list refers to a Rook.)\n    *   `W3/B3.0` to `W3/B3.1` (empty square) - A Rook move.\n\n*   **Pawn W3/B3.2**: (This was listed as W3/B3.2, but the piece list says BW3/B3.2, which is a Bishop. I will assume the legal moves list refers to a Bishop.)\n    *   `W3/B3.2` to `R2/W0.1` (Red pawn) - Captures a Red pawn.\n    *   `W3/B3.2` to `R3/W1.0` (empty square) - A Bishop move.\n    *   `W3/B3.2` to `W1/R0.2` (empty square) - A Bishop move.\n    *   `W3/B3.2` to `W1/R1.3` (empty square) - A Bishop move.\n    *   `W3/B3.2` to `W2/B2.3` (empty square) - A Bishop move.\n\n*   **Pawn W3/R2.0**:\n    *   `W3/R2.0` to `W3/R0.0` (empty square) - A pawn move.\n    *   `W3/R2.0` to `W3/R1.0` (empty square) - A pawn move.\n\n*   **Knight W3/R3.1**:\n    *   `W3/R3.1` to `W1/R1.2` (empty square) - A Knight move.\n    *   `W3/R3.1` to `W2/R2.3` (empty square) - A Knight move.\n    *   `W3/R3.1` to `W3/R1.0` (empty square) - A Knight move.\n\n*   **Pawn W3/R3.2**: (This was listed as W3/R3.2, but the piece list says BW3/R3.2, which is a Bishop. I will assume the legal moves list refers to a Bishop.)\n    *   `W3/R3.2` to `B2/R0.1` (Black pawn) - Captures a Black pawn.\n    *   `W3/R3.2` to `B3/R1.0` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W1/B0.2` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W1/B1.3` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W2/R2.1` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W2/R2.3` (empty square) - A Bishop move.\n    *   `W3/R3.2` to `W3/R1.0` (empty square) - A Bishop move.\n\n*   **King W3/R3.3**:\n    *   `W3/R3.3` to `W2/B2.3` (empty square) - A King move.\n    *   `W3/R3.3` to `W2/R2.3` (empty square) - A King move.\n    *   `W3/R3.3` to `W3/B3.3` (empty square) - A King move.\n\nThe Red Rook on C/W.R is a threat. It attacks my pawn on W2/R0.1.\nI have a pawn on W2/R0.1 that can capture a Red pawn on R2/W0.1. This is a good exchange, and also removes a pawn that is under attack.\n\nLet's consider the capture: `W2/R0.1` to `R2/W0.1`. This captures a Red pawn. This also opens up the line for my Rook on W3/R3.0.\n\nMy Knight on C/B.W is very powerful. It can capture several pawns.\n*   `C/B.W` to `B1/R1.2` (Black pawn)\n*   `C/B.W` to `B2/R2.3` (Black pawn)\n*   `C/B.W` to `B2/W1.1` (Black pawn)\n*   `C/B.W` to `B2/W2.2` (Black pawn)\n*   `C/B.W` to `R1/B1.2` (Red pawn)\n*   `C/B.W` to `R1/W0.2` (Red pawn)\n*   `C/B.W` to `R1/W1.3` (Red pawn)\n*   `C/B.W` to `R2/B0.1` (Red pawn)\n\nCapturing a pawn with the Knight on C/B.W seems like a strong move. It develops the knight further and gains material.\nThe Red Rook on C/W.R is a major threat. I need to address it.\nMoving my pawn W2/R0.1 to capture R2/W0.1 is a good defensive and offensive move. It removes the attacked pawn and captures an enemy pawn.\n\nLet's prioritize:\n1.  King safety: My King is on W3/R3.3, it seems safe for now.\n2.  Material: Capturing an enemy pawn is good.\n3.  Center control: My Knight on C/B.W is already central. The Red Rook on C/W.R is a strong central piece.\n4.  Development: Moving pawns and knights is good for development.\n\nThe move `W2/R0.1` to `R2/W0.1` captures a Red pawn and removes a pawn that was attacked by the Red Rook. This seems like a very solid move.\n\nLet's consider other options:\n*   Moving the Knight from C/B.W to capture a pawn. For example, `C/B.W` to `R1/W0.2`. This captures a Red pawn. It also keeps the Knight active.\n*   Moving a Bishop. For example, `W3/B3.2` to `R2/W0.1`. This also captures the Red pawn, but it's a Bishop for a pawn, which is not as good as a pawn for a pawn. And it exposes the Bishop.\n\nThe move `W2/R0.1` to `R2/W0.1` is a pawn capture, which is a good exchange. It also defends against the Red Rook's attack on that pawn.\n\nLet's double-check the piece list and legal moves for any discrepancies.\nThe piece list shows `wPG4` which corresponds to `W2/R0.1`.\nThe piece list shows `rPG11` which corresponds to `R2/W0.1`.\nSo, `W2/R0.1` to `R2/W0.1` is indeed a pawn capturing a pawn. This is a strong move.\n\nConsider the consequences for Red and Black.\nAfter `W2/R0.1` takes `R2/W0.1`, my pawn is now on `R2/W0.1`. This pawn is now further advanced and potentially closer to promotion.\nThe Red Rook on C/W.R still has a strong position, but it doesn't immediately threaten any of my other pieces.\n\nWhat if I move my Knight on C/B.W?\nIf `C/B.W` to `R1/W0.2`, I capture a Red pawn. This is also a good move.\nWhich is better? Pawn for pawn, or Knight for pawn?\nPawn for pawn keeps my knight on the strong central square.\nKnight for pawn develops the knight further, but it's already well-developed.\n\nI think `W2/R0.1` to `R2/W0.1` is a more immediate and safer move. It removes a threat and gains material. It also opens up the diagonal for my Bishop on W3/R3.2.\n\nLet's consider the pawn moves.\n`W2/B2.1` to `W2/B0.1` or `W2/B1.1` - These are good developing moves for pawns.\n`W2/R2.2` to `W1/R0.2` or `W1/R1.2` - These are good developing moves for pawns.\n`W3/B2.0` to `W3/B0.0` or `W3/B1.0` - These are good developing moves for pawns.\n`W3/R2.0` to `W3/R0.0` or `W3/R1.0` - These are good developing moves for pawns.\n\nHowever, capturing a pawn that is under attack is generally a higher priority.\n\nFinal decision: `W2/R0.1` to `R2/W0.1`. This captures a Red pawn and removes my pawn from attack by the Red Rook. It also advances my pawn. This is a solid move that improves my material and position.\"}\n",
+      "response_chars": 8582,
+      "time_sec": 19.622,
+      "usage": {
+        "prompt_tokens": 1928,
+        "completion_tokens": 3503,
+        "reasoning_tokens": 0,
+        "total_tokens": 5431,
+        "provider_reported_cost_usd": null
+      },
+      "cost": {
+        "input_cost_usd": 0.0005784,
+        "output_cost_usd": 0.0087575,
+        "reasoning_cost_usd": 0.0,
+        "total_cost_usd": 0.0093359,
+        "provider_reported_cost_usd": null
+      }
+    },
+    {
+      "attempt": 2,
+      "raw_response": "{\"thinking\": \"My previous response was not parsed correctly because I did not provide the output in the specified JSON format. I also need to make sure I'm picking from the *exact* legal moves provided.\n\nLet's re-examine the legal moves and my piece list carefully.\n\n**My Pieces (White):**\n*   Bishop W3/B3.2\n*   Bishop W3/R3.2\n*   King W3/R3.3\n*   Knight C/B.W\n*   Knight W3/R3.1\n*   Pawn W2/B2.1\n*   Pawn W2/R0.1\n*   Pawn W2/R2.2\n*   Pawn W3/B2.0\n*   Pawn W3/R2.0\n*   Rook W3/B3.0 (This was listed as W3/B3.0 in the legal moves, but RW3/B3.0 in the piece list. I will assume it's a Rook and refer to the legal moves for W3/B3.0)\n*   Rook W3/R3.0 (This was not listed in the legal moves, so it must not have any legal moves in this turn).\n\n**Red Piece of Concern:**\n*   Red Rook on C/W.R. It attacks my pawn on W2/R0.1.\n\n**Legal Moves (FROM: TO1, TO2, ...):**\n\n1.  **C/B.W (My Knight)**:\n    *   `B1/R1.2` (Black pawn)\n    *   `B2/R2.3` (Black pawn)\n    *   `B2/W1.1` (Black pawn)\n    *   `B2/W2.2` (Black pawn)\n    *   `R1/B1.2` (Red pawn)\n    *   `R1/W0.2` (Red pawn)\n    *   `R1/W1.3` (Red pawn)\n    *   `R2/B0.1` (Red pawn)\n    *   `W1/B0.2` (White pawn - my own, illegal)\n    *   `W1/B1.3` (White pawn - my own, illegal)\n\n    *My analysis:* This Knight is very active and can capture many enemy pawns. Capturing a Red pawn like `R1/W0.2` or `R2/B0.1` would be good.\n\n2.  **W2/B2.1 (My Pawn)**:\n    *   `W2/B0.1`\n    *   `W2/B1.1`\n\n    *My analysis:* Standard pawn advances.\n\n3.  **W2/R0.1 (My Pawn)**:\n    *   `R2/W0.1` (Red pawn)\n\n    *My analysis:* This is the pawn that is attacked by the Red Rook on C/W.R. Moving it to `R2/W0.1` captures a Red pawn. This is a very strong move as it addresses the threat and gains material.\n\n4.  **W2/R2.2 (My Pawn)**:\n    *   `W1/R0.2`\n    *   `W1/R1.2`\n\n    *My analysis:* Standard pawn advances.\n\n5.  **W3/B2.0 (My Pawn)**:\n    *   `W3/B0.0`\n    *   `W3/B1.0`\n\n    *My analysis:* Standard pawn advances.\n\n6.  **W3/B3.0 (My Rook)**:\n    *   `W3/B3.1`\n\n    *My analysis:* A short Rook move.\n\n7.  **W3/B3.2 (My Bishop)**:\n    *   `R2/W0.1` (Red pawn)\n    *   `R3/W1.0`\n    *   `W1/R0.2`\n    *   `W1/R1.3`\n    *   `W2/B2.3`\n\n    *My analysis:* This Bishop can also capture the Red pawn on `R2/W0.1`. However, a Bishop for a pawn exchange is less favorable than a pawn for a pawn exchange, especially when my pawn is already threatened.\n\n8.  **W3/R2.0 (My Pawn)**:\n    *   `W3/R0.0`\n    *   `W3/R1.0`\n\n    *My analysis:* Standard pawn advances.\n\n9.  **W3/R3.1 (My Knight)**:\n    *   `W1/R1.2`\n    *   `W2/R2.3`\n    *   `W3/R1.0`\n\n    *My analysis:* Knight development moves.\n\n10. **W3/R3.2 (My Bishop)**:\n    *   `B2/R0.1` (Black pawn)\n    *   `B3/R1.0`\n    *   `W1/B0.2`\n    *   `W1/B1.3`\n    *   `W2/R2.1`\n    *   `W2/R2.3`\n    *   `W3/R1.0`\n\n    *My analysis:* This Bishop can capture a Black pawn on `B2/R0.1`.\n\n11. **W3/R3.3 (My King)**:\n    *   `W2/B2.3`\n    *   `W2/R2.3`\n    *   `W3/B3.3`\n\n    *My analysis:* King moves, generally not a priority unless in check or to castle.\n\n**Decision:**\nThe most impactful move seems to be `W2/R0.1` to `R2/W0.1`.\n*   It captures an enemy pawn (material gain).\n*   It removes my pawn from immediate attack by the Red Rook on C/W.R.\n*   It advances my pawn towards promotion.\n*   It maintains the strong central position of my Knight on C/B.W, which could capture another pawn later.\n*   It's a pawn-for-pawn exchange, which is good.\n\nComparing this to capturing a pawn with a Knight or Bishop:\n*   Capturing with `C/B.W` to `R1/W0.2` (Red pawn) is also good, but it doesn't address the immediate threat to my pawn on W2/R0.1.\n*   Capturing with `W3/B3.2` to `R2/W0.1` (Red pawn) is a Bishop for a pawn, which is not ideal.\n\nTherefore, `W2/R0.1` to `R2/W0.1` is the best move. It's a direct, strong, and safe move.\", \"move_from\": \"W2/R0.1\", \"move_to\": \"R2/W0.1\"}",
+      "response_chars": 3848,
+      "time_sec": 7.757,
+      "usage": {
+        "prompt_tokens": 5810,
+        "completion_tokens": 1619,
+        "reasoning_tokens": 0,
+        "total_tokens": 7429,
+        "provider_reported_cost_usd": null
+      },
+      "cost": {
+        "input_cost_usd": 0.001743,
+        "output_cost_usd": 0.0040475,
+        "reasoning_cost_usd": 0.0,
+        "total_cost_usd": 0.0057905,
+        "provider_reported_cost_usd": null
+      }
+    }
+  ],
+  "parser_attempts": [
+    {
+      "attempt": 1,
+      "coordinates_found": [
+        "R1/W0.2",
+        "C/W.R",
+        "C/W.R",
+        "C/W.R",
+        "W3/B3.2",
+        "W3/R3.2",
+        "W3/R3.3",
+        "C/B.W",
+        "W3/R3.1",
+        "W2/B2.1",
+        "W2/R0.1",
+        "W2/R2.2",
+        "W3/B2.0",
+        "W3/R2.0",
+        "W3/B3.0",
+        "W3/R3.0",
+        "C/W.R",
+        "W2/R0.1",
+        "C/B.R",
+        "C/B.R",
+        "B1/R1.2",
+        "B1/W1.3",
+        "C/B.W",
+        "B1/R1.2",
+        "B2/R2.3",
+        "B2/W1.1",
+        "B2/W2.2",
+        "R1/B1.2",
+        "R1/W0.2",
+        "R1/W1.3",
+        "R2/B0.1",
+        "W1/B0.2",
+        "W1/B1.3",
+        "C/B.W",
+        "C/B.W",
+        "C/B.W",
+        "B1/R1.2",
+        "B1/R1.2",
+        "C/B.W",
+        "B2/R2.3",
+        "C/B.W",
+        "B2/W1.1",
+        "C/B.W",
+        "B2/W2.2",
+        "C/B.W",
+        "R1/B1.2",
+        "C/B.W",
+        "R1/W0.2",
+        "C/B.W",
+        "R1/W1.3",
+        "C/B.W",
+        "R2/B0.1",
+        "C/B.W",
+        "W1/B0.2",
+        "C/B.W",
+        "W1/B1.3",
+        "C/B.W",
+        "W2/B2.1",
+        "W2/B2.1",
+        "W2/B0.1",
+        "W2/B2.1",
+        "W2/B1.1",
+        "W2/R0.1",
+        "W2/R0.1",
+        "R2/W0.1",
+        "C/W.R",
+        "W2/R2.2",
+        "W2/R2.2",
+        "W1/R0.2",
+        "W2/R2.2",
+        "W1/R1.2",
+        "W3/B2.0",
+        "W3/B2.0",
+        "W3/B0.0",
+        "W3/B2.0",
+        "W3/B1.0",
+        "W3/B3.0",
+        "W3/B3.0",
+        "W3/B3.0",
+        "W3/B3.0",
+        "W3/B3.1",
+        "W3/B3.2",
+        "W3/B3.2",
+        "W3/B3.2",
+        "W3/B3.2",
+        "R2/W0.1",
+        "W3/B3.2",
+        "R3/W1.0",
+        "W3/B3.2",
+        "W1/R0.2",
+        "W3/B3.2",
+        "W1/R1.3",
+        "W3/B3.2",
+        "W2/B2.3",
+        "W3/R2.0",
+        "W3/R2.0",
+        "W3/R0.0",
+        "W3/R2.0",
+        "W3/R1.0",
+        "W3/R3.1",
+        "W3/R3.1",
+        "W1/R1.2",
+        "W3/R3.1",
+        "W2/R2.3",
+        "W3/R3.1",
+        "W3/R1.0",
+        "W3/R3.2",
+        "W3/R3.2",
+        "W3/R3.2",
+        "W3/R3.2",
+        "B2/R0.1",
+        "W3/R3.2",
+        "B3/R1.0",
+        "W3/R3.2",
+        "W1/B0.2",
+        "W3/R3.2",
+        "W1/B1.3",
+        "W3/R3.2",
+        "W2/R2.1",
+        "W3/R3.2",
+        "W2/R2.3",
+        "W3/R3.2",
+        "W3/R1.0",
+        "W3/R3.3",
+        "W3/R3.3",
+        "W2/B2.3",
+        "W3/R3.3",
+        "W2/R2.3",
+        "W3/R3.3",
+        "W3/B3.3",
+        "C/W.R",
+        "W2/R0.1",
+        "W2/R0.1",
+        "R2/W0.1",
+        "W2/R0.1",
+        "R2/W0.1",
+        "W3/R3.0",
+        "C/B.W",
+        "C/B.W",
+        "B1/R1.2",
+        "C/B.W",
+        "B2/R2.3",
+        "C/B.W",
+        "B2/W1.1",
+        "C/B.W",
+        "B2/W2.2",
+        "C/B.W",
+        "R1/B1.2",
+        "C/B.W",
+        "R1/W0.2",
+        "C/B.W",
+        "R1/W1.3",
+        "C/B.W",
+        "R2/B0.1",
+        "C/B.W",
+        "C/W.R",
+        "W2/R0.1",
+        "R2/W0.1",
+        "W3/R3.3",
+        "C/B.W",
+        "C/W.R",
+        "W2/R0.1",
+        "R2/W0.1",
+        "C/B.W",
+        "C/B.W",
+        "R1/W0.2",
+        "W3/B3.2",
+        "R2/W0.1",
+        "W2/R0.1",
+        "R2/W0.1",
+        "W2/R0.1",
+        "R2/W0.1",
+        "W2/R0.1",
+        "R2/W0.1",
+        "W2/R0.1",
+        "R2/W0.1",
+        "R2/W0.1",
+        "C/W.R",
+        "C/B.W",
+        "C/B.W",
+        "R1/W0.2",
+        "W2/R0.1",
+        "R2/W0.1",
+        "W3/R3.2",
+        "W2/B2.1",
+        "W2/B0.1",
+        "W2/B1.1",
+        "W2/R2.2",
+        "W1/R0.2",
+        "W1/R1.2",
+        "W3/B2.0",
+        "W3/B0.0",
+        "W3/B1.0",
+        "W3/R2.0",
+        "W3/R0.0",
+        "W3/R1.0",
+        "W2/R0.1",
+        "R2/W0.1"
+      ],
+      "pairs_tested": [
+        "R1/W0.2→C/W.R(ILLEGAL)",
+        "C/W.R→C/W.R(ILLEGAL)",
+        "C/W.R→C/W.R(ILLEGAL)",
+        "C/W.R→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→C/B.W(ILLEGAL)",
+        "C/B.W→W3/R3.1(ILLEGAL)",
+        "W3/R3.1→W2/B2.1(ILLEGAL)",
+        "W2/B2.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/R3.0(ILLEGAL)",
+        "W3/R3.0→C/W.R(ILLEGAL)",
+        "C/W.R→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→C/B.R(ILLEGAL)",
+        "C/B.R→C/B.R(ILLEGAL)",
+        "C/B.R→B1/R1.2(OK)",
+        "B1/R1.2→B1/W1.3(ILLEGAL)",
+        "B1/W1.3→C/B.W(ILLEGAL)",
+        "C/B.W→B1/R1.2(OK)",
+        "B1/R1.2→B2/R2.3(ILLEGAL)",
+        "B2/R2.3→B2/W1.1(ILLEGAL)",
+        "B2/W1.1→B2/W2.2(ILLEGAL)",
+        "B2/W2.2→R1/B1.2(ILLEGAL)",
+        "R1/B1.2→R1/W0.2(ILLEGAL)",
+        "R1/W0.2→R1/W1.3(ILLEGAL)",
+        "R1/W1.3→R2/B0.1(ILLEGAL)",
+        "R2/B0.1→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→B1/R1.2(OK)",
+        "B1/R1.2→B1/R1.2(ILLEGAL)",
+        "B1/R1.2→C/B.W(ILLEGAL)",
+        "C/B.W→B2/R2.3(OK)",
+        "B2/R2.3→C/B.W(ILLEGAL)",
+        "C/B.W→B2/W1.1(OK)",
+        "B2/W1.1→C/B.W(ILLEGAL)",
+        "C/B.W→B2/W2.2(OK)",
+        "B2/W2.2→C/B.W(ILLEGAL)",
+        "C/B.W→R1/B1.2(OK)",
+        "R1/B1.2→C/B.W(ILLEGAL)",
+        "C/B.W→R1/W0.2(OK)",
+        "R1/W0.2→C/B.W(ILLEGAL)",
+        "C/B.W→R1/W1.3(OK)",
+        "R1/W1.3→C/B.W(ILLEGAL)",
+        "C/B.W→R2/B0.1(OK)",
+        "R2/B0.1→C/B.W(ILLEGAL)",
+        "C/B.W→W1/B0.2(OK)",
+        "W1/B0.2→C/B.W(ILLEGAL)",
+        "C/B.W→W1/B1.3(OK)",
+        "W1/B1.3→C/B.W(ILLEGAL)",
+        "C/B.W→W2/B2.1(ILLEGAL)",
+        "W2/B2.1→W2/B2.1(ILLEGAL)",
+        "W2/B2.1→W2/B0.1(OK)",
+        "W2/B0.1→W2/B2.1(ILLEGAL)",
+        "W2/B2.1→W2/B1.1(OK)",
+        "W2/B1.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→C/W.R(ILLEGAL)",
+        "C/W.R→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W1/R0.2(OK)",
+        "W1/R0.2→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W1/R1.2(OK)",
+        "W1/R1.2→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/B0.0(OK)",
+        "W3/B0.0→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/B1.0(OK)",
+        "W3/B1.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/B3.1(OK)",
+        "W3/B3.1→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→R2/W0.1(OK)",
+        "R2/W0.1→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→R3/W1.0(OK)",
+        "R3/W1.0→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→W1/R0.2(OK)",
+        "W1/R0.2→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→W1/R1.3(OK)",
+        "W1/R1.3→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→W2/B2.3(OK)",
+        "W2/B2.3→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W3/R0.0(OK)",
+        "W3/R0.0→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W3/R1.0(OK)",
+        "W3/R1.0→W3/R3.1(ILLEGAL)",
+        "W3/R3.1→W3/R3.1(ILLEGAL)",
+        "W3/R3.1→W1/R1.2(OK)",
+        "W1/R1.2→W3/R3.1(ILLEGAL)",
+        "W3/R3.1→W2/R2.3(OK)",
+        "W2/R2.3→W3/R3.1(ILLEGAL)",
+        "W3/R3.1→W3/R1.0(OK)",
+        "W3/R1.0→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B2/R0.1(OK)",
+        "B2/R0.1→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B3/R1.0(OK)",
+        "B3/R1.0→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W1/B0.2(OK)",
+        "W1/B0.2→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W1/B1.3(OK)",
+        "W1/B1.3→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W2/R2.1(OK)",
+        "W2/R2.1→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W2/R2.3(OK)",
+        "W2/R2.3→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W3/R1.0(OK)",
+        "W3/R1.0→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→W2/B2.3(OK)",
+        "W2/B2.3→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→W2/R2.3(OK)",
+        "W2/R2.3→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→W3/B3.3(OK)",
+        "W3/B3.3→C/W.R(ILLEGAL)",
+        "C/W.R→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→W3/R3.0(ILLEGAL)",
+        "W3/R3.0→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→B1/R1.2(OK)",
+        "B1/R1.2→C/B.W(ILLEGAL)",
+        "C/B.W→B2/R2.3(OK)",
+        "B2/R2.3→C/B.W(ILLEGAL)",
+        "C/B.W→B2/W1.1(OK)",
+        "B2/W1.1→C/B.W(ILLEGAL)",
+        "C/B.W→B2/W2.2(OK)",
+        "B2/W2.2→C/B.W(ILLEGAL)",
+        "C/B.W→R1/B1.2(OK)",
+        "R1/B1.2→C/B.W(ILLEGAL)",
+        "C/B.W→R1/W0.2(OK)",
+        "R1/W0.2→C/B.W(ILLEGAL)",
+        "C/B.W→R1/W1.3(OK)",
+        "R1/W1.3→C/B.W(ILLEGAL)",
+        "C/B.W→R2/B0.1(OK)",
+        "R2/B0.1→C/B.W(ILLEGAL)",
+        "C/B.W→C/W.R(ILLEGAL)",
+        "C/W.R→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→C/B.W(ILLEGAL)",
+        "C/B.W→C/W.R(ILLEGAL)",
+        "C/W.R→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→R1/W0.2(OK)",
+        "R1/W0.2→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→R2/W0.1(OK)",
+        "R2/W0.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→R2/W0.1(ILLEGAL)",
+        "R2/W0.1→C/W.R(ILLEGAL)",
+        "C/W.R→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→R1/W0.2(OK)",
+        "R1/W0.2→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W2/B2.1(ILLEGAL)",
+        "W2/B2.1→W2/B0.1(OK)",
+        "W2/B0.1→W2/B1.1(ILLEGAL)",
+        "W2/B1.1→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W1/R0.2(OK)",
+        "W1/R0.2→W1/R1.2(ILLEGAL)",
+        "W1/R1.2→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/B0.0(OK)",
+        "W3/B0.0→W3/B1.0(ILLEGAL)",
+        "W3/B1.0→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W3/R0.0(OK)",
+        "W3/R0.0→W3/R1.0(ILLEGAL)",
+        "W3/R1.0→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)"
+      ],
+      "valid": false
+    },
+    {
+      "attempt": 2,
+      "coordinates_found": [
+        "W3/B3.2",
+        "W3/R3.2",
+        "W3/R3.3",
+        "C/B.W",
+        "W3/R3.1",
+        "W2/B2.1",
+        "W2/R0.1",
+        "W2/R2.2",
+        "W3/B2.0",
+        "W3/R2.0",
+        "W3/B3.0",
+        "W3/B3.0",
+        "W3/B3.0",
+        "W3/B3.0",
+        "W3/R3.0",
+        "C/W.R",
+        "W2/R0.1",
+        "C/B.W",
+        "B1/R1.2",
+        "B2/R2.3",
+        "B2/W1.1",
+        "B2/W2.2",
+        "R1/B1.2",
+        "R1/W0.2",
+        "R1/W1.3",
+        "R2/B0.1",
+        "W1/B0.2",
+        "W1/B1.3",
+        "R1/W0.2",
+        "R2/B0.1",
+        "W2/B2.1",
+        "W2/B0.1",
+        "W2/B1.1",
+        "W2/R0.1",
+        "R2/W0.1",
+        "C/W.R",
+        "R2/W0.1",
+        "W2/R2.2",
+        "W1/R0.2",
+        "W1/R1.2",
+        "W3/B2.0",
+        "W3/B0.0",
+        "W3/B1.0",
+        "W3/B3.0",
+        "W3/B3.1",
+        "W3/B3.2",
+        "R2/W0.1",
+        "R3/W1.0",
+        "W1/R0.2",
+        "W1/R1.3",
+        "W2/B2.3",
+        "R2/W0.1",
+        "W3/R2.0",
+        "W3/R0.0",
+        "W3/R1.0",
+        "W3/R3.1",
+        "W1/R1.2",
+        "W2/R2.3",
+        "W3/R1.0",
+        "W3/R3.2",
+        "B2/R0.1",
+        "B3/R1.0",
+        "W1/B0.2",
+        "W1/B1.3",
+        "W2/R2.1",
+        "W2/R2.3",
+        "W3/R1.0",
+        "B2/R0.1",
+        "W3/R3.3",
+        "W2/B2.3",
+        "W2/R2.3",
+        "W3/B3.3",
+        "W2/R0.1",
+        "R2/W0.1",
+        "C/W.R",
+        "C/B.W",
+        "C/B.W",
+        "R1/W0.2",
+        "W2/R0.1",
+        "W3/B3.2",
+        "R2/W0.1",
+        "W2/R0.1",
+        "R2/W0.1",
+        "W2/R0.1",
+        "R2/W0.1"
+      ],
+      "pairs_tested": [
+        "W3/B3.2→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→C/B.W(ILLEGAL)",
+        "C/B.W→W3/R3.1(ILLEGAL)",
+        "W3/R3.1→W2/B2.1(ILLEGAL)",
+        "W2/B2.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/R3.0(ILLEGAL)",
+        "W3/R3.0→C/W.R(ILLEGAL)",
+        "C/W.R→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→C/B.W(ILLEGAL)",
+        "C/B.W→B1/R1.2(OK)",
+        "B1/R1.2→B2/R2.3(ILLEGAL)",
+        "B2/R2.3→B2/W1.1(ILLEGAL)",
+        "B2/W1.1→B2/W2.2(ILLEGAL)",
+        "B2/W2.2→R1/B1.2(ILLEGAL)",
+        "R1/B1.2→R1/W0.2(ILLEGAL)",
+        "R1/W0.2→R1/W1.3(ILLEGAL)",
+        "R1/W1.3→R2/B0.1(ILLEGAL)",
+        "R2/B0.1→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→R1/W0.2(ILLEGAL)",
+        "R1/W0.2→R2/B0.1(ILLEGAL)",
+        "R2/B0.1→W2/B2.1(ILLEGAL)",
+        "W2/B2.1→W2/B0.1(OK)",
+        "W2/B0.1→W2/B1.1(ILLEGAL)",
+        "W2/B1.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→C/W.R(ILLEGAL)",
+        "C/W.R→R2/W0.1(ILLEGAL)",
+        "R2/W0.1→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W1/R0.2(OK)",
+        "W1/R0.2→W1/R1.2(ILLEGAL)",
+        "W1/R1.2→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/B0.0(OK)",
+        "W3/B0.0→W3/B1.0(ILLEGAL)",
+        "W3/B1.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/B3.1(OK)",
+        "W3/B3.1→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→R2/W0.1(OK)",
+        "R2/W0.1→R3/W1.0(ILLEGAL)",
+        "R3/W1.0→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W1/R1.3(ILLEGAL)",
+        "W1/R1.3→W2/B2.3(ILLEGAL)",
+        "W2/B2.3→R2/W0.1(ILLEGAL)",
+        "R2/W0.1→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W3/R0.0(OK)",
+        "W3/R0.0→W3/R1.0(ILLEGAL)",
+        "W3/R1.0→W3/R3.1(ILLEGAL)",
+        "W3/R3.1→W1/R1.2(OK)",
+        "W1/R1.2→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/R1.0(ILLEGAL)",
+        "W3/R1.0→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B2/R0.1(OK)",
+        "B2/R0.1→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W2/R2.1(ILLEGAL)",
+        "W2/R2.1→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/R1.0(ILLEGAL)",
+        "W3/R1.0→B2/R0.1(ILLEGAL)",
+        "B2/R0.1→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→W2/B2.3(OK)",
+        "W2/B2.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→C/W.R(ILLEGAL)",
+        "C/W.R→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→R1/W0.2(OK)",
+        "R1/W0.2→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W3/B3.2(ILLEGAL)",
+        "W3/B3.2→R2/W0.1(OK)",
+        "R2/W0.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)",
+        "R2/W0.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→R2/W0.1(OK)"
+      ],
+      "valid": true
+    }
+  ],
+  "move_selected": {
+    "from": "W2/R0.1",
+    "to": "R2/W0.1",
+    "promotion": null
+  },
+  "server_move_request": {
+    "from": "G4",
+    "to": "G9",
+    "move_number": 10
+  },
+  "server_move_response": {
+    "status_code": 200,
+    "data": {
+      "success": true,
+      "state": {
+        "game_id": "f0c2cec3-4038-4c66-99c6-1492db0a9bfd",
+        "board": [
+          {
+            "notation": "A1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E1",
+            "type": "K",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G1",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "B2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "F2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "A8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I8",
+            "type": "Q",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "B7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "D7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "J7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "K7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "L7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I12",
+            "type": "K",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "G11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "F11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "J11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "K11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "L11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "E4",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D5",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C6",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I6",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "L9",
+            "type": "Q",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I5",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D6",
+            "type": "K",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G9",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          }
+        ],
+        "current_player": "black",
+        "legal_moves": {
+          "A8": [
+            "B8"
+          ],
+          "I8": [
+            "D8",
+            "I7"
+          ],
+          "J8": [
+            "I7"
+          ],
+          "K8": [
+            "I7",
+            "J6",
+            "L6"
+          ],
+          "A7": [
+            "A5",
+            "A6"
+          ],
+          "B7": [
+            "B5",
+            "B6"
+          ],
+          "J7": [
+            "J5",
+            "J6"
+          ],
+          "K7": [
+            "K5",
+            "K6"
+          ],
+          "L7": [
+            "L5",
+            "L6"
+          ],
+          "C6": [
+            "C5",
+            "D5"
+          ],
+          "I6": [
+            "D5"
+          ],
+          "D6": [
+            "C5",
+            "C7",
+            "I5"
+          ]
+        },
+        "promotion_moves": [],
+        "last_move": {
+          "from_square": "G4",
+          "to_square": "G9",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "prev_move": {
+          "from_square": "F9",
+          "to_square": "E4",
+          "move_type": "capture",
+          "promotion": null,
+          "captured": "Q"
+        },
+        "players": [
+          {
+            "color": "white",
+            "name": "LLM_OpenRouter_google/gemini-2.5-flash",
+            "player_type": "llm",
+            "model": "google/gemini-2.5-flash",
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "black",
+            "name": "SmartBot-Black",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "red",
+            "name": "SmartBot-Red",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          }
+        ],
+        "move_number": 10,
+        "game_status": "playing",
+        "check": null,
+        "position_3pf": "wRA1,wPA2,bPA7,bRA8,wPB2,bPB7,wBC1,bPC6,bBC8,wPD5,bKD6,bPD7,wKE1,rBE4,rPE11,wBF1,wPF2,rPF11,rBF12,wNG1,wPG9,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,wNI5,bPI6,bQI8,rKI12,bPJ7,bBJ8,rPJ11,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rQL9,rPL11,rRL12 b wKQ.b-.rKQ - aaa 0 10",
+        "server_version": "0.1.0"
+      },
+      "is_check": false,
+      "is_checkmate": false,
+      "is_stalemate": false,
+      "eliminated_player": null,
+      "inherited_pieces": [],
+      "game_over": false,
+      "winner": null,
+      "reason": null
+    }
+  },
+  "statistics": {
+    "time_total_sec": 28.136,
+    "llm_time_sec": 27.379,
+    "prompt_chars": 17097,
+    "response_chars": 12430,
+    "total_llm_chars": 29527,
+    "llm_calls": 2,
+    "retries": 1,
+    "total_prompt_tokens": 7738,
+    "total_completion_tokens": 5122,
+    "total_reasoning_tokens": 0,
+    "total_tokens": 12860,
+    "total_cost_usd": 0.0151264,
+    "provider_reported_cost_usd": null,
+    "model_pricing": {
+      "prompt_per_1m_usd": 0.3,
+      "completion_per_1m_usd": 2.5,
+      "source": "openrouter_api"
+    }
+  }
+}

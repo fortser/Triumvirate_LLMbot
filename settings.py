@@ -1,7 +1,10 @@
 """Персистентные настройки приложения (JSON-backed) и дефолтные промпты.
 
-Зависимости: constants (только VERSION неявно, через DEFAULTS).
-Зависимые: bot_runner, gui, main.
+Промпты хранятся в отдельных текстовых файлах (prompts/),
+а в JSON-настройках — только пути к ним.
+
+Зависимости: нет.
+Зависимые: bot_runner, gui, main, prompt_builder.
 """
 from __future__ import annotations
 
@@ -14,34 +17,48 @@ _HERE = Path(__file__).parent
 SETTINGS_FILE = _HERE / "llm_bot_gui_settings_v2.json"
 _PROMPTS_DIR = _HERE / "prompts"
 
-
-# ─── Prompt file reader ──────────────────────────────────────────────────────
-def _read_prompt(filename: str, fallback: str) -> str:
-    p = _PROMPTS_DIR / filename
-    if p.exists():
-        return p.read_text(encoding="utf-8")
-    return fallback
-
-
-# ─── Default prompts ─────────────────────────────────────────────────────────
-DEFAULT_SYSTEM = _read_prompt(
-    "system_prompt.txt",
+# ─── Built-in fallback prompts ───────────────────────────────────────────────
+# Used ONLY when prompt files do not exist on disk (first launch / deleted).
+_FALLBACK_SYSTEM = (
     "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n"
     "Columns A–L, rows 1–12. Three players: White, Black, Red.\n"
     "Turn order: White → Black → Red.\n"
-    "Analyze the position carefully. Prioritize king safety, material, center control.",
+    "Analyze the position carefully. Prioritize king safety, material, center control."
 )
 
-DEFAULT_USER_TEMPLATE = _read_prompt(
-    "user_prompt_template.txt",
+_FALLBACK_USER_TEMPLATE = (
     "Move #{{move_number}} | You are {{current_player}}\n\n"
     "Position (3PF): {{position_3pf}}\n\n"
     "Board:\n{{board}}\n\n"
     "Legal moves:\n{{legal_moves}}\n\n"
     "Last move: {{last_move}}\n"
-    "{{check}}",
+    "{{check}}"
 )
 
+# ─── Default prompt file paths (relative to project root) ────────────────────
+_DEFAULT_SYSTEM_FILE = "prompts/system_prompt.txt"
+_DEFAULT_USER_TEMPLATE_FILE = "prompts/user_prompt_template.txt"
+
+
+# ─── Prompt file helpers ─────────────────────────────────────────────────────
+def _read_prompt_file(rel_path: str, fallback: str) -> str:
+    """Read a prompt from a file path relative to project root."""
+    p = _HERE / rel_path
+    if p.exists():
+        text = p.read_text(encoding="utf-8").strip()
+        if text:
+            return text
+    return fallback
+
+
+def _write_prompt_file(rel_path: str, content: str) -> None:
+    """Write prompt content to a file, creating directories if needed."""
+    p = _HERE / rel_path
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(content, encoding="utf-8")
+
+
+# ─── Response format defaults ────────────────────────────────────────────────
 DEFAULT_RESPONSE_FORMAT: dict[str, str] = {
     "simple": (
         "Reply with EXACTLY one line: FROM TO\n"
@@ -52,24 +69,36 @@ DEFAULT_RESPONSE_FORMAT: dict[str, str] = {
     ),
     "json": (
         "Respond with a JSON object only (no markdown, no explanation):\n"
-        '{"from": "E2", "to": "E4"}\n'
-        'For promotion: {"from": "E7", "to": "E8", "promotion": "queen"}\n'
+        '{"move_from": "E2", "move_to": "E4"}\n'
+        'For promotion: {"move_from": "E7", "move_to": "E8", "promotion": "queen"}\n'
         "Promotion values: queen | rook | bishop | knight\n"
         "ONLY use moves from the legal moves list."
     ),
     "json_thinking": (
         "Respond with a JSON object only (no markdown):\n"
-        '{"thinking": "your analysis", "from": "E2", "to": "E4"}\n'
-        'For promotion: {"thinking": "...", "from": "E7", "to": "E8", "promotion": "queen"}\n'
+        '{"thinking": "your analysis", "move_from": "E2", "move_to": "E4"}\n'
+        'For promotion: {"thinking": "...", "move_from": "E7", "move_to": "E8", "promotion": "queen"}\n'
         "Use the thinking field to reason step by step before deciding.\n"
         "ONLY use moves from the legal moves list."
     ),
 }
 
+# ─── Keys that are prompt file paths (not stored as text) ────────────────────
+_PROMPT_FILE_KEYS = {"system_prompt_file", "user_template_file"}
+
+# Legacy keys that contained inline prompt text (pre-migration)
+_LEGACY_PROMPT_KEYS = {"system_prompt", "user_template"}
+
 
 # ─── Settings class ──────────────────────────────────────────────────────────
 class Settings:
-    """JSON-backed application settings."""
+    """JSON-backed application settings.
+
+    Prompt texts are stored in external files (prompts/ directory).
+    The JSON settings file stores only the *paths* to prompt files.
+    Access ``settings["system_prompt"]`` or ``settings["user_template"]``
+    to get the resolved text content (read from file on every access).
+    """
 
     _file: Path = SETTINGS_FILE
 
@@ -86,8 +115,8 @@ class Settings:
         "temperature": 0.3,
         "max_tokens": 24000,
         "response_format": "json_thinking",
-        "system_prompt": DEFAULT_SYSTEM,
-        "user_template": DEFAULT_USER_TEMPLATE,
+        "system_prompt_file": _DEFAULT_SYSTEM_FILE,
+        "user_template_file": _DEFAULT_USER_TEMPLATE_FILE,
         "additional_rules": "",
         "max_retries": 3,
         "poll_interval": 0.5,
@@ -101,26 +130,104 @@ class Settings:
         self._load()
 
     def _load(self) -> None:
-        if self._file.exists():
-            try:
-                stored = json.loads(self._file.read_text(encoding="utf-8"))
-                self._d.update(stored)
-            except Exception:
-                pass
+        if not self._file.exists():
+            return
+        try:
+            stored = json.loads(self._file.read_text(encoding="utf-8"))
+        except Exception:
+            return
+
+        migrated = self._migrate_legacy_prompts(stored)
+        self._d.update(stored)
+        if migrated:
+            self.save()
+
+    def _migrate_legacy_prompts(self, stored: dict) -> bool:
+        """Migrate inline prompt strings to external files.
+
+        If the JSON contains ``system_prompt`` or ``user_template`` as
+        string values (legacy format), write them to the corresponding
+        prompt files and replace the keys with ``*_file`` paths.
+
+        Returns True if migration occurred (caller should re-save).
+        """
+        migrated = False
+
+        mapping = {
+            "system_prompt": (
+                "system_prompt_file",
+                _DEFAULT_SYSTEM_FILE,
+            ),
+            "user_template": (
+                "user_template_file",
+                _DEFAULT_USER_TEMPLATE_FILE,
+            ),
+        }
+
+        for old_key, (new_key, default_path) in mapping.items():
+            if old_key in stored and isinstance(stored[old_key], str):
+                text = stored[old_key]
+                file_path = stored.get(new_key, default_path)
+                _write_prompt_file(file_path, text)
+                del stored[old_key]
+                stored[new_key] = file_path
+                migrated = True
+
+        return migrated
 
     def save(self) -> None:
+        """Save settings to JSON, excluding inline prompt texts."""
+        to_save = {
+            k: v
+            for k, v in self._d.items()
+            if k not in _LEGACY_PROMPT_KEYS
+        }
         try:
             self._file.write_text(
-                json.dumps(self._d, indent=2, ensure_ascii=False), encoding="utf-8"
+                json.dumps(to_save, indent=2, ensure_ascii=False),
+                encoding="utf-8",
             )
         except Exception:
             pass
 
     def __getitem__(self, key: str) -> Any:
+        # Virtual keys: resolve prompt text from files on access
+        if key == "system_prompt":
+            path = self._d.get(
+                "system_prompt_file", _DEFAULT_SYSTEM_FILE
+            )
+            return _read_prompt_file(path, _FALLBACK_SYSTEM)
+
+        if key == "user_template":
+            path = self._d.get(
+                "user_template_file", _DEFAULT_USER_TEMPLATE_FILE
+            )
+            return _read_prompt_file(path, _FALLBACK_USER_TEMPLATE)
+
         return self._d.get(key, self.DEFAULTS.get(key))
 
     def __setitem__(self, key: str, value: Any) -> None:
+        # Prevent accidentally storing prompt text in JSON
+        if key in _LEGACY_PROMPT_KEYS:
+            return
         self._d[key] = value
 
     def get(self, key: str, default: Any = None) -> Any:
+        # Route virtual keys through __getitem__
+        if key in _LEGACY_PROMPT_KEYS:
+            return self[key]
         return self._d.get(key, default)
+
+    @property
+    def system_prompt_path(self) -> Path:
+        """Absolute path to the system prompt file."""
+        rel = self._d.get("system_prompt_file", _DEFAULT_SYSTEM_FILE)
+        return _HERE / rel
+
+    @property
+    def user_template_path(self) -> Path:
+        """Absolute path to the user template file."""
+        rel = self._d.get(
+            "user_template_file", _DEFAULT_USER_TEMPLATE_FILE
+        )
+        return _HERE / rel

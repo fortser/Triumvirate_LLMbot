@@ -1,0 +1,1122 @@
+{
+  "game_id": "f0c2cec3-4038-4c66-99c6-1492db0a9bfd",
+  "move_number": 28,
+  "timestamp": "2026-03-06T18:54:59",
+  "outcome": "success",
+  "model_pricing": {
+    "prompt_per_1m_usd": 0.3,
+    "completion_per_1m_usd": 2.5,
+    "source": "openrouter_api"
+  },
+  "server_interactions": [
+    {
+      "endpoint": "/state",
+      "method": "GET",
+      "response_raw": {
+        "game_id": "f0c2cec3-4038-4c66-99c6-1492db0a9bfd",
+        "board": [
+          {
+            "notation": "F2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "B7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "L7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H11",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "G11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "F11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "J11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "K11",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C6",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I8",
+            "type": "K",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K9",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I12",
+            "type": "K",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D3",
+            "type": "K",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B4",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B1",
+            "type": "Q",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          }
+        ],
+        "current_player": "white",
+        "legal_moves": {
+          "D3": [
+            "C4",
+            "D4",
+            "E2",
+            "E3"
+          ]
+        },
+        "promotion_moves": [],
+        "last_move": {
+          "from_square": "A2",
+          "to_square": "B1",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "prev_move": {
+          "from_square": "J8",
+          "to_square": "B4",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "players": [
+          {
+            "color": "white",
+            "name": "LLM_OpenRouter_google/gemini-2.5-flash",
+            "player_type": "llm",
+            "model": "google/gemini-2.5-flash",
+            "status": "in_check",
+            "is_replacement": false
+          },
+          {
+            "color": "black",
+            "name": "SmartBot-Black",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "red",
+            "name": "SmartBot-Red",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          }
+        ],
+        "move_number": 28,
+        "game_status": "playing",
+        "check": null,
+        "position_3pf": "rQB1,bBB4,bPB7,bPC6,wKD3,rPE11,wPF2,rPF11,rBF12,rPG11,rNG12,wPH2,wPH11,rRH12,bKI8,rKI12,rPJ11,bBK9,rBK11,rNK12,bPL7,rPL11,rRL12 w w-.b-.r- - caa 2 28",
+        "server_version": "0.1.0"
+      }
+    }
+  ],
+  "server_state_raw": {
+    "game_id": "f0c2cec3-4038-4c66-99c6-1492db0a9bfd",
+    "board": [
+      {
+        "notation": "F2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "H2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "B7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "L7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "H12",
+        "type": "R",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "G12",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "F12",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "K12",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L12",
+        "type": "R",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "H11",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "G11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "F11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "E11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "J11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "K11",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "C6",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "I8",
+        "type": "K",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "K9",
+        "type": "B",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I12",
+        "type": "K",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "D3",
+        "type": "K",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "B4",
+        "type": "B",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "B1",
+        "type": "Q",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      }
+    ],
+    "current_player": "white",
+    "legal_moves": {
+      "D3": [
+        "C4",
+        "D4",
+        "E2",
+        "E3"
+      ]
+    },
+    "promotion_moves": [],
+    "last_move": {
+      "from_square": "A2",
+      "to_square": "B1",
+      "move_type": "normal",
+      "promotion": null,
+      "captured": null
+    },
+    "prev_move": {
+      "from_square": "J8",
+      "to_square": "B4",
+      "move_type": "normal",
+      "promotion": null,
+      "captured": null
+    },
+    "players": [
+      {
+        "color": "white",
+        "name": "LLM_OpenRouter_google/gemini-2.5-flash",
+        "player_type": "llm",
+        "model": "google/gemini-2.5-flash",
+        "status": "in_check",
+        "is_replacement": false
+      },
+      {
+        "color": "black",
+        "name": "SmartBot-Black",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "active",
+        "is_replacement": false
+      },
+      {
+        "color": "red",
+        "name": "SmartBot-Red",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "active",
+        "is_replacement": false
+      }
+    ],
+    "move_number": 28,
+    "game_status": "playing",
+    "check": null,
+    "position_3pf": "rQB1,bBB4,bPB7,bPC6,wKD3,rPE11,wPF2,rPF11,rBF12,rPG11,rNG12,wPH2,wPH11,rRH12,bKI8,rKI12,rPJ11,bBK9,rBK11,rNK12,bPL7,rPL11,rRL12 w w-.b-.r- - caa 2 28",
+    "server_version": "0.1.0"
+  },
+  "prompt_pipeline": {
+    "system_prompt": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.",
+    "user_template": "Position (3PF): {position_3pf}\nYour color: {color}\nMove number: {move_number}\nLast move: {last_move}\n\nLegal moves:\n{legal_moves}\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q",
+    "additional_rules": "",
+    "response_format_instruction": "Respond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"move_from\": \"E2\", \"move_to\": \"E4\"}\nFor promotion: {\"thinking\": \"...\", \"move_from\": \"E7\", \"move_to\": \"E8\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list.",
+    "rendered_system": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.\n\nTRIUMVIRATE POSITION FORMAT:\n\nRegular cells: [Sector][Ring]/[Opponent][Depth].[Flank]\n  Sector: W = White, B = Black, R = Red.\n  Ring (1-3): Distance from board center. 1 = inner zone, 3 = edge.\n  Opponent: Which enemy sector this cell faces (W/B/R).\n  Depth (0-3): Steps to front line (row 4). 0 = front line, 3 = rear.\n  Flank (0-3): Steps to border with that opponent. 0 = at border, 3 = center.\n\nRosette cells: C/[Source].[Neighbor]\n  C = Center (rosette, ring 0). Strongest position on board.\n  Source: Sector with direct access to this cell (W/B/R).\n  Neighbor: Second adjacent sector (W/B/R).\n\nReading examples:\n  W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n  C/W.B = Center rosette, accessible from White, bordering Black.\n\nSTRATEGY: Lower numbers = stronger. Buried level = Ring + Depth, keep below 4.\n\nPieces: L = Leader (King), M = Marshal (Queen), T = Train (Rook),\n        D = Drone (Bishop), N = Noctis (Knight), P = Private (Pawn).\n\nOUTPUT FORMAT:\nRespond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\nFor promotion: {\"thinking\": \"...\", \"move_from\": \"W2/R1.3\", \"move_to\": \"W3/R0.3\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list.",
+    "rendered_user_prompt": "Position (3PF): rQB1,bBB4,bPB7,bPC6,wKD3,rPE11,wPF2,rPF11,rBF12,rPG11,rNG12,wPH2,wPH11,rRH12,bKI8,rKI12,rPJ11,bBK9,rBK11,rNK12,bPL7,rPL11,rRL12 w w-.b-.r- - caa 2 28\nYour color: WHITE\nMove number: 28\nLast move: W3/B2.0 → W3/B3.1\n\nLegal moves:\n  W1/B1.3: C/W.B, W1/B0.2, W1/R1.3, W2/R2.3\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q\n\nBoard:\n  BLACK: BR2/B0.1 BW2/B0.1 KB3/W3.3 PB1/R1.2 PB2/R2.1 PB3/W2.0\n  RED: BR2/B2.1 BR3/W3.2 KR3/B3.3 NR3/B3.1 NR3/W3.1 PR2/B2.2 PR2/W2.1 PR2/W2.2 PR2/W2.3 PR3/B2.0 QW3/B3.1 RR3/B3.0 RR3/W3.0\n  WHITE ← YOU: KW1/B1.3 PR3/W2.0 PW2/R2.2 PW3/R2.0",
+    "use_triumvirate_notation": true
+  },
+  "llm_requests": [
+    {
+      "attempt": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nBOARD: Regular hexagon, 96 cells. Columns A–L, rows 1–12.\nThree segments of 32 cells:\n- White: A–H rows 1–4. Black: A–D+I–L rows 5–8. Red: E–H+I–L rows 9–12.\n- Invalid: E5–H8, I1–L4, A9–D12.\n\nBRIDGES (columns connecting 2 segments):\n- A–D: White↔Black. E–H: White↔Red. I–L: Black↔Red.\n\nSTARTING POSITION:\n- White row 1: A1=R B1=N C1=B D1=Q E1=K F1=B G1=N H1=R. Pawns row 2.\n- Black row 8: A8=R B8=N C8=B D8=Q I8=K J8=B K8=N L8=R. Pawns row 7.\n- Red row 12: H12=R G12=N F12=B E12=Q I12=K J12=B K12=N L12=R. Pawns row 11.\n\nTURN ORDER: White → Black → Red (clockwise).\n\nPIECES: Standard chess moves adapted to hex geometry.\n- Pawns move forward along their column toward the opponent's base row.\n- Pawns capture diagonally forward (up to 3 directions at triple junctions: D4,E4,D5,I5,E9,I9).\n- Double pawn move from starting row. En passant. Promotion on opponent's base row.\n- Castling along base row (O-O short, O-O-O long).\n\nSPECIAL: When a player is checkmated, their pieces (except king) transfer to the mating player.\nWIN: Checkmate both opponents.\n\nYou are a strong player. Analyze the position carefully before choosing a move.\nPrioritize: king safety > material > center control > development.\n\nTRIUMVIRATE POSITION FORMAT:\n\nRegular cells: [Sector][Ring]/[Opponent][Depth].[Flank]\n  Sector: W = White, B = Black, R = Red.\n  Ring (1-3): Distance from board center. 1 = inner zone, 3 = edge.\n  Opponent: Which enemy sector this cell faces (W/B/R).\n  Depth (0-3): Steps to front line (row 4). 0 = front line, 3 = rear.\n  Flank (0-3): Steps to border with that opponent. 0 = at border, 3 = center.\n\nRosette cells: C/[Source].[Neighbor]\n  C = Center (rosette, ring 0). Strongest position on board.\n  Source: Sector with direct access to this cell (W/B/R).\n  Neighbor: Second adjacent sector (W/B/R).\n\nReading examples:\n  W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n  C/W.B = Center rosette, accessible from White, bordering Black.\n\nSTRATEGY: Lower numbers = stronger. Buried level = Ring + Depth, keep below 4.\n\nPieces: L = Leader (King), M = Marshal (Queen), T = Train (Rook),\n        D = Drone (Bishop), N = Noctis (Knight), P = Private (Pawn).\n\nOUTPUT FORMAT:\nRespond with a JSON object only (no markdown):\n{\"thinking\": \"your analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\nFor promotion: {\"thinking\": \"...\", \"move_from\": \"W2/R1.3\", \"move_to\": \"W3/R0.3\", \"promotion\": \"queen\"}\nUse the thinking field to reason step by step before deciding.\nONLY use moves from the legal moves list."
+        },
+        {
+          "role": "user",
+          "content": "Position (3PF): rQB1,bBB4,bPB7,bPC6,wKD3,rPE11,wPF2,rPF11,rBF12,rPG11,rNG12,wPH2,wPH11,rRH12,bKI8,rKI12,rPJ11,bBK9,rBK11,rNK12,bPL7,rPL11,rRL12 w w-.b-.r- - caa 2 28\nYour color: WHITE\nMove number: 28\nLast move: W3/B2.0 → W3/B3.1\n\nLegal moves:\n  W1/B1.3: C/W.B, W1/B0.2, W1/R1.3, W2/R2.3\n\nChoose the best move. Reply with exactly: FROM TO\nExample: E2 E4\nFor promotion, add =PIECE: A7 A8=Q\n\nBoard:\n  BLACK: BR2/B0.1 BW2/B0.1 KB3/W3.3 PB1/R1.2 PB2/R2.1 PB3/W2.0\n  RED: BR2/B2.1 BR3/W3.2 KR3/B3.3 NR3/B3.1 NR3/W3.1 PR2/B2.2 PR2/W2.1 PR2/W2.2 PR2/W2.3 PR3/B2.0 QW3/B3.1 RR3/B3.0 RR3/W3.0\n  WHITE ← YOU: KW1/B1.3 PR3/W2.0 PW2/R2.2 PW3/R2.0"
+        }
+      ]
+    }
+  ],
+  "llm_responses": [
+    {
+      "attempt": 1,
+      "raw_response": "{\"thinking\": \"The current position is: BLACK: BR2/B0.1 BW2/B0.1 KB3/W3.3 PB1/R1.2 PB2/R2.1 PB3/W2.0 RED: BR2/B2.1 BR3/W3.2 KR3/B3.3 NR3/B3.1 NR3/W3.1 PR2/B2.2 PR2/W2.1 PR2/W2.2 PR2/W2.3 PR3/B2.0 QW3/B3.1 RR3/B3.0 RR3/W3.0 WHITE ← YOU: KW1/B1.3 PR3/W2.0 PW2/R2.2 PW3/R2.0\n\nWhite's king is on W1/B1.3.\nBlack's king is on KB3/W3.3.\nRed's king is on KR3/B3.3.\n\nWhite's last move was W3/B2.0 → W3/B3.1. This was a pawn move.\n\nLegal moves for White:\n1. W1/B1.3 (King) to C/W.B\n2. W1/B1.3 (King) to W1/B0.2\n3. W1/B1.3 (King) to W1/R1.3\n4. W1/B1.3 (King) to W2/R2.3\n\nAll legal moves are king moves. This means White is in check. I need to move the king out of check.\n\nLet's analyze the possible king moves:\n1.  **W1/B1.3 (King) to C/W.B**: This moves the king to the center rosette. The rosette is a strong central cell.\n2.  **W1/B1.3 (King) to W1/B0.2**: This moves the king one step forward towards the black sector.\n3.  **W1/B1.3 (King) to W1/R1.3**: This moves the king one step towards the red sector.\n4.  **W1/B1.3 (King) to W2/R2.3**: This moves the king further into white's territory, but still towards the red sector.\n\nTo determine the best move, I need to identify the attacking piece and the safety of each destination square.\n\nLooking at the board, the black queen is not present. The red queen is on QW3/B3.1. This queen is in White's sector, threatening the White king.\n\nLet's check the safety of each square:\n- **C/W.B**: The center rosette. This is generally a very safe square. The red queen on QW3/B3.1 is far from the center, and it's unlikely to attack C/W.B directly.\n- **W1/B0.2**: This square is adjacent to the king's current position, moving towards Black. The red queen on QW3/B3.1 is not directly threatening this square.\n- **W1/R1.3**: This square is adjacent to the king's current position, moving towards Red. The red queen on QW3/B3.1 is not directly threatening this square.\n- **W2/R2.3**: This square is further back in White's territory, towards Red. The red queen on QW3/B3.1 is not directly threatening this square.\n\nThe red queen is on QW3/B3.1. This cell is in White's sector, ring 3, facing Black, depth 3, flank 1.\nThe white king is on W1/B1.3. This cell is in White's sector, ring 1, facing Black, depth 1, flank 3.\n\nLet's visualize the board and the queen's attack. A queen on W3/B3.1 can attack along files, ranks, and diagonals.\nThe queen on QW3/B3.1 is located on the 'L' file, row 10 in standard notation (L10).\nThe white king on W1/B1.3 is located on the 'A' file, row 4 in standard notation (A4).\n\nThe red queen on QW3/B3.1 is attacking the white king on W1/B1.3. This means the queen is attacking along a diagonal or a file/rank.\nGiven the coordinates, the queen on QW3/B3.1 (L10) is attacking the king on W1/B1.3 (A4). This looks like a long diagonal attack.\n\nLet's check the safety of each potential king move from the red queen on QW3/B3.1:\n1.  **C/W.B**: The center rosette. This is generally safe.\n2.  **W1/B0.2**: This cell is closer to the red queen's line of attack.\n3.  **W1/R1.3**: This cell is closer to the red queen's line of attack.\n4.  **W2/R2.3**: This cell is further away from the red queen's line of attack, moving deeper into White's territory.\n\nMoving the king to the center rosette (C/W.B) seems like a good defensive move. It moves the king to a central, generally safe location, and also develops the king.\n\nLet's re-evaluate the queen's position and attack.\nQW3/B3.1 is a cell in the White sector, but it's on the border with the Black sector. It's deep in White's territory.\nW1/B1.3 is a cell in the White sector, also on the border with the Black sector. It's closer to the center.\n\nThe queen on QW3/B3.1 (L10) is attacking the king on W1/B1.3 (A4).\nLet's check the cells between them.\nA4, B5, C6, D7, E8, F9, G10, H11, I12, J11, K10, L9. This is a diagonal.\nThe queen is on L10, the king is on A4. This is a diagonal attack.\n\nNow, let's check the safety of the king's possible moves from the queen on QW3/B3.1 (L10):\n- **C/W.B**: This is a central cell. It is not on the same diagonal as L10 and A4. It should be safe.\n- **W1/B0.2**: This cell is A5. Is it attacked by L10? No.\n- **W1/R1.3**: This cell is B4. Is it attacked by L10? No.\n- **W2/R2.3**: This cell is B3. Is it attacked by L10? No.\n\nAll the proposed king moves seem to take the king out of check.\nNow I need to choose the best move.\nMoving the king to the center (C/W.B) is generally a good strategic move as it centralizes the king and can prepare for future attacks or defense. It also removes the king from the edge of the board.\n\nMoving to W1/B0.2 (A5) keeps the king on the border with Black, which might be risky.\nMoving to W1/R1.3 (B4) moves the king towards Red, but still on the border.\nMoving to W2/R2.3 (B3) moves the king deeper into White's territory, which provides more safety.\n\nComparing C/W.B and W2/R2.3:\n- C/W.B: Central, good for future development, possibly safer from attacks from the flanks.\n- W2/R2.3: Deeper into White's territory, potentially more protected by pawns.\n\nGiven the current board state, the red queen is deep in White's territory. Moving the king to the center (C/W.B) might expose it to new lines of attack from the red queen or other red pieces if they advance.\nMoving the king to W2/R2.3 (B3) moves it further away from the current line of attack and deeper into White's own sector, which is generally safer.\n\nLet's consider the long-term implications.\nThe red queen is on QW3/B3.1. This is a very advanced position for Red.\nMoving the king to C/W.B might be good for development, but it's important to ensure it's not immediately threatened again.\n\nLet's re-check the queen's attack.\nThe queen is on QW3/B3.1.\nThe king is on W1/B1.3.\n\nThe cell coordinates are a bit abstract. Let's try to map them to the standard hex board.\nWhite sector: A-H rows 1-4.\nBlack sector: A-D, I-L rows 5-8.\nRed sector: E-H, I-L rows 9-12.\n\nW1/B1.3 (King) is in White's sector, ring 1, facing Black, depth 1, flank 3. This corresponds to A4.\nC/W.B is the center cell.\nW1/B0.2 is A5.\nW1/R1.3 is B4.\nW2/R2.3 is B3.\n\nQW3/B3.1 (Red Queen) is in White's sector, ring 3, facing Black, depth 3, flank 1. This corresponds to L10.\n\nSo the Red Queen is on L10, and the White King is on A4.\nThis is a diagonal attack.\n\nLet's check the safety of the proposed moves:\n1.  **A4 (King) to C/W.B (Center)**: The center cell is not attacked by L10. Safe.\n2.  **A4 (King) to A5**: This cell is not attacked by L10. Safe.\n3.  **A4 (King) to B4**: This cell is not attacked by L10. Safe.\n4.  **A4 (King) to B3**: This cell is not attacked by L10. Safe.\n\nAll moves are safe from the immediate check. Now, I need to choose the best strategic move.\nMoving the king to the center (C/W.B) is often a strong move in Three-Player Chess due to the strategic importance of the center. It allows the king to be more active in defense or even offense later.\nMoving to B3 (W2/R2.3) moves the king further back into the white sector, which is also a safe option.\n\nGiven that the Red Queen is deep in White's territory (L10), moving the king to the center might be a good way to activate it and prepare for counter-attacks or defense. The center is also less vulnerable to attacks from the flanks.\n\nLet's consider the pawn structure around the king for each move.\n- Current king position A4.\n- If king moves to C/W.B, it is in the open.\n- If king moves to A5, it is still somewhat exposed.\n- If king moves to B4, it is still somewhat exposed.\n- If king moves to B3, it is behind the pawns PW2/R2.2 and PW3/R2.0. This seems like a better defensive position.\n\nThe white pawns are on PR3/W2.0 (H2), PW2/R2.2 (G3), PW3/R2.0 (F2).\nIf the king moves to B3 (W2/R2.3), it will be behind the pawns G3 and F2. This provides some pawn cover.\n\nMoving to C/W.B (center) is a strong move, but the king will be in the open.\nMoving to W2/R2.3 (B3) provides pawn cover and moves the king away from the immediate threat. This seems like a more prudent defensive move given the advanced position of the red queen.\n\nLet's re-evaluate the queen's position. QW3/B3.1 (L10).\nThe white pawns are on H2, G3, F2.\nIf the king moves to B3, it is behind G3 and F2. This is good.\n\nThe red queen on L10 is very active. It can move to many squares.\nMoving the king to C/W.B might be too exposed.\nMoving the king to W2/R2.3 (B3) seems like the safest option, providing pawn cover and moving the king away from the immediate threat.\n\nI will choose W1/B1.3 to W2/R2.3. This moves the king to a safer square with pawn cover. It also moves the king further into White's territory, away from the red queen's advanced position.\n\nFinal check:\n- King safety: Moving to W2/R2.3 (B3) provides pawn cover.\n- Material: No material changes with king move.\n- Center control: Not directly affecting center control, but a safer king can allow for better piece activity later.\n- Development: Not a development move, but a necessary defensive one.\n\nTherefore, W1/B1.3 to W2/R2.3 is the best move.\", \"move_from\": \"W1/B1.3\", \"move_to\": \"W2/R2.3\"}",
+      "response_chars": 9013,
+      "time_sec": 15.46,
+      "usage": {
+        "prompt_tokens": 1329,
+        "completion_tokens": 3062,
+        "reasoning_tokens": 0,
+        "total_tokens": 4391,
+        "provider_reported_cost_usd": null
+      },
+      "cost": {
+        "input_cost_usd": 0.0003987,
+        "output_cost_usd": 0.007655,
+        "reasoning_cost_usd": 0.0,
+        "total_cost_usd": 0.0080537,
+        "provider_reported_cost_usd": null
+      }
+    }
+  ],
+  "parser_attempts": [
+    {
+      "attempt": 1,
+      "coordinates_found": [
+        "R2/B0.1",
+        "W2/B0.1",
+        "B3/W3.3",
+        "B1/R1.2",
+        "B2/R2.1",
+        "B3/W2.0",
+        "R2/B2.1",
+        "R3/W3.2",
+        "R3/B3.3",
+        "R3/B3.1",
+        "R3/W3.1",
+        "R2/B2.2",
+        "R2/W2.1",
+        "R2/W2.2",
+        "R2/W2.3",
+        "R3/B2.0",
+        "W3/B3.1",
+        "R3/B3.0",
+        "R3/W3.0",
+        "W1/B1.3",
+        "R3/W2.0",
+        "W2/R2.2",
+        "W3/R2.0",
+        "W1/B1.3",
+        "B3/W3.3",
+        "R3/B3.3",
+        "W3/B2.0",
+        "W3/B3.1",
+        "W1/B1.3",
+        "C/W.B",
+        "W1/B1.3",
+        "W1/B0.2",
+        "W1/B1.3",
+        "W1/R1.3",
+        "W1/B1.3",
+        "W2/R2.3",
+        "W1/B1.3",
+        "C/W.B",
+        "W1/B1.3",
+        "W1/B0.2",
+        "W1/B1.3",
+        "W1/R1.3",
+        "W1/B1.3",
+        "W2/R2.3",
+        "W3/B3.1",
+        "C/W.B",
+        "W3/B3.1",
+        "C/W.B",
+        "W1/B0.2",
+        "W3/B3.1",
+        "W1/R1.3",
+        "W3/B3.1",
+        "W2/R2.3",
+        "W3/B3.1",
+        "W3/B3.1",
+        "W1/B1.3",
+        "W3/B3.1",
+        "W3/B3.1",
+        "W1/B1.3",
+        "W3/B3.1",
+        "W1/B1.3",
+        "W3/B3.1",
+        "W1/B1.3",
+        "W3/B3.1",
+        "C/W.B",
+        "W1/B0.2",
+        "W1/R1.3",
+        "W2/R2.3",
+        "C/W.B",
+        "W3/B3.1",
+        "W1/B1.3",
+        "W3/B3.1",
+        "W1/B1.3",
+        "W3/B3.1",
+        "C/W.B",
+        "W1/B0.2",
+        "W1/R1.3",
+        "W2/R2.3",
+        "C/W.B",
+        "W1/B0.2",
+        "W1/R1.3",
+        "W2/R2.3",
+        "C/W.B",
+        "W2/R2.3",
+        "C/W.B",
+        "W2/R2.3",
+        "C/W.B",
+        "W2/R2.3",
+        "W3/B3.1",
+        "C/W.B",
+        "W3/B3.1",
+        "W1/B1.3",
+        "W1/B1.3",
+        "C/W.B",
+        "W1/B0.2",
+        "W1/R1.3",
+        "W2/R2.3",
+        "W3/B3.1",
+        "C/W.B",
+        "C/W.B",
+        "W2/R2.3",
+        "C/W.B",
+        "W2/R2.2",
+        "W3/R2.0",
+        "R3/W2.0",
+        "W2/R2.2",
+        "W3/R2.0",
+        "W2/R2.3",
+        "C/W.B",
+        "W2/R2.3",
+        "W3/B3.1",
+        "C/W.B",
+        "W2/R2.3",
+        "W1/B1.3",
+        "W2/R2.3",
+        "W2/R2.3",
+        "W1/B1.3",
+        "W2/R2.3",
+        "W1/B1.3",
+        "W2/R2.3"
+      ],
+      "pairs_tested": [
+        "R2/B0.1→W2/B0.1(ILLEGAL)",
+        "W2/B0.1→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B1/R1.2(ILLEGAL)",
+        "B1/R1.2→B2/R2.1(ILLEGAL)",
+        "B2/R2.1→B3/W2.0(ILLEGAL)",
+        "B3/W2.0→R2/B2.1(ILLEGAL)",
+        "R2/B2.1→R3/W3.2(ILLEGAL)",
+        "R3/W3.2→R3/B3.3(ILLEGAL)",
+        "R3/B3.3→R3/B3.1(ILLEGAL)",
+        "R3/B3.1→R3/W3.1(ILLEGAL)",
+        "R3/W3.1→R2/B2.2(ILLEGAL)",
+        "R2/B2.2→R2/W2.1(ILLEGAL)",
+        "R2/W2.1→R2/W2.2(ILLEGAL)",
+        "R2/W2.2→R2/W2.3(ILLEGAL)",
+        "R2/W2.3→R3/B2.0(ILLEGAL)",
+        "R3/B2.0→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→R3/B3.0(ILLEGAL)",
+        "R3/B3.0→R3/W3.0(ILLEGAL)",
+        "R3/W3.0→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→R3/W2.0(ILLEGAL)",
+        "R3/W2.0→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→R3/B3.3(ILLEGAL)",
+        "R3/B3.3→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→C/W.B(OK)",
+        "C/W.B→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W1/B0.2(OK)",
+        "W1/B0.2→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W1/R1.3(OK)",
+        "W1/R1.3→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W2/R2.3(OK)",
+        "W2/R2.3→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→C/W.B(OK)",
+        "C/W.B→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W1/B0.2(OK)",
+        "W1/B0.2→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W1/R1.3(OK)",
+        "W1/R1.3→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W2/R2.3(OK)",
+        "W2/R2.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→C/W.B(ILLEGAL)",
+        "C/W.B→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→C/W.B(ILLEGAL)",
+        "C/W.B→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W1/R1.3(ILLEGAL)",
+        "W1/R1.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→C/W.B(ILLEGAL)",
+        "C/W.B→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W1/R1.3(ILLEGAL)",
+        "W1/R1.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→C/W.B(ILLEGAL)",
+        "C/W.B→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→C/W.B(ILLEGAL)",
+        "C/W.B→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W1/R1.3(ILLEGAL)",
+        "W1/R1.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→C/W.B(ILLEGAL)",
+        "C/W.B→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W1/R1.3(ILLEGAL)",
+        "W1/R1.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→C/W.B(ILLEGAL)",
+        "C/W.B→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→C/W.B(ILLEGAL)",
+        "C/W.B→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→C/W.B(ILLEGAL)",
+        "C/W.B→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→C/W.B(ILLEGAL)",
+        "C/W.B→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→C/W.B(OK)",
+        "C/W.B→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W1/R1.3(ILLEGAL)",
+        "W1/R1.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→C/W.B(ILLEGAL)",
+        "C/W.B→C/W.B(ILLEGAL)",
+        "C/W.B→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→C/W.B(ILLEGAL)",
+        "C/W.B→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→R3/W2.0(ILLEGAL)",
+        "R3/W2.0→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→C/W.B(ILLEGAL)",
+        "C/W.B→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→C/W.B(ILLEGAL)",
+        "C/W.B→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W2/R2.3(OK)",
+        "W2/R2.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W2/R2.3(OK)",
+        "W2/R2.3→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W2/R2.3(OK)"
+      ],
+      "valid": true
+    }
+  ],
+  "move_selected": {
+    "from": "W1/B1.3",
+    "to": "W2/R2.3",
+    "promotion": null
+  },
+  "server_move_request": {
+    "from": "D3",
+    "to": "E2",
+    "move_number": 28
+  },
+  "server_move_response": {
+    "status_code": 200,
+    "data": {
+      "success": true,
+      "state": {
+        "game_id": "f0c2cec3-4038-4c66-99c6-1492db0a9bfd",
+        "board": [
+          {
+            "notation": "F2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "B7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "L7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H11",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "G11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "F11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "J11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "K11",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C6",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I8",
+            "type": "K",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K9",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I12",
+            "type": "K",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B4",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B1",
+            "type": "Q",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E2",
+            "type": "K",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          }
+        ],
+        "current_player": "black",
+        "legal_moves": {
+          "B7": [
+            "B5",
+            "B6"
+          ],
+          "L7": [
+            "L5",
+            "L6"
+          ],
+          "C6": [
+            "C5"
+          ],
+          "I8": [
+            "D7",
+            "D8",
+            "I7",
+            "J7",
+            "J8"
+          ],
+          "K9": [
+            "C8",
+            "D7",
+            "E12",
+            "I11",
+            "I6",
+            "J10",
+            "J5",
+            "L10",
+            "L5"
+          ],
+          "B4": [
+            "A3",
+            "A5",
+            "C3",
+            "C5",
+            "D2",
+            "D6",
+            "E1",
+            "I7",
+            "J8"
+          ]
+        },
+        "promotion_moves": [],
+        "last_move": {
+          "from_square": "D3",
+          "to_square": "E2",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "prev_move": {
+          "from_square": "A2",
+          "to_square": "B1",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "players": [
+          {
+            "color": "white",
+            "name": "LLM_OpenRouter_google/gemini-2.5-flash",
+            "player_type": "llm",
+            "model": "google/gemini-2.5-flash",
+            "status": "in_check",
+            "is_replacement": false
+          },
+          {
+            "color": "black",
+            "name": "SmartBot-Black",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "red",
+            "name": "SmartBot-Red",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          }
+        ],
+        "move_number": 28,
+        "game_status": "playing",
+        "check": null,
+        "position_3pf": "rQB1,bBB4,bPB7,bPC6,wKE2,rPE11,wPF2,rPF11,rBF12,rPG11,rNG12,wPH2,wPH11,rRH12,bKI8,rKI12,rPJ11,bBK9,rBK11,rNK12,bPL7,rPL11,rRL12 b w-.b-.r- - caa 3 28",
+        "server_version": "0.1.0"
+      },
+      "is_check": false,
+      "is_checkmate": false,
+      "is_stalemate": false,
+      "eliminated_player": null,
+      "inherited_pieces": [],
+      "game_over": false,
+      "winner": null,
+      "reason": null
+    }
+  },
+  "statistics": {
+    "time_total_sec": 16.207,
+    "llm_time_sec": 15.46,
+    "prompt_chars": 3224,
+    "response_chars": 9013,
+    "total_llm_chars": 12237,
+    "llm_calls": 1,
+    "retries": 0,
+    "total_prompt_tokens": 1329,
+    "total_completion_tokens": 3062,
+    "total_reasoning_tokens": 0,
+    "total_tokens": 4391,
+    "total_cost_usd": 0.0080537,
+    "provider_reported_cost_usd": null,
+    "model_pricing": {
+      "prompt_per_1m_usd": 0.3,
+      "completion_per_1m_usd": 2.5,
+      "source": "openrouter_api"
+    }
+  }
+}

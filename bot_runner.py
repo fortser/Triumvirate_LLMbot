@@ -20,7 +20,7 @@ from typing import Any
 from arena_client import ArenaClient
 from constants import make_bot_name
 from llm_client import LLMClient
-from move_parser import COORD_RE, MoveParser, TRI_COORD_RE
+from move_parser import COORD_RE, MoveParser, TRI_COORD_RE, _sanitize_json_string
 from notation_converter import (
     convert_board,
     convert_legal_moves,
@@ -432,7 +432,7 @@ class BotRunner:
         use_tri = tri_legal is not None
         working_legal = tri_legal if use_tri else legal
 
-        messages = self.builder.build(
+        original_messages = self.builder.build(
             state,
             s,
             tri_legal=tri_legal,
@@ -449,72 +449,70 @@ class BotRunner:
                 "response_format_instruction": DEFAULT_RESPONSE_FORMAT.get(
                     fmt, ""
                 ),
-                "rendered_system": messages[0]["content"] if messages else "",
+                "rendered_system": (
+                    original_messages[0]["content"]
+                    if original_messages
+                    else ""
+                ),
                 "rendered_user_prompt": (
-                    messages[1]["content"] if len(messages) > 1 else ""
+                    original_messages[1]["content"]
+                    if len(original_messages) > 1
+                    else ""
                 ),
                 "use_triumvirate_notation": use_tri,
             }
         )
 
-        prompt_chars = sum(len(m.get("content", "")) for m in messages)
+        prompt_chars = sum(
+            len(m.get("content", "")) for m in original_messages
+        )
         legal_count = sum(len(v) for v in working_legal.values())
         notation_tag = " [TRI]" if use_tri else ""
         self._log(
             f"📋 Промпт: {prompt_chars} симв. | "
-            f"{len(messages)} сообщ. | "
+            f"{len(original_messages)} сообщ. | "
             f"формат={fmt}{notation_tag} | "
             f"допустимых ходов: {legal_count}"
         )
 
+        base_temperature = float(s.get("temperature", 0.3))
+
         for attempt in range(max_retries):
-            if attempt > 0:
+            # ── Build messages for this attempt ───────────────────
+            if attempt == 0:
+                messages = original_messages
+            else:
                 self.stats["retries"] += 1
-                is_last = attempt == max_retries - 1
-                if is_last:
-                    all_pairs = [
-                        f"{src} {dst}"
-                        for src, dsts in working_legal.items()
-                        for dst in dsts
-                    ]
-                    retry_ctx = (
-                        f"IMPORTANT: Your previous move «{last_raw[:60]}» is ILLEGAL.\n"
-                        f"Reply with ONLY two coordinates separated by a space.\n"
-                        f"You MUST pick one of these EXACT moves:\n"
-                        + "\n".join(all_pairs[:30])
-                        + ("\n..." if len(all_pairs) > 30 else "")
-                        + "\nJust write the move, nothing else. Example: "
-                        + (
-                            "W3/B2.0 W3/B1.0"
-                            if use_tri
-                            else "A2 A3"
-                        )
+
+                # Minimal retry hint appended to user message
+                if fmt in ("json", "json_thinking"):
+                    retry_hint = (
+                        "\n\n⚠️ REMINDER: You MUST respond with a JSON object "
+                        'containing "move_from" and "move_to" keys. '
+                        "Do NOT reply with plain text coordinates."
                     )
                 else:
-                    legal_sample = list(working_legal.items())[:6]
-                    legal_hint = "; ".join(
-                        f"{src}→[{','.join(dsts[:4])}{',...' if len(dsts) > 4 else ''}]"
-                        for src, dsts in legal_sample
+                    retry_hint = (
+                        "\n\n⚠️ REMINDER: Reply with EXACTLY one line: FROM TO. "
+                        "Use only coordinates from the legal moves list above."
                     )
-                    retry_ctx = (
-                        f"Your previous response «{last_raw[:80]}» contained an ILLEGAL move "
-                        f"that is NOT in the legal moves list.\n"
-                        f"You MUST choose ONLY from the legal moves provided.\n"
-                        f"Legal FROM squares: {', '.join(sorted(working_legal.keys()))}\n"
-                        f"Sample: {legal_hint}\n"
-                        f"Do NOT repeat the same illegal move."
-                    )
-                messages = messages + [
-                    {"role": "assistant", "content": last_raw or "(empty)"},
-                    {"role": "user", "content": retry_ctx},
+
+                messages = [
+                    original_messages[0],  # system — unchanged
+                    {
+                        "role": "user",
+                        "content": original_messages[1]["content"]
+                        + retry_hint,
+                    },
                 ]
-                prompt_chars = sum(
+
+                retry_chars = sum(
                     len(m.get("content", "")) for m in messages
                 )
                 self._log(
-                    f"🔄 Повтор {attempt + 1}/{max_retries}"
-                    f"{' [упрощённый формат]' if is_last else ''} "
-                    f"(промпт: {prompt_chars} симв., {len(messages)} сообщ.)"
+                    f"🔄 Повтор {attempt + 1}/{max_retries} "
+                    f"(промпт: {retry_chars} симв., "
+                    f"{len(messages)} сообщ.)"
                 )
 
             self._log(
@@ -523,19 +521,22 @@ class BotRunner:
             self.tracer.add_llm_request(attempt + 1, messages)
             t0 = time.time()
             try:
+                retry_temp = min(base_temperature + attempt * 0.2, 1.0)
                 raw, resp_body = await self.llm.ask(
                     messages=messages,
                     base_url=s["base_url"],
                     api_key=s["api_key"],
                     model=s["model"],
-                    temperature=float(s.get("temperature", 0.3)),
+                    temperature=retry_temp,
                     max_tokens=int(s.get("max_tokens", 300)),
                     compat=bool(s.get("compat", True)),
                     custom_headers=s.get("custom_headers") or {},
                 )
                 elapsed = time.time() - t0
                 self.stats["llm_calls"] += 1
-                self.stats["total_prompt_chars"] += prompt_chars
+                self.stats["total_prompt_chars"] += sum(
+                    len(m.get("content", "")) for m in messages
+                )
                 self.stats["total_llm_time"] += elapsed
 
                 resp_chars = len(raw) if raw else 0
@@ -617,6 +618,7 @@ class BotRunner:
                     f"попытка {attempt + 1}): {preview}"
                 )
 
+                # ── Diagnostic JSON log ───────────────────────────
                 if fmt in ("json", "json_thinking"):
                     json_start = raw.find("{")
                     json_end = raw.rfind("}")
@@ -627,12 +629,16 @@ class BotRunner:
                             f"«{raw.strip()[:50]}»)"
                         )
                     else:
-                        json_str = raw[json_start : json_end + 1]
+                        json_str = _sanitize_json_string(
+                            raw[json_start : json_end + 1]
+                        )
                         try:
                             obj = json.loads(json_str)
                             keys = list(obj.keys())
-                            has_from = "from" in obj
-                            has_to = "to" in obj
+                            has_from = (
+                                "move_from" in obj or "from" in obj
+                            )
+                            has_to = "move_to" in obj or "to" in obj
                             has_thinking = "thinking" in obj
                             parts = []
                             if has_thinking:
@@ -641,9 +647,10 @@ class BotRunner:
                                     f"thinking={think_len} симв."
                                 )
                             if has_from:
-                                raw_f = (
-                                    str(obj["from"]).upper().strip()
-                                )
+                                raw_f = str(
+                                    obj.get("move_from")
+                                    or obj.get("from", "")
+                                ).upper().strip()
                                 clean_f = (
                                     self.parser._strip_piece_prefix_tri(
                                         raw_f
@@ -654,14 +661,15 @@ class BotRunner:
                                     )
                                 )
                                 parts.append(
-                                    f'from="{raw_f}"'
+                                    f'move_from="{raw_f}"'
                                     if clean_f == raw_f
-                                    else f'from="{raw_f}"→"{clean_f}"'
+                                    else f'move_from="{raw_f}"→"{clean_f}"'
                                 )
                             if has_to:
-                                raw_t = (
-                                    str(obj["to"]).upper().strip()
-                                )
+                                raw_t = str(
+                                    obj.get("move_to")
+                                    or obj.get("to", "")
+                                ).upper().strip()
                                 clean_t = (
                                     self.parser._strip_piece_prefix_tri(
                                         raw_t
@@ -672,9 +680,9 @@ class BotRunner:
                                     )
                                 )
                                 parts.append(
-                                    f'to="{raw_t}"'
+                                    f'move_to="{raw_t}"'
                                     if clean_t == raw_t
-                                    else f'to="{raw_t}"→"{clean_t}"'
+                                    else f'move_to="{raw_t}"→"{clean_t}"'
                                 )
                             promo_val = obj.get("promotion")
                             if promo_val:
@@ -683,13 +691,20 @@ class BotRunner:
                                 parts.append(
                                     f"⚠️ НЕПОЛНЫЙ (ключи: {keys})"
                                 )
+                            elif (
+                                "move_from" not in obj
+                                and "from" in obj
+                            ):
+                                parts.append(
+                                    "⚠️ legacy keys (from/to вместо move_from/move_to)"
+                                )
                             self._log(
                                 f"📎 JSON разбор: {' | '.join(parts)}"
                             )
                         except json.JSONDecodeError as je:
                             self._log(
-                                f"⚠️ JSON невалиден: {je.msg} "
-                                f"(позиция {je.pos}): "
+                                f"⚠️ JSON невалиден даже после санитизации: "
+                                f"{je.msg} (позиция {je.pos}): "
                                 f"«{json_str[:60]}»"
                             )
 
@@ -703,10 +718,14 @@ class BotRunner:
                 await asyncio.sleep(1)
                 continue
 
+            # ── Parse the response ────────────────────────────────
+            parse_fmt = fmt
+
             result = self.parser.parse(
-                raw, working_legal, fmt, triumvirate=use_tri
+                raw, working_legal, parse_fmt, triumvirate=use_tri
             )
 
+            # ── Trace: record all coordinates found (diagnostic) ──
             _upper = raw.upper()
             _coord_re = TRI_COORD_RE if use_tri else COORD_RE
             _coords = _coord_re.findall(_upper)
@@ -728,24 +747,61 @@ class BotRunner:
                 promo_str = f" ={promo}" if promo else ""
                 self._log(
                     f"✔️ Ход распознан: {f}→{t}{promo_str} "
-                    f"(валиден: {f} в legal и {t} в legal[{f}])"
+                    f"(валиден: {f} в legal и {t} в legal[{f}]) "
+                    f"[{fmt}]"
                 )
                 self.tracer.set_move_selected(f, t, promo)
                 return result
 
+            # ── Move not parsed — log details and retry ───────────
             last_raw = raw.strip()
             upper = raw.upper()
             coord_re = TRI_COORD_RE if use_tri else COORD_RE
             coords = coord_re.findall(upper)
-            if coords:
+
+            if parse_fmt in ("json", "json_thinking"):
+                # Strict JSON mode — explain why parsing failed
+                json_start = raw.find("{")
+                json_end = raw.rfind("}")
+                if json_start == -1 or json_end <= json_start:
+                    reason = "JSON-объект не найден в ответе"
+                else:
+                    json_str = _sanitize_json_string(
+                        raw[json_start : json_end + 1]
+                    )
+                    try:
+                        obj = json.loads(json_str)
+                        has_mf = "move_from" in obj or "from" in obj
+                        has_mt = "move_to" in obj or "to" in obj
+                        if not has_mf or not has_mt:
+                            reason = (
+                                f"JSON найден, но нет ключей move_from/move_to "
+                                f"(ключи: {list(obj.keys())})"
+                            )
+                        else:
+                            raw_f = str(
+                                obj.get("move_from")
+                                or obj.get("from", "")
+                            ).upper().strip()
+                            raw_t = str(
+                                obj.get("move_to")
+                                or obj.get("to", "")
+                            ).upper().strip()
+                            reason = (
+                                f"ход {raw_f}→{raw_t} нелегален "
+                                f"(нет в legal_moves)"
+                            )
+                    except json.JSONDecodeError:
+                        reason = "JSON невалиден даже после санитизации"
+                self._log(
+                    f"⚠️ Ход не распознан (попытка {attempt + 1}/{max_retries}) | "
+                    f"причина: {reason}"
+                )
+            elif coords:
                 pairs_tried = []
                 for i in range(len(coords) - 1):
                     c1, c2 = coords[i].upper(), coords[i + 1].upper()
-                    legal_up = {
-                        k.upper(): [v.upper() for v in vs]
-                        for k, vs in working_legal.items()
-                    }
-                    in_legal = c1 in legal_up and c2 in legal_up.get(
+                    in_legal = c1 in _legal_up and c2 in _legal_up.get(
                         c1, []
                     )
                     pairs_tried.append(

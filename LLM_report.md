@@ -119,7 +119,7 @@
 # PROJECT REPORTS
 
 # Project: .
-Source: Python: 20 py | 5,047 lines | 192 KB
+Source: Python: 20 py | 5,200 lines | 198 KB
 Language: PYTHON
 
 ## Packages
@@ -150,7 +150,7 @@ LLMClient (llm_client.py)
   imports: __future__, httpx
   imported_by: bot_runner.py
 
-**bot_runner.py** (768 lines)
+**bot_runner.py** (824 lines)
   classes: BotRunner
   imports: __future__, asyncio, random, time, pathlib
   imported_by: gui.py
@@ -174,8 +174,9 @@ LLMClient (llm_client.py)
   functions: main
   imports: __future__, argparse, pathlib, nicegui, gui
 
-**move_parser.py** (152 lines)
+**move_parser.py** (246 lines)
   classes: MoveParser
+  functions: _sanitize_json_string
   imports: __future__
   imported_by: bot_runner.py
 
@@ -189,12 +190,12 @@ LLMClient (llm_client.py)
   imports: __future__, httpx
   imported_by: bot_runner.py
 
-**prompt_builder.py** (224 lines)
+**prompt_builder.py** (226 lines)
   classes: PromptBuilder
   imports: __future__, settings
   imported_by: bot_runner.py
 
-**settings.py** (127 lines)
+**settings.py** (128 lines)
   classes: Settings
   functions: _read_prompt
   imports: __future__, pathlib
@@ -281,7 +282,7 @@ methods:
   def _from_text(self, text: str, legal_up: dict, triumvirate: bool) -> ...
   def _validate(self, f: str, t: str, promo: ..., legal_up: dict) -> ...
   def _norm_promo(self, raw: Any) -> ...
-"""Parses and validates LLM response → (from, to, promotion) or None."""
+"""Parses and validates LLM response → (from, to, promotion) or None.  For JSON formats (json / json_th..."""
 
 ## MoveTracer (tracer.py)
 methods:
@@ -349,6 +350,9 @@ def create_gui(settings: Settings) -> None
 
 ## main.py
 def main() -> None
+
+## move_parser.py
+def _sanitize_json_string(raw: str) -> str
 
 ## notation_converter.py
 def _build_tables() -> tuple[(dict[(str, str)], dict[(str, str)])]

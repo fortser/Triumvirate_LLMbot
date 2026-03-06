@@ -1,11 +1,12 @@
+Move #{move_number} | You are {current_player}
+
 Position (3PF): {position_3pf}
-Your color: {color}
-Move number: {move_number}
-Last move: {last_move}
+
+Board:
+{board}
 
 Legal moves:
 {legal_moves}
 
-Choose the best move. Reply with exactly: FROM TO
-Example: E2 E4
-For promotion, add =PIECE: A7 A8=Q
+Last move: {last_move}
+{check}

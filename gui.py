@@ -19,8 +19,9 @@ from constants import VERSION, PROVIDERS, PROVIDER_ENV_KEY, make_bot_name
 from llm_client import LLMClient
 from settings import (
     DEFAULT_RESPONSE_FORMAT,
-    DEFAULT_SYSTEM,
-    DEFAULT_USER_TEMPLATE,
+    _FALLBACK_SYSTEM,
+    _FALLBACK_USER_TEMPLATE,
+    _write_prompt_file,
     Settings,
 )
 
@@ -120,8 +121,8 @@ def create_gui(settings: Settings) -> None:  # noqa: C901
         else:
             settings["custom_headers"] = {}
         settings["response_format"] = sel_fmt.value
-        settings["system_prompt"] = ta_system.value
-        settings["user_template"] = ta_user.value
+        # NOTE: system_prompt and user_template are NOT collected from GUI.
+        # They are read directly from files in prompts/ directory.
         settings["additional_rules"] = ta_rules.value
         settings["max_retries"] = int(inp_retries.value or 3)
         settings["auto_skip_waiting"] = cb_skip.value
@@ -316,10 +317,20 @@ def create_gui(settings: Settings) -> None:  # noqa: C901
         ui.notify("Настройки сохранены ✔", type="positive")
 
     def on_reset_prompts() -> None:
-        ta_system.value = DEFAULT_SYSTEM
-        ta_user.value = DEFAULT_USER_TEMPLATE
+        """Reset prompt files to built-in defaults."""
+        _write_prompt_file(
+            str(settings.system_prompt_path.relative_to(settings._file.parent)),
+            _FALLBACK_SYSTEM,
+        )
+        _write_prompt_file(
+            str(settings.user_template_path.relative_to(settings._file.parent)),
+            _FALLBACK_USER_TEMPLATE,
+        )
         ta_rules.value = ""
-        ui.notify("Промпты сброшены к умолчаниям", type="info")
+        ui.notify(
+            "Промпты сброшены к умолчаниям (файлы перезаписаны)",
+            type="info",
+        )
 
     # ── layout ────────────────────────────────────────────────────────────
     with ui.header(elevated=True).classes(
@@ -433,7 +444,7 @@ def create_gui(settings: Settings) -> None:  # noqa: C901
                         "Проверить LLM", on_click=on_test_llm
                     ).props("outline dense").classes("w-full mt-1 text-xs")
 
-                # Prompts
+                # Prompts — file-based (read-only in GUI)
                 with ui.card().classes("w-full"):
                     with ui.row().classes(
                         "justify-between items-center mb-1"
@@ -446,22 +457,37 @@ def create_gui(settings: Settings) -> None:  # noqa: C901
                             on_click=on_reset_prompts,
                         ).props("flat dense size=xs")
 
+                    ui.label(
+                        "Промпты хранятся в текстовых файлах. "
+                        "Редактируйте их в любом текстовом редакторе."
+                    ).classes("text-xs text-gray-500 mb-2")
+
                     with ui.expansion(
                         "Системный промпт", icon="psychology"
                     ).classes("w-full"):
-                        ta_system = (
-                            ui.textarea(value=settings["system_prompt"])
-                            .classes("w-full font-mono text-xs")
-                            .props("rows=10 outlined")
+                        sys_path = settings.system_prompt_path
+                        ui.label(f"📄 {sys_path}").classes(
+                            "text-xs font-mono text-blue-600 mb-1"
+                        )
+                        sys_preview = settings["system_prompt"][:200]
+                        if len(settings["system_prompt"]) > 200:
+                            sys_preview += "…"
+                        ui.label(sys_preview).classes(
+                            "text-xs text-gray-400 whitespace-pre-line"
                         )
 
                     with ui.expansion(
                         "Шаблон пользователя", icon="message"
                     ).classes("w-full"):
-                        ta_user = (
-                            ui.textarea(value=settings["user_template"])
-                            .classes("w-full font-mono text-xs")
-                            .props("rows=8 outlined")
+                        usr_path = settings.user_template_path
+                        ui.label(f"📄 {usr_path}").classes(
+                            "text-xs font-mono text-blue-600 mb-1"
+                        )
+                        usr_preview = settings["user_template"][:200]
+                        if len(settings["user_template"]) > 200:
+                            usr_preview += "…"
+                        ui.label(usr_preview).classes(
+                            "text-xs text-gray-400 whitespace-pre-line"
                         )
                         ui.label(
                             "Плейсхолдеры: {{move_number}} {{current_player}} "
