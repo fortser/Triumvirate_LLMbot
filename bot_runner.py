@@ -4,7 +4,7 @@
 парсинг хода, отправку хода, ретраи с эскалацией, фоллбэк на случайный ход.
 
 Зависимости: llm_client, arena_client, pricing, prompt_builder,
-             move_parser, tracer, settings, constants.
+             move_parser, tracer, settings, constants, notation_converter.
 Зависимые: gui.
 """
 from __future__ import annotations
@@ -20,7 +20,13 @@ from typing import Any
 from arena_client import ArenaClient
 from constants import make_bot_name
 from llm_client import LLMClient
-from move_parser import COORD_RE, MoveParser
+from move_parser import COORD_RE, MoveParser, TRI_COORD_RE
+from notation_converter import (
+    convert_board,
+    convert_legal_moves,
+    convert_move_back,
+    to_triumvirate,
+)
 from pricing import PricingManager
 from prompt_builder import PromptBuilder
 from settings import DEFAULT_RESPONSE_FORMAT, Settings
@@ -83,7 +89,7 @@ class BotRunner:
         return provider == "OpenRouter" or "openrouter.ai" in base_url.lower()
 
     # ─── Main loop ────────────────────────────────────────────────────────
-    async def _run(self) -> None:
+    async def _run(self) -> None:  # noqa: C901
         s = self.s
         try:
             self._is_openrouter = self._detect_openrouter()
@@ -138,6 +144,11 @@ class BotRunner:
                 f"статус={join['status']}"
             )
             self._set_status(f"Ожидание | Цвет: {join['color'].upper()}")
+
+            if s.get("use_triumvirate_notation"):
+                self._log("🔄 Нотация: TRIUMVIRATE v4.0 (радиально-кольцевая)")
+            else:
+                self._log("🔄 Нотация: серверная (A1-L12)")
 
             while self._running:
                 try:
@@ -196,7 +207,9 @@ class BotRunner:
                     continue
 
                 self.tracer.init(
-                    self.arena.game_id or "unknown", move_num, self.s.get("model", "")
+                    self.arena.game_id or "unknown",
+                    move_num,
+                    self.s.get("model", ""),
                 )
                 self.tracer.set_model_pricing(self.pricing.get_pricing())
                 self.tracer.add_server_interaction("/state", "GET", state)
@@ -207,16 +220,51 @@ class BotRunner:
                     await asyncio.sleep(0.5)
                     continue
 
+                # ── Triumvirate conversion (incoming) ─────────────
+                use_tri = bool(s.get("use_triumvirate_notation"))
+                tri_legal: dict | None = None
+                tri_board: list[dict] | None = None
+                tri_last_move: tuple[str, str] | None = None
+                if use_tri:
+                    try:
+                        tri_legal = convert_legal_moves(legal)
+                        tri_board = convert_board(state.get("board", []))
+                        last_move_raw = state.get("last_move")
+                        if last_move_raw:
+                            lf = last_move_raw.get("from_square", "")
+                            lt = last_move_raw.get("to_square", "")
+                            if lf and lt:
+                                tri_last_move = (
+                                    to_triumvirate(lf),
+                                    to_triumvirate(lt),
+                                )
+                    except Exception as conv_err:
+                        self._log(
+                            f"⚠️ Triumvirate conversion error: {conv_err}, "
+                            f"falling back to server notation"
+                        )
+                        use_tri = False
+                        tri_legal = None
+                        tri_board = None
+                        tri_last_move = None
+
                 _trace_saved = False
                 try:
                     self._set_status(f"🤔 Думаю... | Ход #{move_num}")
-                    result = await self._choose_move(state, legal)
+                    result = await self._choose_move(
+                        state,
+                        legal,
+                        tri_legal=tri_legal,
+                        tri_board=tri_board,
+                        tri_last_move=tri_last_move,
+                    )
 
                     if result is None:
                         if s.get("fallback_random", True):
                             src = random.choice(list(legal.keys()))
                             dst = random.choice(legal[src])
                             result = (src, dst, None)
+                            use_tri = False  # fallback is server notation
                             self._log(f"🎲 Случайный ход: {src} → {dst}")
                             self.stats["fallbacks"] += 1
                             self.tracer.set_move_selected(src, dst, None)
@@ -231,6 +279,19 @@ class BotRunner:
                             continue
 
                     from_sq, to_sq, promo = result
+
+                    # ── Triumvirate → Server (outgoing) ───────────
+                    if use_tri:
+                        try:
+                            from_sq, to_sq = convert_move_back(
+                                from_sq, to_sq
+                            )
+                        except KeyError as e:
+                            self._log(
+                                f"⚠️ Reverse conversion failed: {e}, "
+                                f"using raw: {from_sq} → {to_sq}"
+                            )
+
                     move_req: dict[str, Any] = {
                         "from": from_sq,
                         "to": to_sq,
@@ -297,7 +358,9 @@ class BotRunner:
                         "⚠️ 409: Конфликт move_number (ход уже сделан?)"
                     )
                 elif code == 410:
-                    self._log("🚫 410: Токен недействителен (игрок заменён)")
+                    self._log(
+                        "🚫 410: Токен недействителен (игрок заменён)"
+                    )
                     break
                 elif code == 429:
                     self._log("⏳ 429: Rate limit, пауза 2с")
@@ -322,7 +385,9 @@ class BotRunner:
                 else "—"
             )
             cost_str = (
-                f"${st['total_cost_usd']:.6f}" if st["total_cost_usd"] > 0 else "$0"
+                f"${st['total_cost_usd']:.6f}"
+                if st["total_cost_usd"] > 0
+                else "$0"
             )
             self._set_status(
                 f"Остановлен | ходов={st['moves']} "
@@ -351,13 +416,29 @@ class BotRunner:
             )
             self._log(f"💰 Общая стоимость: {cost_str}")
 
+    # ─── Move selection with LLM ──────────────────────────────────────────
     async def _choose_move(
-        self, state: dict, legal: dict
+        self,
+        state: dict,
+        legal: dict,
+        *,
+        tri_legal: dict | None = None,
+        tri_board: list[dict] | None = None,
+        tri_last_move: tuple[str, str] | None = None,
     ) -> tuple[str, str, str | None] | None:
         s = self.s
         max_retries = int(s.get("max_retries", 3))
         fmt = s["response_format"]
-        messages = self.builder.build(state, s)
+        use_tri = tri_legal is not None
+        working_legal = tri_legal if use_tri else legal
+
+        messages = self.builder.build(
+            state,
+            s,
+            tri_legal=tri_legal,
+            tri_board=tri_board,
+            tri_last_move=tri_last_move,
+        )
         last_raw = ""
 
         self.tracer.set_prompt_pipeline(
@@ -365,20 +446,24 @@ class BotRunner:
                 "system_prompt": s["system_prompt"],
                 "user_template": s["user_template"],
                 "additional_rules": s.get("additional_rules") or "",
-                "response_format_instruction": DEFAULT_RESPONSE_FORMAT.get(fmt, ""),
+                "response_format_instruction": DEFAULT_RESPONSE_FORMAT.get(
+                    fmt, ""
+                ),
                 "rendered_system": messages[0]["content"] if messages else "",
                 "rendered_user_prompt": (
                     messages[1]["content"] if len(messages) > 1 else ""
                 ),
+                "use_triumvirate_notation": use_tri,
             }
         )
 
         prompt_chars = sum(len(m.get("content", "")) for m in messages)
-        legal_count = sum(len(v) for v in legal.values())
+        legal_count = sum(len(v) for v in working_legal.values())
+        notation_tag = " [TRI]" if use_tri else ""
         self._log(
             f"📋 Промпт: {prompt_chars} симв. | "
             f"{len(messages)} сообщ. | "
-            f"формат={fmt} | "
+            f"формат={fmt}{notation_tag} | "
             f"допустимых ходов: {legal_count}"
         )
 
@@ -389,7 +474,7 @@ class BotRunner:
                 if is_last:
                     all_pairs = [
                         f"{src} {dst}"
-                        for src, dsts in legal.items()
+                        for src, dsts in working_legal.items()
                         for dst in dsts
                     ]
                     retry_ctx = (
@@ -398,19 +483,24 @@ class BotRunner:
                         f"You MUST pick one of these EXACT moves:\n"
                         + "\n".join(all_pairs[:30])
                         + ("\n..." if len(all_pairs) > 30 else "")
-                        + "\nJust write the move, nothing else. Example: A2 A3"
+                        + "\nJust write the move, nothing else. Example: "
+                        + (
+                            "W3/B2.0 W3/B1.0"
+                            if use_tri
+                            else "A2 A3"
+                        )
                     )
                 else:
-                    legal_sample = list(legal.items())[:6]
+                    legal_sample = list(working_legal.items())[:6]
                     legal_hint = "; ".join(
-                        f"{src}→[{','.join(dsts[:4])}{',...' if len(dsts)>4 else ''}]"
+                        f"{src}→[{','.join(dsts[:4])}{',...' if len(dsts) > 4 else ''}]"
                         for src, dsts in legal_sample
                     )
                     retry_ctx = (
                         f"Your previous response «{last_raw[:80]}» contained an ILLEGAL move "
                         f"that is NOT in the legal moves list.\n"
                         f"You MUST choose ONLY from the legal moves provided.\n"
-                        f"Legal FROM squares: {', '.join(sorted(legal.keys()))}\n"
+                        f"Legal FROM squares: {', '.join(sorted(working_legal.keys()))}\n"
                         f"Sample: {legal_hint}\n"
                         f"Do NOT repeat the same illegal move."
                     )
@@ -418,15 +508,17 @@ class BotRunner:
                     {"role": "assistant", "content": last_raw or "(empty)"},
                     {"role": "user", "content": retry_ctx},
                 ]
-                prompt_chars = sum(len(m.get("content", "")) for m in messages)
+                prompt_chars = sum(
+                    len(m.get("content", "")) for m in messages
+                )
                 self._log(
-                    f"🔄 Повтор {attempt+1}/{max_retries}"
+                    f"🔄 Повтор {attempt + 1}/{max_retries}"
                     f"{' [упрощённый формат]' if is_last else ''} "
                     f"(промпт: {prompt_chars} симв., {len(messages)} сообщ.)"
                 )
 
             self._log(
-                f"⏳ Запрос к LLM (попытка {attempt+1}/{max_retries})..."
+                f"⏳ Запрос к LLM (попытка {attempt + 1}/{max_retries})..."
             )
             self.tracer.add_llm_request(attempt + 1, messages)
             t0 = time.time()
@@ -461,7 +553,9 @@ class BotRunner:
                     "provider_reported_cost_usd"
                 )
 
-                self.stats["total_prompt_tokens"] += usage_data["prompt_tokens"]
+                self.stats["total_prompt_tokens"] += usage_data[
+                    "prompt_tokens"
+                ]
                 self.stats["total_completion_tokens"] += usage_data[
                     "completion_tokens"
                 ]
@@ -501,7 +595,9 @@ class BotRunner:
                         )
                     tok_info += f" total={usage_data['total_tokens']}"
                     if cost_data["total_cost_usd"] > 0:
-                        tok_info += f" | 💰${cost_data['total_cost_usd']:.6f}"
+                        tok_info += (
+                            f" | 💰${cost_data['total_cost_usd']:.6f}"
+                        )
                     prc = usage_data.get("provider_reported_cost_usd")
                     if prc is not None:
                         tok_info += f" (провайдер: ${prc:.6f})"
@@ -510,7 +606,7 @@ class BotRunner:
                 if not raw or not raw.strip():
                     self._log(
                         f"⚠️ LLM вернул пустой ответ ({elapsed:.1f}s, "
-                        f"попытка {attempt+1}/{max_retries})"
+                        f"попытка {attempt + 1}/{max_retries})"
                     )
                     last_raw = "(пустой ответ)"
                     continue
@@ -518,7 +614,7 @@ class BotRunner:
                 preview = raw.strip().replace("\n", " ")[:120]
                 self._log(
                     f"🤖 LLM ({elapsed:.1f}s, {resp_chars} симв., "
-                    f"попытка {attempt+1}): {preview}"
+                    f"попытка {attempt + 1}): {preview}"
                 )
 
                 if fmt in ("json", "json_thinking"):
@@ -541,11 +637,21 @@ class BotRunner:
                             parts = []
                             if has_thinking:
                                 think_len = len(str(obj["thinking"]))
-                                parts.append(f"thinking={think_len} симв.")
+                                parts.append(
+                                    f"thinking={think_len} симв."
+                                )
                             if has_from:
-                                raw_f = str(obj["from"]).upper().strip()
-                                clean_f = self.parser._strip_piece_prefix(
-                                    raw_f
+                                raw_f = (
+                                    str(obj["from"]).upper().strip()
+                                )
+                                clean_f = (
+                                    self.parser._strip_piece_prefix_tri(
+                                        raw_f
+                                    )
+                                    if use_tri
+                                    else self.parser._strip_piece_prefix(
+                                        raw_f
+                                    )
                                 )
                                 parts.append(
                                     f'from="{raw_f}"'
@@ -553,9 +659,17 @@ class BotRunner:
                                     else f'from="{raw_f}"→"{clean_f}"'
                                 )
                             if has_to:
-                                raw_t = str(obj["to"]).upper().strip()
-                                clean_t = self.parser._strip_piece_prefix(
-                                    raw_t
+                                raw_t = (
+                                    str(obj["to"]).upper().strip()
+                                )
+                                clean_t = (
+                                    self.parser._strip_piece_prefix_tri(
+                                        raw_t
+                                    )
+                                    if use_tri
+                                    else self.parser._strip_piece_prefix(
+                                        raw_t
+                                    )
                                 )
                                 parts.append(
                                     f'to="{raw_t}"'
@@ -583,22 +697,26 @@ class BotRunner:
                 elapsed = time.time() - t0
                 self._log(
                     f"⚠️ LLM ошибка ({elapsed:.1f}s, "
-                    f"попытка {attempt+1}/{max_retries}): {e}"
+                    f"попытка {attempt + 1}/{max_retries}): {e}"
                 )
                 last_raw = str(e)
                 await asyncio.sleep(1)
                 continue
 
-            result = self.parser.parse(raw, legal, fmt)
+            result = self.parser.parse(
+                raw, working_legal, fmt, triumvirate=use_tri
+            )
 
             _upper = raw.upper()
-            _coords = COORD_RE.findall(_upper)
+            _coord_re = TRI_COORD_RE if use_tri else COORD_RE
+            _coords = _coord_re.findall(_upper)
             _legal_up = {
-                k.upper(): [v.upper() for v in vs] for k, vs in legal.items()
+                k.upper(): [v.upper() for v in vs]
+                for k, vs in working_legal.items()
             }
             _pairs = [
-                f"{_coords[i]}→{_coords[i+1]}"
-                f"({'OK' if _coords[i] in _legal_up and _coords[i+1] in _legal_up.get(_coords[i], []) else 'ILLEGAL'})"
+                f"{_coords[i]}→{_coords[i + 1]}"
+                f"({'OK' if _coords[i] in _legal_up and _coords[i + 1] in _legal_up.get(_coords[i], []) else 'ILLEGAL'})"
                 for i in range(len(_coords) - 1)
             ]
             self.tracer.add_parser_attempt(
@@ -617,27 +735,30 @@ class BotRunner:
 
             last_raw = raw.strip()
             upper = raw.upper()
-            coords = COORD_RE.findall(upper)
+            coord_re = TRI_COORD_RE if use_tri else COORD_RE
+            coords = coord_re.findall(upper)
             if coords:
                 pairs_tried = []
                 for i in range(len(coords) - 1):
                     c1, c2 = coords[i].upper(), coords[i + 1].upper()
                     legal_up = {
                         k.upper(): [v.upper() for v in vs]
-                        for k, vs in legal.items()
+                        for k, vs in working_legal.items()
                     }
-                    in_legal = c1 in legal_up and c2 in legal_up.get(c1, [])
+                    in_legal = c1 in legal_up and c2 in legal_up.get(
+                        c1, []
+                    )
                     pairs_tried.append(
                         f"{c1}→{c2}({'OK' if in_legal else 'ILLEGAL'})"
                     )
                 self._log(
-                    f"⚠️ Ход не распознан (попытка {attempt+1}/{max_retries}) | "
+                    f"⚠️ Ход не распознан (попытка {attempt + 1}/{max_retries}) | "
                     f"найдены координаты: {coords} | "
                     f"пары: {', '.join(pairs_tried)}"
                 )
             else:
                 self._log(
-                    f"⚠️ Ход не распознан (попытка {attempt+1}/{max_retries}) | "
+                    f"⚠️ Ход не распознан (попытка {attempt + 1}/{max_retries}) | "
                     f"координаты не найдены в тексте: "
                     f"«{last_raw[:80]}»"
                 )

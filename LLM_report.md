@@ -119,7 +119,7 @@
 # PROJECT REPORTS
 
 # Project: .
-Source: Python: 19 py | 4,582 lines | 173 KB
+Source: Python: 20 py | 5,047 lines | 192 KB
 Language: PYTHON
 
 ## Packages
@@ -128,11 +128,11 @@ trace_analyzer.views/ — 4 modules, 0 subpackages
 ## Key Classes
 MoveTracer (tracer.py)
 ArenaClient (arena_client.py)
+MoveParser (move_parser.py)
 PricingManager (pricing.py)
 BotRunner (bot_runner.py)
-MoveParser (move_parser.py)
-Settings (settings.py)
 PromptBuilder (prompt_builder.py)
+Settings (settings.py)
 LLMClient (llm_client.py)
 
 ## Entry Points
@@ -150,7 +150,7 @@ LLMClient (llm_client.py)
   imports: __future__, httpx
   imported_by: bot_runner.py
 
-**bot_runner.py** (647 lines)
+**bot_runner.py** (768 lines)
   classes: BotRunner
   imports: __future__, asyncio, random, time, pathlib
   imported_by: gui.py
@@ -160,7 +160,7 @@ LLMClient (llm_client.py)
   imports: __future__
   imported_by: bot_runner.py, gui.py
 
-**gui.py** (701 lines)
+**gui.py** (712 lines)
   functions: create_gui
   imports: __future__, time, httpx, nicegui, bot_runner
   imported_by: main.py
@@ -174,8 +174,13 @@ LLMClient (llm_client.py)
   functions: main
   imports: __future__, argparse, pathlib, nicegui, gui
 
-**move_parser.py** (90 lines)
+**move_parser.py** (152 lines)
   classes: MoveParser
+  imports: __future__
+  imported_by: bot_runner.py
+
+**notation_converter.py** (154 lines)
+  functions: _compute_notation, _build_tables, to_triumvirate, to_server, convert_legal_moves +3
   imports: __future__
   imported_by: bot_runner.py
 
@@ -184,12 +189,12 @@ LLMClient (llm_client.py)
   imports: __future__, httpx
   imported_by: bot_runner.py
 
-**prompt_builder.py** (108 lines)
+**prompt_builder.py** (224 lines)
   classes: PromptBuilder
   imports: __future__, settings
   imported_by: bot_runner.py
 
-**settings.py** (126 lines)
+**settings.py** (127 lines)
   classes: Settings
   functions: _read_prompt
   imports: __future__, pathlib
@@ -257,7 +262,7 @@ methods:
   def stop(self) -> None
   def _detect_openrouter(self) -> bool
   async def _run(self) -> None
-  async def _choose_move(self, state: dict, legal: dict) -> ...
+  async def _choose_move(self, state: dict, legal: dict, *, tri_legal: ... = None, tri_board: ... = None, tri_last_move: ... = None) -> ...
 """Asyncio game loop for the LLM bot."""
 
 ## LLMClient (llm_client.py)
@@ -269,10 +274,11 @@ methods:
 
 ## MoveParser (move_parser.py)
 methods:
-  def parse(self, text: str, legal: dict, fmt: str) -> ...
+  def parse(self, text: str, legal: dict, fmt: str, triumvirate: bool = False) -> ...
   def _strip_piece_prefix(self, s: str) -> str
-  def _from_json(self, text: str, legal_up: dict) -> ...
-  def _from_text(self, text: str, legal_up: dict) -> ...
+  def _strip_piece_prefix_tri(self, s: str) -> str
+  def _from_json(self, text: str, legal_up: dict, triumvirate: bool) -> ...
+  def _from_text(self, text: str, legal_up: dict, triumvirate: bool) -> ...
   def _validate(self, f: str, t: str, promo: ..., legal_up: dict) -> ...
   def _norm_promo(self, raw: Any) -> ...
 """Parses and validates LLM response → (from, to, promotion) or None."""
@@ -309,10 +315,12 @@ methods:
 
 ## PromptBuilder (prompt_builder.py)
 methods:
-  def build(self, state: dict, settings: Settings) -> list[dict]
+  def build(self, state: dict, settings: Settings, *, tri_legal: ... = None, tri_board: ... = None, tri_last_move: ... = None) -> list[dict]
+  def _adapt_format_for_tri(self, fmt_instruction: str) -> str
   def _fill_template(self, template: str, subs: dict) -> str
   def _fmt_legal(self, legal: dict) -> str
   def _fmt_board(self, board: list[dict], my_color: str) -> str
+  def _fmt_board_tri(self, tri_board: list[dict], my_color: str) -> str
 """Assembles multi-layer prompts from settings + game state."""
 
 ## Settings (settings.py)
@@ -341,6 +349,16 @@ def create_gui(settings: Settings) -> None
 
 ## main.py
 def main() -> None
+
+## notation_converter.py
+def _build_tables() -> tuple[(dict[(str, str)], dict[(str, str)])]
+def _compute_notation(sector: str, game_col: int, game_row: int) -> str
+def convert_board(board: list[dict]) -> list[dict]
+def convert_legal_moves(legal: dict[(str, list[str])]) -> dict[(str, list[str])]
+def convert_legal_moves_back(tri_legal: dict[(str, list[str])]) -> dict[(str, list[str])]
+def convert_move_back(tri_from: str, tri_to: str) -> tuple[(str, str)]
+def to_server(tri_notation: str) -> str
+def to_triumvirate(server_notation: str) -> str
 
 ## settings.py
 def _read_prompt(filename: str, fallback: str) -> str
@@ -420,6 +438,7 @@ modules: move_detail, moves_table, overview, thinking_gallery
 - gui.py
 - llm_client.py
 - move_parser.py
+- notation_converter.py
 - pricing.py
 - prompt_builder.py
 - trace_analyzer/data_loader.py

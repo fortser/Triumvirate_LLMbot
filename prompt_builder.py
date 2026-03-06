@@ -8,22 +8,73 @@ from __future__ import annotations
 from settings import DEFAULT_RESPONSE_FORMAT, Settings
 
 
+# ─── Triumvirate notation description (injected into system prompt) ───────────
+_TRI_NOTATION_BLOCK = """
+TRIUMVIRATE POSITION FORMAT:
+
+Regular cells: [Sector][Ring]/[Opponent][Depth].[Flank]
+  Sector: W = White, B = Black, R = Red.
+  Ring (1-3): Distance from board center. 1 = inner zone, 3 = edge.
+  Opponent: Which enemy sector this cell faces (W/B/R).
+  Depth (0-3): Steps to front line (row 4). 0 = front line, 3 = rear.
+  Flank (0-3): Steps to border with that opponent. 0 = at border, 3 = center.
+
+Rosette cells: C/[Source].[Neighbor]
+  C = Center (rosette, ring 0). Strongest position on board.
+  Source: Sector with direct access to this cell (W/B/R).
+  Neighbor: Second adjacent sector (W/B/R).
+
+Reading examples:
+  W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.
+  C/W.B = Center rosette, accessible from White, bordering Black.
+
+STRATEGY: Lower numbers = stronger. Buried level = Ring + Depth, keep below 4.
+
+Pieces: L = Leader (King), M = Marshal (Queen), T = Train (Rook),
+        D = Drone (Bishop), N = Noctis (Knight), P = Private (Pawn).
+""".strip()
+
+
 class PromptBuilder:
     """Assembles multi-layer prompts from settings + game state."""
 
-    def build(self, state: dict, settings: Settings) -> list[dict]:
-        legal = state.get("legal_moves", {})
+    def build(
+        self,
+        state: dict,
+        settings: Settings,
+        *,
+        tri_legal: dict | None = None,
+        tri_board: list[dict] | None = None,
+        tri_last_move: tuple[str, str] | None = None,
+    ) -> list[dict]:
+        """Build prompt messages.
+
+        Args:
+            state: raw server state dict.
+            settings: application settings.
+            tri_legal: legal moves in Triumvirate notation (if enabled).
+            tri_board: board pieces with tri_notation field (if enabled).
+            tri_last_move: (tri_from, tri_to) of last move (if enabled).
+        """
+        use_tri = tri_legal is not None
+        legal = tri_legal if use_tri else state.get("legal_moves", {})
         current = state.get("current_player", "?")
         move_num = state.get("move_number", 0)
         pos3pf = state.get("position_3pf") or "N/A"
         last_raw = state.get("last_move")
         check_info = state.get("check")
 
+        # ── Last move text ────────────────────────────────────────────
         last_text = "none (game start)"
         if last_raw:
-            last_text = (
-                f"{last_raw.get('from_square','?')} → {last_raw.get('to_square','?')}"
-            )
+            if use_tri and tri_last_move:
+                lf, lt = tri_last_move
+                last_text = f"{lf} → {lt}"
+            else:
+                last_text = (
+                    f"{last_raw.get('from_square', '?')} → "
+                    f"{last_raw.get('to_square', '?')}"
+                )
             mt = last_raw.get("move_type", "")
             if mt and mt != "normal":
                 last_text += f" ({mt})"
@@ -33,9 +84,15 @@ class PromptBuilder:
             checked = ", ".join(check_info.get("checked_colors", []))
             check_text = f"⚠️ CHECK: {checked} is in check!"
 
-        board_text = self._fmt_board(state.get("board", []), current)
+        # ── Board & legal text ────────────────────────────────────────
+        if use_tri and tri_board is not None:
+            board_text = self._fmt_board_tri(tri_board, current)
+        else:
+            board_text = self._fmt_board(state.get("board", []), current)
+
         legal_text = self._fmt_legal(legal)
 
+        # ── Template substitution ─────────────────────────────────────
         tmpl = settings["user_template"]
         subs = {
             "move_number": str(move_num),
@@ -60,10 +117,17 @@ class PromptBuilder:
             fmt, DEFAULT_RESPONSE_FORMAT["json_thinking"]
         )
 
+        # ── If Triumvirate: override format examples ──────────────────
+        if use_tri:
+            fmt_instruction = self._adapt_format_for_tri(fmt_instruction)
+
+        # ── System prompt ─────────────────────────────────────────────
         sys_parts = [settings["system_prompt"].strip()]
         rules = (settings["additional_rules"] or "").strip()
         if rules:
             sys_parts.append(f"\nADDITIONAL RULES:\n{rules}")
+        if use_tri:
+            sys_parts.append(f"\n{_TRI_NOTATION_BLOCK}")
         sys_parts.append(f"\nOUTPUT FORMAT:\n{fmt_instruction}")
         system = "\n".join(p for p in sys_parts if p)
 
@@ -71,6 +135,25 @@ class PromptBuilder:
             {"role": "system", "content": system},
             {"role": "user", "content": user},
         ]
+
+    # ── Triumvirate format adapter ────────────────────────────────────────
+
+    def _adapt_format_for_tri(self, fmt_instruction: str) -> str:
+        """Replace server-notation examples with Triumvirate examples."""
+        replacements = {
+            "E2 E4": "W2/R2.3 C/W.R",
+            "E7 E8": "W2/R1.3 W3/R0.3",
+            '"E2"': '"W2/R2.3"',
+            '"E4"': '"C/W.R"',
+            '"E7"': '"W2/R1.3"',
+            '"E8"': '"W3/R0.3"',
+        }
+        result = fmt_instruction
+        for old, new in replacements.items():
+            result = result.replace(old, new)
+        return result
+
+    # ── Template helpers ──────────────────────────────────────────────────
 
     def _fill_template(self, template: str, subs: dict) -> str:
         result = template
@@ -87,6 +170,8 @@ class PromptBuilder:
             for src, dsts in sorted(legal.items())
         )
 
+    # ── Board formatters ──────────────────────────────────────────────────
+
     def _fmt_board(self, board: list[dict], my_color: str) -> str:
         if not board:
             return ""
@@ -97,6 +182,37 @@ class PromptBuilder:
             n = p.get("notation", "?")
             owner = p.get("owner", c)
             label = f"{t[0]}{n}" if t else n
+            if owner != c:
+                label += f"({owner[0]})"
+            by_color.setdefault(c, []).append(label)
+        lines = []
+        for c, pieces in sorted(by_color.items()):
+            tag = " ← YOU" if c == my_color else ""
+            lines.append(f"  {c.upper()}{tag}: {' '.join(sorted(pieces))}")
+        return "\n".join(lines)
+
+    def _fmt_board_tri(self, tri_board: list[dict], my_color: str) -> str:
+        """Format board using Triumvirate notation and piece symbols."""
+        if not tri_board:
+            return ""
+
+        _PIECE_SYMBOL = {
+            "KING": "L",
+            "QUEEN": "M",
+            "ROOK": "T",
+            "BISHOP": "D",
+            "KNIGHT": "N",
+            "PAWN": "P",
+        }
+
+        by_color: dict[str, list[str]] = {}
+        for p in tri_board:
+            c = p.get("color", "?")
+            t = p.get("type", "?")
+            tri_n = p.get("tri_notation") or p.get("notation", "?")
+            owner = p.get("owner", c)
+            sym = _PIECE_SYMBOL.get(t.upper(), t[0] if t else "?")
+            label = f"{sym}{tri_n}"
             if owner != c:
                 label += f"({owner[0]})"
             by_color.setdefault(c, []).append(label)

@@ -84,7 +84,7 @@ class Settings:
         "compat": True,
         "custom_headers": {},
         "temperature": 0.3,
-        "max_tokens": 300,
+        "max_tokens": 24000,
         "response_format": "json_thinking",
         "system_prompt": DEFAULT_SYSTEM,
         "user_template": DEFAULT_USER_TEMPLATE,
@@ -93,6 +93,7 @@ class Settings:
         "poll_interval": 0.5,
         "auto_skip_waiting": False,
         "fallback_random": True,
+        "use_triumvirate_notation": False,
     }
 
     def __init__(self) -> None:

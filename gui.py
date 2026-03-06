@@ -126,6 +126,7 @@ def create_gui(settings: Settings) -> None:  # noqa: C901
         settings["max_retries"] = int(inp_retries.value or 3)
         settings["auto_skip_waiting"] = cb_skip.value
         settings["fallback_random"] = cb_fallback.value
+        settings["use_triumvirate_notation"] = cb_triumvirate.value
 
     def _on_provider(e: Any) -> None:
         p = e.value
@@ -410,7 +411,7 @@ def create_gui(settings: Settings) -> None:  # noqa: C901
                             label="Max tokens",
                             value=settings.get("max_tokens", 300),
                             min=50,
-                            max=8000,
+                            max=65536,
                             step=50,
                         ).classes("flex-1 text-sm")
                     _ch_default = settings.get("custom_headers") or {}
@@ -520,6 +521,16 @@ def create_gui(settings: Settings) -> None:  # noqa: C901
                     cb_fallback = ui.checkbox(
                         "Случайный ход при сбое LLM",
                         value=settings.get("fallback_random", True),
+                    )
+                    cb_triumvirate = ui.checkbox(
+                        "Нотация Triumvirate (вместо A1-L12)",
+                        value=settings.get(
+                            "use_triumvirate_notation", False
+                        ),
+                    ).tooltip(
+                        "Конвертировать координаты в радиально-кольцевую "
+                        "нотацию Triumvirate v4.0 для LLM. Сервер по-прежнему "
+                        "получает стандартные координаты."
                     )
 
                 # Control buttons
