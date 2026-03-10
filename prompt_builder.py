@@ -5,34 +5,7 @@
 """
 from __future__ import annotations
 
-from settings import DEFAULT_RESPONSE_FORMAT, Settings
-
-
-# ─── Triumvirate notation description (injected into system prompt) ───────────
-_TRI_NOTATION_BLOCK = """
-TRIUMVIRATE POSITION FORMAT:
-
-Regular cells: [Sector][Ring]/[Opponent][Depth].[Flank]
-  Sector: W = White, B = Black, R = Red.
-  Ring (1-3): Distance from board center. 1 = inner zone, 3 = edge.
-  Opponent: Which enemy sector this cell faces (W/B/R).
-  Depth (0-3): Steps to front line (row 4). 0 = front line, 3 = rear.
-  Flank (0-3): Steps to border with that opponent. 0 = at border, 3 = center.
-
-Rosette cells: C/[Source].[Neighbor]
-  C = Center (rosette, ring 0). Strongest position on board.
-  Source: Sector with direct access to this cell (W/B/R).
-  Neighbor: Second adjacent sector (W/B/R).
-
-Reading examples:
-  W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.
-  C/W.B = Center rosette, accessible from White, bordering Black.
-
-STRATEGY: Lower numbers = stronger. Buried level = Ring + Depth, keep below 4.
-
-Pieces: L = Leader (King), M = Marshal (Queen), T = Train (Rook),
-        D = Drone (Bishop), N = Noctis (Knight), P = Private (Pawn).
-""".strip()
+from settings import Settings, get_response_format
 
 
 class PromptBuilder:
@@ -84,6 +57,16 @@ class PromptBuilder:
             checked = ", ".join(check_info.get("checked_colors", []))
             check_text = f"⚠️ CHECK: {checked} is in check!"
 
+        # Fallback: server may return check=null but players[].status="in_check"
+        if not check_text:
+            for p in state.get("players", []):
+                if p.get("color") == current and p.get("status") == "in_check":
+                    check_text = (
+                        "⚠️ YOU ARE IN CHECK! You MUST move your Leader to safety "
+                        "or block the attack. Any other move is illegal."
+                    )
+                    break
+
         # ── Board & legal text ────────────────────────────────────────
         if use_tri and tri_board is not None:
             board_text = self._fmt_board_tri(tri_board, current)
@@ -97,7 +80,7 @@ class PromptBuilder:
         subs = {
             "move_number": str(move_num),
             "current_player": current.upper(),
-            "position_3pf": "" if use_tri else pos3pf,
+            "position_3pf": pos3pf,
             "legal_moves": legal_text,
             "last_move": last_text,
             "board": board_text,
@@ -112,48 +95,22 @@ class PromptBuilder:
         if check_text and "check" not in raw_tmpl:
             user += f"\n\n{check_text}"
 
+        # ── Response format from file (no more _adapt_format_for_tri) ─
         fmt = settings["response_format"]
-        fmt_instruction = DEFAULT_RESPONSE_FORMAT.get(
-            fmt, DEFAULT_RESPONSE_FORMAT["json_thinking"]
-        )
-
-        # ── If Triumvirate: override format examples ──────────────────
-        if use_tri:
-            fmt_instruction = self._adapt_format_for_tri(fmt_instruction)
+        fmt_instruction = get_response_format(fmt)
 
         # ── System prompt ─────────────────────────────────────────────
         sys_parts = [settings["system_prompt"].strip()]
         rules = (settings["additional_rules"] or "").strip()
         if rules:
             sys_parts.append(f"\nADDITIONAL RULES:\n{rules}")
-        if use_tri:
-            sys_parts.append(f"\n{_TRI_NOTATION_BLOCK}")
-        sys_parts.append(f"\nOUTPUT FORMAT:\n{fmt_instruction}")
+        sys_parts.append(f"\n### OUTPUT FORMAT\n{fmt_instruction}")
         system = "\n".join(p for p in sys_parts if p)
 
         return [
             {"role": "system", "content": system},
             {"role": "user", "content": user},
         ]
-
-    # ── Triumvirate format adapter ────────────────────────────────────────
-
-    def _adapt_format_for_tri(self, fmt_instruction: str) -> str:
-        """Replace server-notation examples with Triumvirate examples."""
-        replacements = {
-            # Coordinate examples in plain text
-            "E2 E4": "W2/R2.3 C/W.R",
-            "E7 E8": "W2/R1.3 W3/R0.3",
-            # JSON value examples
-            '"E2"': '"W2/R2.3"',
-            '"E4"': '"C/W.R"',
-            '"E7"': '"W2/R1.3"',
-            '"E8"': '"W3/R0.3"',
-        }
-        result = fmt_instruction
-        for old, new in replacements.items():
-            result = result.replace(old, new)
-        return result
 
     # ── Template helpers ──────────────────────────────────────────────────
 
@@ -199,12 +156,10 @@ class PromptBuilder:
             return ""
 
         _PIECE_SYMBOL = {
-            "KING": "L",
-            "QUEEN": "M",
-            "ROOK": "T",
-            "BISHOP": "D",
-            "KNIGHT": "N",
-            "PAWN": "P",
+            "KING": "L", "QUEEN": "M", "ROOK": "T",
+            "BISHOP": "D", "KNIGHT": "N", "PAWN": "P",
+            # Single-letter codes (current server format)
+            "K": "L", "Q": "M", "R": "T", "B": "D",
         }
 
         by_color: dict[str, list[str]] = {}
@@ -214,7 +169,7 @@ class PromptBuilder:
             tri_n = p.get("tri_notation") or p.get("notation", "?")
             owner = p.get("owner", c)
             sym = _PIECE_SYMBOL.get(t.upper(), t[0] if t else "?")
-            label = f"{sym}{tri_n}"
+            label = f"{sym}:{tri_n}"
             if owner != c:
                 label += f"({owner[0]})"
             by_color.setdefault(c, []).append(label)

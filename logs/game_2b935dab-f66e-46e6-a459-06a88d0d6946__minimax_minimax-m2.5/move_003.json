@@ -1,0 +1,1563 @@
+{
+  "game_id": "2b935dab-f66e-46e6-a459-06a88d0d6946",
+  "move_number": 3,
+  "timestamp": "2026-03-07T21:16:59",
+  "outcome": "success",
+  "model_pricing": {
+    "prompt_per_1m_usd": 0.295,
+    "completion_per_1m_usd": 1.2,
+    "source": "openrouter_api"
+  },
+  "server_interactions": [
+    {
+      "endpoint": "/state",
+      "method": "GET",
+      "response_raw": {
+        "game_id": "2b935dab-f66e-46e6-a459-06a88d0d6946",
+        "board": [
+          {
+            "notation": "A1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B1",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D1",
+            "type": "Q",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E1",
+            "type": "K",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G1",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "B2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "D2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "F2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "G2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "A8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D8",
+            "type": "K",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I8",
+            "type": "Q",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "B7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "C7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "D7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "J7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "K7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "L7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E12",
+            "type": "Q",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I12",
+            "type": "K",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "G11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "F11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "J11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "K11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "L11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "E9",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          }
+        ],
+        "current_player": "white",
+        "legal_moves": {
+          "B1": [
+            "A3",
+            "C3"
+          ],
+          "D1": [
+            "E2",
+            "F3",
+            "G4",
+            "H9"
+          ],
+          "E1": [
+            "E2"
+          ],
+          "F1": [
+            "A6",
+            "B5",
+            "C4",
+            "D3",
+            "E2"
+          ],
+          "G1": [
+            "E2",
+            "F3",
+            "H3"
+          ],
+          "A2": [
+            "A3",
+            "A4"
+          ],
+          "B2": [
+            "B3",
+            "B4"
+          ],
+          "C2": [
+            "C3",
+            "C4"
+          ],
+          "D2": [
+            "D3",
+            "D4"
+          ],
+          "F2": [
+            "F3",
+            "F4"
+          ],
+          "G2": [
+            "G3",
+            "G4"
+          ],
+          "H2": [
+            "H3",
+            "H4"
+          ]
+        },
+        "promotion_moves": [],
+        "last_move": {
+          "from_square": "J10",
+          "to_square": "E9",
+          "move_type": "capture",
+          "promotion": null,
+          "captured": "P"
+        },
+        "prev_move": {
+          "from_square": "I5",
+          "to_square": "E9",
+          "move_type": "capture",
+          "promotion": null,
+          "captured": "P"
+        },
+        "players": [
+          {
+            "color": "white",
+            "name": "LLM_OpenRouter_minimax/minimax-m2.5",
+            "player_type": "llm",
+            "model": "minimax/minimax-m2.5",
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "black",
+            "name": "SmartBot-Black",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "red",
+            "name": "SmartBot-Red",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          }
+        ],
+        "move_number": 3,
+        "game_status": "playing",
+        "check": null,
+        "position_3pf": "wRA1,wPA2,bPA7,bRA8,wNB1,wPB2,bPB7,bNB8,wBC1,wPC2,bPC7,bBC8,wQD1,wPD2,bPD7,bKD8,wKE1,rNE9,rPE11,rQE12,wBF1,wPF2,rPF11,rBF12,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,bPL7,bRL8,rPL11,rRL12 w wKQ.bKQ.rKQ - aaa 0 3",
+        "server_version": "0.1.0"
+      }
+    }
+  ],
+  "server_state_raw": {
+    "game_id": "2b935dab-f66e-46e6-a459-06a88d0d6946",
+    "board": [
+      {
+        "notation": "A1",
+        "type": "R",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "B1",
+        "type": "N",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "C1",
+        "type": "B",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "D1",
+        "type": "Q",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "E1",
+        "type": "K",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "F1",
+        "type": "B",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "G1",
+        "type": "N",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "H1",
+        "type": "R",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "A2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "B2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "C2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "D2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "F2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "G2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "H2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "A8",
+        "type": "R",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "B8",
+        "type": "N",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "C8",
+        "type": "B",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "D8",
+        "type": "K",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I8",
+        "type": "Q",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "J8",
+        "type": "B",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "K8",
+        "type": "N",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L8",
+        "type": "R",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "A7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "B7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "C7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "D7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "J7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "K7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "L7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "H12",
+        "type": "R",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "G12",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "F12",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "E12",
+        "type": "Q",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I12",
+        "type": "K",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "J12",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L12",
+        "type": "R",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "H11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "G11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "F11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "E11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "I11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "J11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "K11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "L11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "E9",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      }
+    ],
+    "current_player": "white",
+    "legal_moves": {
+      "B1": [
+        "A3",
+        "C3"
+      ],
+      "D1": [
+        "E2",
+        "F3",
+        "G4",
+        "H9"
+      ],
+      "E1": [
+        "E2"
+      ],
+      "F1": [
+        "A6",
+        "B5",
+        "C4",
+        "D3",
+        "E2"
+      ],
+      "G1": [
+        "E2",
+        "F3",
+        "H3"
+      ],
+      "A2": [
+        "A3",
+        "A4"
+      ],
+      "B2": [
+        "B3",
+        "B4"
+      ],
+      "C2": [
+        "C3",
+        "C4"
+      ],
+      "D2": [
+        "D3",
+        "D4"
+      ],
+      "F2": [
+        "F3",
+        "F4"
+      ],
+      "G2": [
+        "G3",
+        "G4"
+      ],
+      "H2": [
+        "H3",
+        "H4"
+      ]
+    },
+    "promotion_moves": [],
+    "last_move": {
+      "from_square": "J10",
+      "to_square": "E9",
+      "move_type": "capture",
+      "promotion": null,
+      "captured": "P"
+    },
+    "prev_move": {
+      "from_square": "I5",
+      "to_square": "E9",
+      "move_type": "capture",
+      "promotion": null,
+      "captured": "P"
+    },
+    "players": [
+      {
+        "color": "white",
+        "name": "LLM_OpenRouter_minimax/minimax-m2.5",
+        "player_type": "llm",
+        "model": "minimax/minimax-m2.5",
+        "status": "active",
+        "is_replacement": false
+      },
+      {
+        "color": "black",
+        "name": "SmartBot-Black",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "active",
+        "is_replacement": false
+      },
+      {
+        "color": "red",
+        "name": "SmartBot-Red",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "active",
+        "is_replacement": false
+      }
+    ],
+    "move_number": 3,
+    "game_status": "playing",
+    "check": null,
+    "position_3pf": "wRA1,wPA2,bPA7,bRA8,wNB1,wPB2,bPB7,bNB8,wBC1,wPC2,bPC7,bBC8,wQD1,wPD2,bPD7,bKD8,wKE1,rNE9,rPE11,rQE12,wBF1,wPF2,rPF11,rBF12,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,bPL7,bRL8,rPL11,rRL12 w wKQ.bKQ.rKQ - aaa 0 3",
+    "server_version": "0.1.0"
+  },
+  "prompt_pipeline": {
+    "system_prompt": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nTHREE PLAYERS: White, Black, Red. Turn order: White → Black → Red.\n\nBOARD STRUCTURE:\n- Three sectors (W=White, B=Black, R=Red), each with 32 cells.\n- Sectors connect through shared border columns (bridges).\n- Center rosette (C/...) cells are the most powerful positions — they control all three sectors.\n\nPIECES AND MOVEMENT (adapted to hexagonal geometry):\nL (Leader) — Moves exactly 1 step in any direction. If captured, you lose.\nM (Marshal) — Moves any distance in straight lines or diagonals. Most powerful piece.\nT (Train) — Moves any distance in straight lines only (no diagonals).\nD (Drone) — Moves any distance diagonally only.\nN (Noctis) — Jumps in an L-shape (2+1 cells). Ignores pieces in the way.\nP (Private) — Moves 1 forward (2 from start row). Captures diagonally forward.\n- Privates move forward along their column toward the opponent's back row.\n- Privates capture diagonally forward (up to 3 directions near the center).\n- Double Private move from starting row. En passant applies.\n- Promotion on opponent's back row to M, T, D, or N.\n- Castling along the base row (Leader-side or Marshal-side).\n\nSPECIAL RULES:\n- Checkmated player's pieces (except Leader) transfer to the mating player.\n- Transferred Privates moving against their new forward direction become \"stuck\" (capture only).\n- Win condition: checkmate both opponents.\n\nREADING COORDINATES:\n- Regular cell example: W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n- Rosette cell example: C/W.B = Center rosette, between White and Black sectors.\n- Lower ring number = closer to center = stronger position.\n- Depth 0 = front line (most aggressive), depth 3 = back row (defensive).\n- \"Buried level\" = Ring + Depth. Keep your active pieces below buried level 4.\n\nSTRATEGY:\n1. Leader safety — your Leader is attacked from TWO directions. Keep it protected.\n2. Center control — rosette cells (C/...) dominate the board. Fight for them.\n3. Material — captures matter, but avoid trading into the third player's advantage.\n4. Development — activate pieces toward lower rings. A piece at ring 3 depth 3 is useless.\n5. Three-player dynamics — attacking one opponent strengthens the other. Balance aggression.\n6. Private advancement — Privates closer to promotion (depth 0) are worth much more.\n\nIMPORTANT: Choose ONLY from the legal moves list provided. Do not invent coordinates.",
+    "user_template": "Move #{move_number} | You are {current_player}\n\nPosition (3PF): {position_3pf}\n\nBoard:\n{board}\n\nLegal moves:\n{legal_moves}\n\nLast move: {last_move}\n{check}",
+    "additional_rules": "",
+    "response_format_instruction": "Respond with a single JSON object. No markdown, no commentary outside JSON.\n\n{\"thinking\": \"your step-by-step analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\n\nFor Private promotion add: \"promotion\": \"marshal\"\nPromotion values: marshal | train | drone | noctis\n\nExample thinking: \"My Leader at W3/B3.3 is safe behind Privates. Enemy Marshal on C/B.R threatens my Train at W1/R0.2. I can retreat Train to W2/R1.1 (buried 3, acceptable) or counterattack with Noctis to C/W.B (buried 0, controls center). The Noctis move also pressures Black's exposed Drone. Red is passive — safe to focus on Black. Moving Noctis to C/W.B.\"\n\nIn your thinking, consider:\n1. Is my Leader safe? Any immediate threats?\n2. Can I capture an undefended piece or create a fork?\n3. Does this move improve piece activity (lower buried level)?\n4. How does this move affect BOTH opponents — am I helping the third player?\n\nCRITICAL: Use ONLY coordinates from the legal moves list provided. Coordinates are case-sensitive uppercase.",
+    "rendered_system": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nTHREE PLAYERS: White, Black, Red. Turn order: White → Black → Red.\n\nBOARD STRUCTURE:\n- Three sectors (W=White, B=Black, R=Red), each with 32 cells.\n- Sectors connect through shared border columns (bridges).\n- Center rosette (C/...) cells are the most powerful positions — they control all three sectors.\n\nPIECES AND MOVEMENT (adapted to hexagonal geometry):\nL (Leader) — Moves exactly 1 step in any direction. If captured, you lose.\nM (Marshal) — Moves any distance in straight lines or diagonals. Most powerful piece.\nT (Train) — Moves any distance in straight lines only (no diagonals).\nD (Drone) — Moves any distance diagonally only.\nN (Noctis) — Jumps in an L-shape (2+1 cells). Ignores pieces in the way.\nP (Private) — Moves 1 forward (2 from start row). Captures diagonally forward.\n- Privates move forward along their column toward the opponent's back row.\n- Privates capture diagonally forward (up to 3 directions near the center).\n- Double Private move from starting row. En passant applies.\n- Promotion on opponent's back row to M, T, D, or N.\n- Castling along the base row (Leader-side or Marshal-side).\n\nSPECIAL RULES:\n- Checkmated player's pieces (except Leader) transfer to the mating player.\n- Transferred Privates moving against their new forward direction become \"stuck\" (capture only).\n- Win condition: checkmate both opponents.\n\nREADING COORDINATES:\n- Regular cell example: W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n- Rosette cell example: C/W.B = Center rosette, between White and Black sectors.\n- Lower ring number = closer to center = stronger position.\n- Depth 0 = front line (most aggressive), depth 3 = back row (defensive).\n- \"Buried level\" = Ring + Depth. Keep your active pieces below buried level 4.\n\nSTRATEGY:\n1. Leader safety — your Leader is attacked from TWO directions. Keep it protected.\n2. Center control — rosette cells (C/...) dominate the board. Fight for them.\n3. Material — captures matter, but avoid trading into the third player's advantage.\n4. Development — activate pieces toward lower rings. A piece at ring 3 depth 3 is useless.\n5. Three-player dynamics — attacking one opponent strengthens the other. Balance aggression.\n6. Private advancement — Privates closer to promotion (depth 0) are worth much more.\n\nIMPORTANT: Choose ONLY from the legal moves list provided. Do not invent coordinates.\n\n### OUTPUT FORMAT\nRespond with a single JSON object. No markdown, no commentary outside JSON.\n\n{\"thinking\": \"your step-by-step analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\n\nFor Private promotion add: \"promotion\": \"marshal\"\nPromotion values: marshal | train | drone | noctis\n\nExample thinking: \"My Leader at W3/B3.3 is safe behind Privates. Enemy Marshal on C/B.R threatens my Train at W1/R0.2. I can retreat Train to W2/R1.1 (buried 3, acceptable) or counterattack with Noctis to C/W.B (buried 0, controls center). The Noctis move also pressures Black's exposed Drone. Red is passive — safe to focus on Black. Moving Noctis to C/W.B.\"\n\nIn your thinking, consider:\n1. Is my Leader safe? Any immediate threats?\n2. Can I capture an undefended piece or create a fork?\n3. Does this move improve piece activity (lower buried level)?\n4. How does this move affect BOTH opponents — am I helping the third player?\n\nCRITICAL: Use ONLY coordinates from the legal moves list provided. Coordinates are case-sensitive uppercase.",
+    "rendered_user_prompt": "Move #3 | You are WHITE\n\nPosition (3PF): wRA1,wPA2,bPA7,bRA8,wNB1,wPB2,bPB7,bNB8,wBC1,wPC2,bPC7,bBC8,wQD1,wPD2,bPD7,bKD8,wKE1,rNE9,rPE11,rQE12,wBF1,wPF2,rPF11,rBF12,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,bPL7,bRL8,rPL11,rRL12 w wKQ.bKQ.rKQ - aaa 0 3\n\nBoard:\n  BLACK: D:B3/R3.2 D:B3/W3.2 L:B3/R3.3 M:B3/W3.3 N:B3/R3.1 N:B3/W3.1 P:B2/R2.1 P:B2/R2.2 P:B2/R2.3 P:B2/W2.1 P:B2/W2.2 P:B3/R2.0 P:B3/W2.0 T:B3/R3.0 T:B3/W3.0\n  RED: D:R3/B3.2 D:R3/W3.2 L:R3/B3.3 M:R3/W3.3 N:C/R.W N:R3/W3.1 P:R2/B2.1 P:R2/B2.2 P:R2/B2.3 P:R2/W2.1 P:R2/W2.2 P:R2/W2.3 P:R3/B2.0 P:R3/W2.0 T:R3/B3.0 T:R3/W3.0\n  WHITE ← YOU: D:W3/B3.2 D:W3/R3.2 L:W3/R3.3 M:W3/B3.3 N:W3/B3.1 N:W3/R3.1 P:W2/B2.1 P:W2/B2.2 P:W2/B2.3 P:W2/R2.1 P:W2/R2.2 P:W3/B2.0 P:W3/R2.0 T:W3/B3.0 T:W3/R3.0\n\nLegal moves:\n  W2/B2.1: W2/B0.1, W2/B1.1\n  W2/B2.2: W1/B0.2, W1/B1.2\n  W2/B2.3: C/W.B, W1/B1.3\n  W2/R2.1: W2/R0.1, W2/R1.1\n  W2/R2.2: W1/R0.2, W1/R1.2\n  W3/B2.0: W3/B0.0, W3/B1.0\n  W3/B3.1: W1/B1.2, W3/B1.0\n  W3/B3.3: R3/W0.0, W1/R1.2, W2/R0.1, W2/R2.3\n  W3/R2.0: W3/R0.0, W3/R1.0\n  W3/R3.1: W1/R1.2, W2/R2.3, W3/R1.0\n  W3/R3.2: B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.3\n  W3/R3.3: W2/R2.3\n\nLast move: R1/B1.2 → C/R.W (capture)\n",
+    "use_triumvirate_notation": true
+  },
+  "llm_requests": [
+    {
+      "attempt": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nTHREE PLAYERS: White, Black, Red. Turn order: White → Black → Red.\n\nBOARD STRUCTURE:\n- Three sectors (W=White, B=Black, R=Red), each with 32 cells.\n- Sectors connect through shared border columns (bridges).\n- Center rosette (C/...) cells are the most powerful positions — they control all three sectors.\n\nPIECES AND MOVEMENT (adapted to hexagonal geometry):\nL (Leader) — Moves exactly 1 step in any direction. If captured, you lose.\nM (Marshal) — Moves any distance in straight lines or diagonals. Most powerful piece.\nT (Train) — Moves any distance in straight lines only (no diagonals).\nD (Drone) — Moves any distance diagonally only.\nN (Noctis) — Jumps in an L-shape (2+1 cells). Ignores pieces in the way.\nP (Private) — Moves 1 forward (2 from start row). Captures diagonally forward.\n- Privates move forward along their column toward the opponent's back row.\n- Privates capture diagonally forward (up to 3 directions near the center).\n- Double Private move from starting row. En passant applies.\n- Promotion on opponent's back row to M, T, D, or N.\n- Castling along the base row (Leader-side or Marshal-side).\n\nSPECIAL RULES:\n- Checkmated player's pieces (except Leader) transfer to the mating player.\n- Transferred Privates moving against their new forward direction become \"stuck\" (capture only).\n- Win condition: checkmate both opponents.\n\nREADING COORDINATES:\n- Regular cell example: W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n- Rosette cell example: C/W.B = Center rosette, between White and Black sectors.\n- Lower ring number = closer to center = stronger position.\n- Depth 0 = front line (most aggressive), depth 3 = back row (defensive).\n- \"Buried level\" = Ring + Depth. Keep your active pieces below buried level 4.\n\nSTRATEGY:\n1. Leader safety — your Leader is attacked from TWO directions. Keep it protected.\n2. Center control — rosette cells (C/...) dominate the board. Fight for them.\n3. Material — captures matter, but avoid trading into the third player's advantage.\n4. Development — activate pieces toward lower rings. A piece at ring 3 depth 3 is useless.\n5. Three-player dynamics — attacking one opponent strengthens the other. Balance aggression.\n6. Private advancement — Privates closer to promotion (depth 0) are worth much more.\n\nIMPORTANT: Choose ONLY from the legal moves list provided. Do not invent coordinates.\n\n### OUTPUT FORMAT\nRespond with a single JSON object. No markdown, no commentary outside JSON.\n\n{\"thinking\": \"your step-by-step analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\n\nFor Private promotion add: \"promotion\": \"marshal\"\nPromotion values: marshal | train | drone | noctis\n\nExample thinking: \"My Leader at W3/B3.3 is safe behind Privates. Enemy Marshal on C/B.R threatens my Train at W1/R0.2. I can retreat Train to W2/R1.1 (buried 3, acceptable) or counterattack with Noctis to C/W.B (buried 0, controls center). The Noctis move also pressures Black's exposed Drone. Red is passive — safe to focus on Black. Moving Noctis to C/W.B.\"\n\nIn your thinking, consider:\n1. Is my Leader safe? Any immediate threats?\n2. Can I capture an undefended piece or create a fork?\n3. Does this move improve piece activity (lower buried level)?\n4. How does this move affect BOTH opponents — am I helping the third player?\n\nCRITICAL: Use ONLY coordinates from the legal moves list provided. Coordinates are case-sensitive uppercase."
+        },
+        {
+          "role": "user",
+          "content": "Move #3 | You are WHITE\n\nPosition (3PF): wRA1,wPA2,bPA7,bRA8,wNB1,wPB2,bPB7,bNB8,wBC1,wPC2,bPC7,bBC8,wQD1,wPD2,bPD7,bKD8,wKE1,rNE9,rPE11,rQE12,wBF1,wPF2,rPF11,rBF12,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,bPL7,bRL8,rPL11,rRL12 w wKQ.bKQ.rKQ - aaa 0 3\n\nBoard:\n  BLACK: D:B3/R3.2 D:B3/W3.2 L:B3/R3.3 M:B3/W3.3 N:B3/R3.1 N:B3/W3.1 P:B2/R2.1 P:B2/R2.2 P:B2/R2.3 P:B2/W2.1 P:B2/W2.2 P:B3/R2.0 P:B3/W2.0 T:B3/R3.0 T:B3/W3.0\n  RED: D:R3/B3.2 D:R3/W3.2 L:R3/B3.3 M:R3/W3.3 N:C/R.W N:R3/W3.1 P:R2/B2.1 P:R2/B2.2 P:R2/B2.3 P:R2/W2.1 P:R2/W2.2 P:R2/W2.3 P:R3/B2.0 P:R3/W2.0 T:R3/B3.0 T:R3/W3.0\n  WHITE ← YOU: D:W3/B3.2 D:W3/R3.2 L:W3/R3.3 M:W3/B3.3 N:W3/B3.1 N:W3/R3.1 P:W2/B2.1 P:W2/B2.2 P:W2/B2.3 P:W2/R2.1 P:W2/R2.2 P:W3/B2.0 P:W3/R2.0 T:W3/B3.0 T:W3/R3.0\n\nLegal moves:\n  W2/B2.1: W2/B0.1, W2/B1.1\n  W2/B2.2: W1/B0.2, W1/B1.2\n  W2/B2.3: C/W.B, W1/B1.3\n  W2/R2.1: W2/R0.1, W2/R1.1\n  W2/R2.2: W1/R0.2, W1/R1.2\n  W3/B2.0: W3/B0.0, W3/B1.0\n  W3/B3.1: W1/B1.2, W3/B1.0\n  W3/B3.3: R3/W0.0, W1/R1.2, W2/R0.1, W2/R2.3\n  W3/R2.0: W3/R0.0, W3/R1.0\n  W3/R3.1: W1/R1.2, W2/R2.3, W3/R1.0\n  W3/R3.2: B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.3\n  W3/R3.3: W2/R2.3\n\nLast move: R1/B1.2 → C/R.W (capture)\n"
+        }
+      ]
+    }
+  ],
+  "llm_responses": [
+    {
+      "attempt": 1,
+      "raw_response": "{\"thinking\": \"Last move was Red capturing at C/R.W, showing aggressive center control. My Leader at W3/R3.3 is protected by surrounding pieces. Looking at my options: I have several pieces that can move toward the center (lower ring numbers). The Private at W2/B2.3 can move to C/W.B (rosette cell), which is highly valuable center control. This also pushes my Private from depth 2 toward depth 1, improving its activity (buried level goes from 4 to 3). The C/W.B rosette is critical because it controls the intersection between White and Black sectors. Black has pieces threatening the center (Train at B3/W3.0, Marshal at B3/W3.3), so occupying C/W.B denies Black that powerful position. This move also puts pressure on Black while Red just captured in the center - I'm competing for central control. No immediate threats to my Leader, and this move doesn't help Red directly.\", \"move_from\": \"W2/B2.3\", \"move_to\": \"C/W.B\"}",
+      "response_chars": 924,
+      "time_sec": 92.445,
+      "usage": {
+        "prompt_tokens": 1683,
+        "completion_tokens": 1448,
+        "reasoning_tokens": 1272,
+        "total_tokens": 3131,
+        "provider_reported_cost_usd": null
+      },
+      "cost": {
+        "input_cost_usd": 0.00049648,
+        "output_cost_usd": 0.0017376,
+        "reasoning_cost_usd": 0.0015264,
+        "total_cost_usd": 0.00376048,
+        "provider_reported_cost_usd": null
+      }
+    }
+  ],
+  "parser_attempts": [
+    {
+      "attempt": 1,
+      "coordinates_found": [
+        "C/R.W",
+        "W3/R3.3",
+        "W2/B2.3",
+        "C/W.B",
+        "C/W.B",
+        "B3/W3.0",
+        "B3/W3.3",
+        "C/W.B",
+        "W2/B2.3",
+        "C/W.B"
+      ],
+      "pairs_tested": [
+        "C/R.W→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→W2/B2.3(ILLEGAL)",
+        "W2/B2.3→C/W.B(OK)",
+        "C/W.B→C/W.B(ILLEGAL)",
+        "C/W.B→B3/W3.0(ILLEGAL)",
+        "B3/W3.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→C/W.B(ILLEGAL)",
+        "C/W.B→W2/B2.3(ILLEGAL)",
+        "W2/B2.3→C/W.B(OK)"
+      ],
+      "valid": true
+    }
+  ],
+  "move_selected": {
+    "from": "W2/B2.3",
+    "to": "C/W.B",
+    "promotion": null
+  },
+  "server_move_request": {
+    "from": "D2",
+    "to": "D4",
+    "move_number": 3
+  },
+  "server_move_response": {
+    "status_code": 200,
+    "data": {
+      "success": true,
+      "state": {
+        "game_id": "2b935dab-f66e-46e6-a459-06a88d0d6946",
+        "board": [
+          {
+            "notation": "A1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B1",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D1",
+            "type": "Q",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E1",
+            "type": "K",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G1",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "B2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "F2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "G2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "A8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D8",
+            "type": "K",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I8",
+            "type": "Q",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "B7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "C7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "D7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "J7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "K7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "L7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E12",
+            "type": "Q",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I12",
+            "type": "K",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "G11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "F11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "J11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "K11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "L11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "E9",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D4",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          }
+        ],
+        "current_player": "black",
+        "legal_moves": {
+          "B8": [
+            "A6",
+            "C6"
+          ],
+          "D8": [
+            "I7"
+          ],
+          "I8": [
+            "I10",
+            "I11",
+            "I5",
+            "I6",
+            "I7",
+            "I9"
+          ],
+          "J8": [
+            "A3",
+            "B4",
+            "C5",
+            "D6",
+            "I7"
+          ],
+          "K8": [
+            "I7",
+            "J6",
+            "L6"
+          ],
+          "A7": [
+            "A5",
+            "A6"
+          ],
+          "B7": [
+            "B5",
+            "B6"
+          ],
+          "C7": [
+            "C5",
+            "C6"
+          ],
+          "D7": [
+            "D5",
+            "D6"
+          ],
+          "J7": [
+            "J5",
+            "J6"
+          ],
+          "K7": [
+            "K5",
+            "K6"
+          ],
+          "L7": [
+            "L5",
+            "L6"
+          ]
+        },
+        "promotion_moves": [],
+        "last_move": {
+          "from_square": "D2",
+          "to_square": "D4",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "prev_move": {
+          "from_square": "J10",
+          "to_square": "E9",
+          "move_type": "capture",
+          "promotion": null,
+          "captured": "P"
+        },
+        "players": [
+          {
+            "color": "white",
+            "name": "LLM_OpenRouter_minimax/minimax-m2.5",
+            "player_type": "llm",
+            "model": "minimax/minimax-m2.5",
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "black",
+            "name": "SmartBot-Black",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "red",
+            "name": "SmartBot-Red",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          }
+        ],
+        "move_number": 3,
+        "game_status": "playing",
+        "check": null,
+        "position_3pf": "wRA1,wPA2,bPA7,bRA8,wNB1,wPB2,bPB7,bNB8,wBC1,wPC2,bPC7,bBC8,wQD1,wPD4,bPD7,bKD8,wKE1,rNE9,rPE11,rQE12,wBF1,wPF2,rPF11,rBF12,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,bPL7,bRL8,rPL11,rRL12 b wKQ.bKQ.rKQ D3 aaa 0 3",
+        "server_version": "0.1.0"
+      },
+      "is_check": false,
+      "is_checkmate": false,
+      "is_stalemate": false,
+      "eliminated_player": null,
+      "inherited_pieces": [],
+      "game_over": false,
+      "winner": null,
+      "reason": null
+    }
+  },
+  "statistics": {
+    "time_total_sec": 93.201,
+    "llm_time_sec": 92.445,
+    "prompt_chars": 4704,
+    "response_chars": 924,
+    "total_llm_chars": 5628,
+    "llm_calls": 1,
+    "retries": 0,
+    "total_prompt_tokens": 1683,
+    "total_completion_tokens": 1448,
+    "total_reasoning_tokens": 1272,
+    "total_tokens": 3131,
+    "total_cost_usd": 0.00376048,
+    "provider_reported_cost_usd": null,
+    "model_pricing": {
+      "prompt_per_1m_usd": 0.295,
+      "completion_per_1m_usd": 1.2,
+      "source": "openrouter_api"
+    }
+  }
+}

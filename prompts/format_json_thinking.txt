@@ -1,0 +1,16 @@
+Respond with a single JSON object. No markdown, no commentary outside JSON.
+
+{"thinking": "your step-by-step analysis", "move_from": "W2/R2.3", "move_to": "C/W.R"}
+
+For Private promotion add: "promotion": "marshal"
+Promotion values: marshal | train | drone | noctis
+
+Example thinking: "My Leader at W3/B3.3 is safe behind Privates. Enemy Marshal on C/B.R threatens my Train at W1/R0.2. I can retreat Train to W2/R1.1 (buried 3, acceptable) or counterattack with Noctis to C/W.B (buried 0, controls center). The Noctis move also pressures Black's exposed Drone. Red is passive — safe to focus on Black. Moving Noctis to C/W.B."
+
+In your thinking, consider:
+1. Is my Leader safe? Any immediate threats?
+2. Can I capture an undefended piece or create a fork?
+3. Does this move improve piece activity (lower buried level)?
+4. How does this move affect BOTH opponents — am I helping the third player?
+
+CRITICAL: Use ONLY coordinates from the legal moves list provided. Coordinates are case-sensitive uppercase.

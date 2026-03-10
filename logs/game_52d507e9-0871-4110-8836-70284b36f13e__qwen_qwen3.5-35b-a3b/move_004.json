@@ -1,0 +1,2379 @@
+{
+  "game_id": "52d507e9-0871-4110-8836-70284b36f13e",
+  "move_number": 4,
+  "timestamp": "2026-03-07T20:51:52",
+  "outcome": "success",
+  "model_pricing": {
+    "prompt_per_1m_usd": 0.1625,
+    "completion_per_1m_usd": 1.3,
+    "source": "openrouter_api"
+  },
+  "server_interactions": [
+    {
+      "endpoint": "/state",
+      "method": "GET",
+      "response_raw": {
+        "game_id": "52d507e9-0871-4110-8836-70284b36f13e",
+        "board": [
+          {
+            "notation": "A1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D1",
+            "type": "Q",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E1",
+            "type": "K",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G1",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "B2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "D2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "F2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "G2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "A8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D8",
+            "type": "K",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I8",
+            "type": "Q",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "D7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "J7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "K7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "L7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E12",
+            "type": "Q",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I12",
+            "type": "K",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "G11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "F11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "J11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "K11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "L11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C5",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E9",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E4",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "A5",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "D5",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A6",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I5",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          }
+        ],
+        "current_player": "white",
+        "legal_moves": {
+          "A1": [
+            "B1"
+          ],
+          "D1": [
+            "E2",
+            "F3",
+            "G4",
+            "H9"
+          ],
+          "E1": [
+            "E2"
+          ],
+          "F1": [
+            "A6",
+            "B5",
+            "C4",
+            "D3",
+            "E2"
+          ],
+          "G1": [
+            "E2",
+            "F3",
+            "H3"
+          ],
+          "A2": [
+            "A3",
+            "A4"
+          ],
+          "B2": [
+            "B3",
+            "B4"
+          ],
+          "C2": [
+            "C3",
+            "C4"
+          ],
+          "D2": [
+            "D3",
+            "D4"
+          ],
+          "F2": [
+            "F3",
+            "F4"
+          ],
+          "G2": [
+            "G3",
+            "G4"
+          ],
+          "H2": [
+            "H3",
+            "H4"
+          ],
+          "D5": [
+            "B4",
+            "B6",
+            "C3",
+            "C7",
+            "E3",
+            "F4",
+            "I10",
+            "I7",
+            "J6",
+            "J9"
+          ]
+        },
+        "promotion_moves": [],
+        "last_move": {
+          "from_square": "J9",
+          "to_square": "I5",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "prev_move": {
+          "from_square": "B8",
+          "to_square": "A6",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "players": [
+          {
+            "color": "white",
+            "name": "LLM_OpenRouter_qwen/qwen3.5-35b-a3b",
+            "player_type": "llm",
+            "model": "qwen/qwen3.5-35b-a3b",
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "black",
+            "name": "SmartBot-Black",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "red",
+            "name": "SmartBot-Red",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          }
+        ],
+        "move_number": 4,
+        "game_status": "playing",
+        "check": null,
+        "position_3pf": "wRA1,wPA2,bPA5,bNA6,bRA8,wPB2,bPB7,wBC1,wPC2,bPC5,bBC8,wQD1,wPD2,wND5,bPD7,bKD8,wKE1,wPE4,rPE9,rQE12,wBF1,wPF2,rPF11,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,rBI5,bPI7,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 w wKQ.bKQ.rKQ - aaa 4 4",
+        "server_version": "0.1.0"
+      }
+    }
+  ],
+  "server_state_raw": {
+    "game_id": "52d507e9-0871-4110-8836-70284b36f13e",
+    "board": [
+      {
+        "notation": "A1",
+        "type": "R",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "C1",
+        "type": "B",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "D1",
+        "type": "Q",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "E1",
+        "type": "K",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "F1",
+        "type": "B",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "G1",
+        "type": "N",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "H1",
+        "type": "R",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "A2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "B2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "C2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "D2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "F2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "G2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "H2",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "A8",
+        "type": "R",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "C8",
+        "type": "B",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "D8",
+        "type": "K",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I8",
+        "type": "Q",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "J8",
+        "type": "B",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "K8",
+        "type": "N",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L8",
+        "type": "R",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "B7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "D7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "I7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "J7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "K7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "L7",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "H12",
+        "type": "R",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "G12",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "E12",
+        "type": "Q",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I12",
+        "type": "K",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "J12",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "K12",
+        "type": "N",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "L12",
+        "type": "R",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "H11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "G11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "F11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "I11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "J11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "K11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "L11",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "black"
+      },
+      {
+        "notation": "C5",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "E9",
+        "type": "P",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "E4",
+        "type": "P",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": false,
+        "promotion_target_color": "red"
+      },
+      {
+        "notation": "A5",
+        "type": "P",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": false,
+        "promotion_target_color": "white"
+      },
+      {
+        "notation": "D5",
+        "type": "N",
+        "color": "white",
+        "owner": "white",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "A6",
+        "type": "N",
+        "color": "black",
+        "owner": "black",
+        "is_stuck": null,
+        "promotion_target_color": null
+      },
+      {
+        "notation": "I5",
+        "type": "B",
+        "color": "red",
+        "owner": "red",
+        "is_stuck": null,
+        "promotion_target_color": null
+      }
+    ],
+    "current_player": "white",
+    "legal_moves": {
+      "A1": [
+        "B1"
+      ],
+      "D1": [
+        "E2",
+        "F3",
+        "G4",
+        "H9"
+      ],
+      "E1": [
+        "E2"
+      ],
+      "F1": [
+        "A6",
+        "B5",
+        "C4",
+        "D3",
+        "E2"
+      ],
+      "G1": [
+        "E2",
+        "F3",
+        "H3"
+      ],
+      "A2": [
+        "A3",
+        "A4"
+      ],
+      "B2": [
+        "B3",
+        "B4"
+      ],
+      "C2": [
+        "C3",
+        "C4"
+      ],
+      "D2": [
+        "D3",
+        "D4"
+      ],
+      "F2": [
+        "F3",
+        "F4"
+      ],
+      "G2": [
+        "G3",
+        "G4"
+      ],
+      "H2": [
+        "H3",
+        "H4"
+      ],
+      "D5": [
+        "B4",
+        "B6",
+        "C3",
+        "C7",
+        "E3",
+        "F4",
+        "I10",
+        "I7",
+        "J6",
+        "J9"
+      ]
+    },
+    "promotion_moves": [],
+    "last_move": {
+      "from_square": "J9",
+      "to_square": "I5",
+      "move_type": "normal",
+      "promotion": null,
+      "captured": null
+    },
+    "prev_move": {
+      "from_square": "B8",
+      "to_square": "A6",
+      "move_type": "normal",
+      "promotion": null,
+      "captured": null
+    },
+    "players": [
+      {
+        "color": "white",
+        "name": "LLM_OpenRouter_qwen/qwen3.5-35b-a3b",
+        "player_type": "llm",
+        "model": "qwen/qwen3.5-35b-a3b",
+        "status": "active",
+        "is_replacement": false
+      },
+      {
+        "color": "black",
+        "name": "SmartBot-Black",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "active",
+        "is_replacement": false
+      },
+      {
+        "color": "red",
+        "name": "SmartBot-Red",
+        "player_type": "smartbot",
+        "model": null,
+        "status": "active",
+        "is_replacement": false
+      }
+    ],
+    "move_number": 4,
+    "game_status": "playing",
+    "check": null,
+    "position_3pf": "wRA1,wPA2,bPA5,bNA6,bRA8,wPB2,bPB7,wBC1,wPC2,bPC5,bBC8,wQD1,wPD2,wND5,bPD7,bKD8,wKE1,wPE4,rPE9,rQE12,wBF1,wPF2,rPF11,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,rBI5,bPI7,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 w wKQ.bKQ.rKQ - aaa 4 4",
+    "server_version": "0.1.0"
+  },
+  "prompt_pipeline": {
+    "system_prompt": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nTHREE PLAYERS: White, Black, Red. Turn order: White → Black → Red.\n\nBOARD STRUCTURE:\n- Three sectors (W=White, B=Black, R=Red), each with 32 cells.\n- Sectors connect through shared border columns (bridges).\n- Center rosette (C/...) cells are the most powerful positions — they control all three sectors.\n\nPIECES AND MOVEMENT (adapted to hexagonal geometry):\nL (Leader) — Moves exactly 1 step in any direction. If captured, you lose.\nM (Marshal) — Moves any distance in straight lines or diagonals. Most powerful piece.\nT (Train) — Moves any distance in straight lines only (no diagonals).\nD (Drone) — Moves any distance diagonally only.\nN (Noctis) — Jumps in an L-shape (2+1 cells). Ignores pieces in the way.\nP (Private) — Moves 1 forward (2 from start row). Captures diagonally forward.\n- Privates move forward along their column toward the opponent's back row.\n- Privates capture diagonally forward (up to 3 directions near the center).\n- Double Private move from starting row. En passant applies.\n- Promotion on opponent's back row to M, T, D, or N.\n- Castling along the base row (Leader-side or Marshal-side).\n\nSPECIAL RULES:\n- Checkmated player's pieces (except Leader) transfer to the mating player.\n- Transferred Privates moving against their new forward direction become \"stuck\" (capture only).\n- Win condition: checkmate both opponents.\n\nREADING COORDINATES:\n- Regular cell example: W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n- Rosette cell example: C/W.B = Center rosette, between White and Black sectors.\n- Lower ring number = closer to center = stronger position.\n- Depth 0 = front line (most aggressive), depth 3 = back row (defensive).\n- \"Buried level\" = Ring + Depth. Keep your active pieces below buried level 4.\n\nSTRATEGY:\n1. Leader safety — your Leader is attacked from TWO directions. Keep it protected.\n2. Center control — rosette cells (C/...) dominate the board. Fight for them.\n3. Material — captures matter, but avoid trading into the third player's advantage.\n4. Development — activate pieces toward lower rings. A piece at ring 3 depth 3 is useless.\n5. Three-player dynamics — attacking one opponent strengthens the other. Balance aggression.\n6. Private advancement — Privates closer to promotion (depth 0) are worth much more.\n\nIMPORTANT: Choose ONLY from the legal moves list provided. Do not invent coordinates.",
+    "user_template": "Move #{move_number} | You are {current_player}\n\nPosition (3PF): {position_3pf}\n\nBoard:\n{board}\n\nLegal moves:\n{legal_moves}\n\nLast move: {last_move}\n{check}",
+    "additional_rules": "",
+    "response_format_instruction": "Respond with a single JSON object. No markdown, no commentary outside JSON.\n\n{\"thinking\": \"your step-by-step analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\n\nFor Private promotion add: \"promotion\": \"marshal\"\nPromotion values: marshal | train | drone | noctis\n\nExample thinking: \"My Leader at W3/B3.3 is safe behind Privates. Enemy Marshal on C/B.R threatens my Train at W1/R0.2. I can retreat Train to W2/R1.1 (buried 3, acceptable) or counterattack with Noctis to C/W.B (buried 0, controls center). The Noctis move also pressures Black's exposed Drone. Red is passive — safe to focus on Black. Moving Noctis to C/W.B.\"\n\nIn your thinking, consider:\n1. Is my Leader safe? Any immediate threats?\n2. Can I capture an undefended piece or create a fork?\n3. Does this move improve piece activity (lower buried level)?\n4. How does this move affect BOTH opponents — am I helping the third player?\n\nCRITICAL: Use ONLY coordinates from the legal moves list provided. Coordinates are case-sensitive uppercase.",
+    "rendered_system": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nTHREE PLAYERS: White, Black, Red. Turn order: White → Black → Red.\n\nBOARD STRUCTURE:\n- Three sectors (W=White, B=Black, R=Red), each with 32 cells.\n- Sectors connect through shared border columns (bridges).\n- Center rosette (C/...) cells are the most powerful positions — they control all three sectors.\n\nPIECES AND MOVEMENT (adapted to hexagonal geometry):\nL (Leader) — Moves exactly 1 step in any direction. If captured, you lose.\nM (Marshal) — Moves any distance in straight lines or diagonals. Most powerful piece.\nT (Train) — Moves any distance in straight lines only (no diagonals).\nD (Drone) — Moves any distance diagonally only.\nN (Noctis) — Jumps in an L-shape (2+1 cells). Ignores pieces in the way.\nP (Private) — Moves 1 forward (2 from start row). Captures diagonally forward.\n- Privates move forward along their column toward the opponent's back row.\n- Privates capture diagonally forward (up to 3 directions near the center).\n- Double Private move from starting row. En passant applies.\n- Promotion on opponent's back row to M, T, D, or N.\n- Castling along the base row (Leader-side or Marshal-side).\n\nSPECIAL RULES:\n- Checkmated player's pieces (except Leader) transfer to the mating player.\n- Transferred Privates moving against their new forward direction become \"stuck\" (capture only).\n- Win condition: checkmate both opponents.\n\nREADING COORDINATES:\n- Regular cell example: W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n- Rosette cell example: C/W.B = Center rosette, between White and Black sectors.\n- Lower ring number = closer to center = stronger position.\n- Depth 0 = front line (most aggressive), depth 3 = back row (defensive).\n- \"Buried level\" = Ring + Depth. Keep your active pieces below buried level 4.\n\nSTRATEGY:\n1. Leader safety — your Leader is attacked from TWO directions. Keep it protected.\n2. Center control — rosette cells (C/...) dominate the board. Fight for them.\n3. Material — captures matter, but avoid trading into the third player's advantage.\n4. Development — activate pieces toward lower rings. A piece at ring 3 depth 3 is useless.\n5. Three-player dynamics — attacking one opponent strengthens the other. Balance aggression.\n6. Private advancement — Privates closer to promotion (depth 0) are worth much more.\n\nIMPORTANT: Choose ONLY from the legal moves list provided. Do not invent coordinates.\n\n### OUTPUT FORMAT\nRespond with a single JSON object. No markdown, no commentary outside JSON.\n\n{\"thinking\": \"your step-by-step analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\n\nFor Private promotion add: \"promotion\": \"marshal\"\nPromotion values: marshal | train | drone | noctis\n\nExample thinking: \"My Leader at W3/B3.3 is safe behind Privates. Enemy Marshal on C/B.R threatens my Train at W1/R0.2. I can retreat Train to W2/R1.1 (buried 3, acceptable) or counterattack with Noctis to C/W.B (buried 0, controls center). The Noctis move also pressures Black's exposed Drone. Red is passive — safe to focus on Black. Moving Noctis to C/W.B.\"\n\nIn your thinking, consider:\n1. Is my Leader safe? Any immediate threats?\n2. Can I capture an undefended piece or create a fork?\n3. Does this move improve piece activity (lower buried level)?\n4. How does this move affect BOTH opponents — am I helping the third player?\n\nCRITICAL: Use ONLY coordinates from the legal moves list provided. Coordinates are case-sensitive uppercase.",
+    "rendered_user_prompt": "Move #4 | You are WHITE\n\nPosition (3PF): wRA1,wPA2,bPA5,bNA6,bRA8,wPB2,bPB7,wBC1,wPC2,bPC5,bBC8,wQD1,wPD2,wND5,bPD7,bKD8,wKE1,wPE4,rPE9,rQE12,wBF1,wPF2,rPF11,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,rBI5,bPI7,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 w wKQ.bKQ.rKQ - aaa 4 4\n\nBoard:\n  BLACK: D:B3/R3.2 D:B3/W3.2 L:B3/R3.3 M:B3/W3.3 N:B3/R1.0 N:B3/W3.1 P:B1/R0.2 P:B2/R2.1 P:B2/R2.3 P:B2/W2.1 P:B2/W2.2 P:B2/W2.3 P:B3/R0.0 P:B3/W2.0 T:B3/R3.0 T:B3/W3.0\n  RED: D:C/B.W D:R3/B3.2 L:R3/B3.3 M:R3/W3.3 N:R3/B3.1 N:R3/W3.1 P:C/R.W P:R2/B2.1 P:R2/B2.2 P:R2/B2.3 P:R2/W2.1 P:R2/W2.2 P:R3/B2.0 P:R3/W2.0 T:R3/B3.0 T:R3/W3.0\n  WHITE ← YOU: D:W3/B3.2 D:W3/R3.2 L:W3/R3.3 M:W3/B3.3 N:C/B.R N:W3/R3.1 P:C/W.R P:W2/B2.1 P:W2/B2.2 P:W2/B2.3 P:W2/R2.1 P:W2/R2.2 P:W3/B2.0 P:W3/R2.0 T:W3/B3.0 T:W3/R3.0\n\nLegal moves:\n  C/B.R: B1/W1.2, B2/R1.1, B2/R2.2, B2/W2.3, R1/B0.2, R1/B1.3, W1/B1.2, W1/R0.2, W1/R1.3, W2/B0.1\n  W2/B2.1: W2/B0.1, W2/B1.1\n  W2/B2.2: W1/B0.2, W1/B1.2\n  W2/B2.3: C/W.B, W1/B1.3\n  W2/R2.1: W2/R0.1, W2/R1.1\n  W2/R2.2: W1/R0.2, W1/R1.2\n  W3/B2.0: W3/B0.0, W3/B1.0\n  W3/B3.0: W3/B3.1\n  W3/B3.3: R3/W0.0, W1/R1.2, W2/R0.1, W2/R2.3\n  W3/R2.0: W3/R0.0, W3/R1.0\n  W3/R3.1: W1/R1.2, W2/R2.3, W3/R1.0\n  W3/R3.2: B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.3\n  W3/R3.3: W2/R2.3\n\nLast move: R1/B0.2 → C/B.W\n",
+    "use_triumvirate_notation": true
+  },
+  "llm_requests": [
+    {
+      "attempt": 1,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nTHREE PLAYERS: White, Black, Red. Turn order: White → Black → Red.\n\nBOARD STRUCTURE:\n- Three sectors (W=White, B=Black, R=Red), each with 32 cells.\n- Sectors connect through shared border columns (bridges).\n- Center rosette (C/...) cells are the most powerful positions — they control all three sectors.\n\nPIECES AND MOVEMENT (adapted to hexagonal geometry):\nL (Leader) — Moves exactly 1 step in any direction. If captured, you lose.\nM (Marshal) — Moves any distance in straight lines or diagonals. Most powerful piece.\nT (Train) — Moves any distance in straight lines only (no diagonals).\nD (Drone) — Moves any distance diagonally only.\nN (Noctis) — Jumps in an L-shape (2+1 cells). Ignores pieces in the way.\nP (Private) — Moves 1 forward (2 from start row). Captures diagonally forward.\n- Privates move forward along their column toward the opponent's back row.\n- Privates capture diagonally forward (up to 3 directions near the center).\n- Double Private move from starting row. En passant applies.\n- Promotion on opponent's back row to M, T, D, or N.\n- Castling along the base row (Leader-side or Marshal-side).\n\nSPECIAL RULES:\n- Checkmated player's pieces (except Leader) transfer to the mating player.\n- Transferred Privates moving against their new forward direction become \"stuck\" (capture only).\n- Win condition: checkmate both opponents.\n\nREADING COORDINATES:\n- Regular cell example: W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n- Rosette cell example: C/W.B = Center rosette, between White and Black sectors.\n- Lower ring number = closer to center = stronger position.\n- Depth 0 = front line (most aggressive), depth 3 = back row (defensive).\n- \"Buried level\" = Ring + Depth. Keep your active pieces below buried level 4.\n\nSTRATEGY:\n1. Leader safety — your Leader is attacked from TWO directions. Keep it protected.\n2. Center control — rosette cells (C/...) dominate the board. Fight for them.\n3. Material — captures matter, but avoid trading into the third player's advantage.\n4. Development — activate pieces toward lower rings. A piece at ring 3 depth 3 is useless.\n5. Three-player dynamics — attacking one opponent strengthens the other. Balance aggression.\n6. Private advancement — Privates closer to promotion (depth 0) are worth much more.\n\nIMPORTANT: Choose ONLY from the legal moves list provided. Do not invent coordinates.\n\n### OUTPUT FORMAT\nRespond with a single JSON object. No markdown, no commentary outside JSON.\n\n{\"thinking\": \"your step-by-step analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\n\nFor Private promotion add: \"promotion\": \"marshal\"\nPromotion values: marshal | train | drone | noctis\n\nExample thinking: \"My Leader at W3/B3.3 is safe behind Privates. Enemy Marshal on C/B.R threatens my Train at W1/R0.2. I can retreat Train to W2/R1.1 (buried 3, acceptable) or counterattack with Noctis to C/W.B (buried 0, controls center). The Noctis move also pressures Black's exposed Drone. Red is passive — safe to focus on Black. Moving Noctis to C/W.B.\"\n\nIn your thinking, consider:\n1. Is my Leader safe? Any immediate threats?\n2. Can I capture an undefended piece or create a fork?\n3. Does this move improve piece activity (lower buried level)?\n4. How does this move affect BOTH opponents — am I helping the third player?\n\nCRITICAL: Use ONLY coordinates from the legal moves list provided. Coordinates are case-sensitive uppercase."
+        },
+        {
+          "role": "user",
+          "content": "Move #4 | You are WHITE\n\nPosition (3PF): wRA1,wPA2,bPA5,bNA6,bRA8,wPB2,bPB7,wBC1,wPC2,bPC5,bBC8,wQD1,wPD2,wND5,bPD7,bKD8,wKE1,wPE4,rPE9,rQE12,wBF1,wPF2,rPF11,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,rBI5,bPI7,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 w wKQ.bKQ.rKQ - aaa 4 4\n\nBoard:\n  BLACK: D:B3/R3.2 D:B3/W3.2 L:B3/R3.3 M:B3/W3.3 N:B3/R1.0 N:B3/W3.1 P:B1/R0.2 P:B2/R2.1 P:B2/R2.3 P:B2/W2.1 P:B2/W2.2 P:B2/W2.3 P:B3/R0.0 P:B3/W2.0 T:B3/R3.0 T:B3/W3.0\n  RED: D:C/B.W D:R3/B3.2 L:R3/B3.3 M:R3/W3.3 N:R3/B3.1 N:R3/W3.1 P:C/R.W P:R2/B2.1 P:R2/B2.2 P:R2/B2.3 P:R2/W2.1 P:R2/W2.2 P:R3/B2.0 P:R3/W2.0 T:R3/B3.0 T:R3/W3.0\n  WHITE ← YOU: D:W3/B3.2 D:W3/R3.2 L:W3/R3.3 M:W3/B3.3 N:C/B.R N:W3/R3.1 P:C/W.R P:W2/B2.1 P:W2/B2.2 P:W2/B2.3 P:W2/R2.1 P:W2/R2.2 P:W3/B2.0 P:W3/R2.0 T:W3/B3.0 T:W3/R3.0\n\nLegal moves:\n  C/B.R: B1/W1.2, B2/R1.1, B2/R2.2, B2/W2.3, R1/B0.2, R1/B1.3, W1/B1.2, W1/R0.2, W1/R1.3, W2/B0.1\n  W2/B2.1: W2/B0.1, W2/B1.1\n  W2/B2.2: W1/B0.2, W1/B1.2\n  W2/B2.3: C/W.B, W1/B1.3\n  W2/R2.1: W2/R0.1, W2/R1.1\n  W2/R2.2: W1/R0.2, W1/R1.2\n  W3/B2.0: W3/B0.0, W3/B1.0\n  W3/B3.0: W3/B3.1\n  W3/B3.3: R3/W0.0, W1/R1.2, W2/R0.1, W2/R2.3\n  W3/R2.0: W3/R0.0, W3/R1.0\n  W3/R3.1: W1/R1.2, W2/R2.3, W3/R1.0\n  W3/R3.2: B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.3\n  W3/R3.3: W2/R2.3\n\nLast move: R1/B0.2 → C/B.W\n"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n\nTHREE PLAYERS: White, Black, Red. Turn order: White → Black → Red.\n\nBOARD STRUCTURE:\n- Three sectors (W=White, B=Black, R=Red), each with 32 cells.\n- Sectors connect through shared border columns (bridges).\n- Center rosette (C/...) cells are the most powerful positions — they control all three sectors.\n\nPIECES AND MOVEMENT (adapted to hexagonal geometry):\nL (Leader) — Moves exactly 1 step in any direction. If captured, you lose.\nM (Marshal) — Moves any distance in straight lines or diagonals. Most powerful piece.\nT (Train) — Moves any distance in straight lines only (no diagonals).\nD (Drone) — Moves any distance diagonally only.\nN (Noctis) — Jumps in an L-shape (2+1 cells). Ignores pieces in the way.\nP (Private) — Moves 1 forward (2 from start row). Captures diagonally forward.\n- Privates move forward along their column toward the opponent's back row.\n- Privates capture diagonally forward (up to 3 directions near the center).\n- Double Private move from starting row. En passant applies.\n- Promotion on opponent's back row to M, T, D, or N.\n- Castling along the base row (Leader-side or Marshal-side).\n\nSPECIAL RULES:\n- Checkmated player's pieces (except Leader) transfer to the mating player.\n- Transferred Privates moving against their new forward direction become \"stuck\" (capture only).\n- Win condition: checkmate both opponents.\n\nREADING COORDINATES:\n- Regular cell example: W2/R1.2 = White sector, ring 2, facing Red, depth 1, flank 2.\n- Rosette cell example: C/W.B = Center rosette, between White and Black sectors.\n- Lower ring number = closer to center = stronger position.\n- Depth 0 = front line (most aggressive), depth 3 = back row (defensive).\n- \"Buried level\" = Ring + Depth. Keep your active pieces below buried level 4.\n\nSTRATEGY:\n1. Leader safety — your Leader is attacked from TWO directions. Keep it protected.\n2. Center control — rosette cells (C/...) dominate the board. Fight for them.\n3. Material — captures matter, but avoid trading into the third player's advantage.\n4. Development — activate pieces toward lower rings. A piece at ring 3 depth 3 is useless.\n5. Three-player dynamics — attacking one opponent strengthens the other. Balance aggression.\n6. Private advancement — Privates closer to promotion (depth 0) are worth much more.\n\nIMPORTANT: Choose ONLY from the legal moves list provided. Do not invent coordinates.\n\n### OUTPUT FORMAT\nRespond with a single JSON object. No markdown, no commentary outside JSON.\n\n{\"thinking\": \"your step-by-step analysis\", \"move_from\": \"W2/R2.3\", \"move_to\": \"C/W.R\"}\n\nFor Private promotion add: \"promotion\": \"marshal\"\nPromotion values: marshal | train | drone | noctis\n\nExample thinking: \"My Leader at W3/B3.3 is safe behind Privates. Enemy Marshal on C/B.R threatens my Train at W1/R0.2. I can retreat Train to W2/R1.1 (buried 3, acceptable) or counterattack with Noctis to C/W.B (buried 0, controls center). The Noctis move also pressures Black's exposed Drone. Red is passive — safe to focus on Black. Moving Noctis to C/W.B.\"\n\nIn your thinking, consider:\n1. Is my Leader safe? Any immediate threats?\n2. Can I capture an undefended piece or create a fork?\n3. Does this move improve piece activity (lower buried level)?\n4. How does this move affect BOTH opponents — am I helping the third player?\n\nCRITICAL: Use ONLY coordinates from the legal moves list provided. Coordinates are case-sensitive uppercase."
+        },
+        {
+          "role": "user",
+          "content": "Move #4 | You are WHITE\n\nPosition (3PF): wRA1,wPA2,bPA5,bNA6,bRA8,wPB2,bPB7,wBC1,wPC2,bPC5,bBC8,wQD1,wPD2,wND5,bPD7,bKD8,wKE1,wPE4,rPE9,rQE12,wBF1,wPF2,rPF11,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,rBI5,bPI7,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 w wKQ.bKQ.rKQ - aaa 4 4\n\nBoard:\n  BLACK: D:B3/R3.2 D:B3/W3.2 L:B3/R3.3 M:B3/W3.3 N:B3/R1.0 N:B3/W3.1 P:B1/R0.2 P:B2/R2.1 P:B2/R2.3 P:B2/W2.1 P:B2/W2.2 P:B2/W2.3 P:B3/R0.0 P:B3/W2.0 T:B3/R3.0 T:B3/W3.0\n  RED: D:C/B.W D:R3/B3.2 L:R3/B3.3 M:R3/W3.3 N:R3/B3.1 N:R3/W3.1 P:C/R.W P:R2/B2.1 P:R2/B2.2 P:R2/B2.3 P:R2/W2.1 P:R2/W2.2 P:R3/B2.0 P:R3/W2.0 T:R3/B3.0 T:R3/W3.0\n  WHITE ← YOU: D:W3/B3.2 D:W3/R3.2 L:W3/R3.3 M:W3/B3.3 N:C/B.R N:W3/R3.1 P:C/W.R P:W2/B2.1 P:W2/B2.2 P:W2/B2.3 P:W2/R2.1 P:W2/R2.2 P:W3/B2.0 P:W3/R2.0 T:W3/B3.0 T:W3/R3.0\n\nLegal moves:\n  C/B.R: B1/W1.2, B2/R1.1, B2/R2.2, B2/W2.3, R1/B0.2, R1/B1.3, W1/B1.2, W1/R0.2, W1/R1.3, W2/B0.1\n  W2/B2.1: W2/B0.1, W2/B1.1\n  W2/B2.2: W1/B0.2, W1/B1.2\n  W2/B2.3: C/W.B, W1/B1.3\n  W2/R2.1: W2/R0.1, W2/R1.1\n  W2/R2.2: W1/R0.2, W1/R1.2\n  W3/B2.0: W3/B0.0, W3/B1.0\n  W3/B3.0: W3/B3.1\n  W3/B3.3: R3/W0.0, W1/R1.2, W2/R0.1, W2/R2.3\n  W3/R2.0: W3/R0.0, W3/R1.0\n  W3/R3.1: W1/R1.2, W2/R2.3, W3/R1.0\n  W3/R3.2: B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.3\n  W3/R3.3: W2/R2.3\n\nLast move: R1/B0.2 → C/B.W\n\n\n⚠️ REMINDER: You MUST respond with a JSON object containing \"move_from\" and \"move_to\" keys. Do NOT reply with plain text coordinates."
+        }
+      ]
+    }
+  ],
+  "llm_responses": [
+    {
+      "attempt": 1,
+      "raw_response": "The user wants me to play a move in a Three-Player Chess game.\nI am playing as WHITE.\nThe board state is provided, along with the legal moves.\nI need to analyze the position and choose the best move from the legal list.\n\n**Position Analysis:**\n- **My Leader (L):** W3/R3.3. It is at depth 3, ring 3. This is deep in my own territory (White sector). It is relatively safe but not controlling the center.\n- **My Marshal (M):** W3/B3.3. Also deep in my territory.\n- **My Noctis (N):** C/B.R. This is a Rosette cell (Center). It is in the center, controlling all sectors. This is a very strong position.\n- **My Privates (P):** Several at W2/B2.x, W2/R2.x, W3/B2.0, W3/R2.0, C/W.R.\n  - C/W.R is a Rosette.\n  - W3/B2.0 and W3/R2.0 are depth 2, ring 3.\n  - W2/B2.x and W2/R2.x are depth 2, ring 2.\n- **Opponents:**\n  - **Black:** Has pieces in B sector and some in center.\n  - **Red:** Has pieces in R sector and some in center.\n\n**Key Strategic Points:**\n1.  **Center Control:** The Rosette cells (C/...) are crucial. I have a Noctis at C/B.R and a Private at C/W.R.\n2.  **Leader Safety:** My Leader is at W3/R3.3. It is surrounded by my own pieces (T:W3/R3.0, M:W3/B3.3, P:W3/R2.0). It seems safe for now.\n3.  **Activity:** Pieces at Ring 3 are generally less active than Ring 2 or 1. Moving pieces towards the center (lower ring numbers) or forward (lower depth numbers) is good.\n4.  **Threats:** I need to check if any opponent pieces are threatening my Leader or valuable pieces.\n    - Black's Marshal is at B3/W3.3.\n    - Red's Marshal is at R3/W3.3.\n    - Black's Noctis is at B3/R1.0.\n    - Red's Noctis is at R3/B3.1.\n    - Black's Train is at B3/R3.0.\n    - Red's Train is at R3/B3.0.\n    - Black's Drone is at B3/R3.2.\n    - Red's Drone is at R3/B3.2.\n    - The board seems relatively symmetrical in terms of back-row setup.\n5.  **Last Move:** Red moved R1/B0.2 → C/B.W. This suggests Red is trying to control the center or attack. C/B.W is a rosette. Red now has a piece there (likely a Private or piece that moved there). Wait, the board text says \"Red: P:C/R.W\". Ah, the board text lists \"P:C/R.W\" under Red. But the move log says \"Last move: R1/B0.2 → C/B.W\". This implies a Red piece moved to C/B.W. Let's check the board text again.\n    - Board text: \"RED: ... P:C/R.W ...\".\n    - Wait, the move log says \"Last move: R1/B0.2 → C/B.W\".\n    - The board text lists \"P:C/R.W\" for Red.\n    - The board text lists \"P:C/W.R\" for White.\n    - The board text lists \"N:C/B.R\" for White.\n    - The board text lists \"D:C/B.W\" for Red? No, \"D:C/B.W\" is listed under Red. Wait, let me re-read the board text carefully.\n    - Board: \"RED: D:C/B.W D:R3/B3.2 ...\". So Red has a Drone at C/B.W.\n    - Board: \"WHITE: ... N:C/B.R ... P:C/W.R ...\". White has Noctis at C/B.R and Private at C/W.R.\n    - So Red moved a piece to C/B.W (likely a Drone based on the list).\n    - This puts a Red piece in the center.\n    - My Noctis is at C/B.R.\n    - My Private is at C/W.R.\n    - I need to decide what to do with my pieces.\n\n**Legal Moves Analysis:**\nI need to pick one move from the provided list.\nThe list is:\n- C/B.R (My Noctis): B1/W1.2, B2/R1.1, B2/R2.2, B2/W2.3, R1/B0.2, R1/B1.3, W1/B1.2, W1/R0.2, W1/R1.3, W2/B0.1\n- W2/B2.1 (P): W2/B0.1, W2/B1.1\n- W2/B2.2 (P): W1/B0.2, W1/B1.2\n- W2/B2.3 (P): C/W.B, W1/B1.3\n- W2/R2.1 (P): W2/R0.1, W2/R1.1\n- W2/R2.2 (P): W1/R0.2, W1/R1.2\n- W3/B2.0 (P): W3/B0.0, W3/B1.0\n- W3/B3.0 (T): W3/B3.1\n- W3/B3.3 (M): R3/W0.0, W1/R1.2, W2/R0.1, W2/R2.3\n- W3/R2.0 (P): W3/R0.0, W3/R1.0\n- W3/R3.1 (T): W1/R1.2, W2/R2.3, W3/R1.0\n- W3/R3.2 (D): B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.3\n- W3/R3.3 (L): R3/W0.0, W1/R1.2, W2/R0.1, W2/R2.3\n\n**Candidate Moves:**\n\n1.  **Move Noctis (C/B.R):**\n    - C/B.R is currently in the center. Moving it away might lose central control.\n    - However, it can jump to W1/R1.3 or W1/R0.2.\n    - W1/R0.2 is a very aggressive position (depth 0, ring 1).\n    - W1/R1.3 is also good.\n    - But C/B.R is a Noctis. It jumps.\n    - If I move Noctis, I leave C/B.R empty. Red has a Drone at C/B.W. White has a Private at C/W.R.\n    - Keeping the Noctis in the center is usually strong because it controls many squares.\n    - However, if it's safe, maybe I should activate it.\n    - Wait, the move list for C/B.R includes \"W1/R0.2\". This is a jump to depth 0. That is very aggressive.\n    - Is there a threat to the Noctis? Red's Drone is at C/B.W. Noctis moves diagonally. C/B.W is adjacent? No, C/B.W is a Rosette. C/B.R is a Rosette. They are different rosettes.\n    - The board shows \"D:C/B.W\" for Red. \"N:C/B.R\" for White.\n    - If I move N from C/B.R, I lose the center control of that specific rosette.\n    - Let's look at other pieces.\n\n2.  **Move Marshal (W3/B3.3):**\n    - W3/B3.3 is at depth 3, ring 3. Very passive.\n    - Moves: R3/W0.0 (Red sector depth 0!), W1/R1.2, W2/R0.1, W2/R2.3.\n    - **R3/W0.0**: This is a jump to the Red sector's front line (depth 0). This is extremely aggressive. It places my Marshal right in the opponent's back row (Red's back row is depth 3, front is depth 0). Wait, \"Depth 0 = front line (most aggressive)\". So depth 0 is where the opponent's back row is?\n    - Let's check the coordinate system description: \"Depth 0 = front line (most aggressive), depth 3 = back row (defensive).\"\n    - Usually, in chess, you move towards the opponent. If I am White, my back row is depth 3. My front line is depth 0.\n    - Wait, the description says \"Depth 0 = front line\".\n    - If I am White, my pieces start at depth 3 (back) and move to depth 0 (front/opponent).\n    - So W3/B3.3 is at depth 3 (my back row).\n    - Moving to R3/W0.0: R3 means Red sector. W0.0 means White facing, depth 0? Or is it Red sector, White facing?\n    - The coordinate format is Sector/Flank/Depth? Or Sector/Ring/Depth?\n    - \"W2/R2.3 = White sector, ring 2, facing Red, depth 3\".\n    - So W3/B3.3 = White sector, ring 3, facing Black, depth 3.\n    - R3/W0.0 = Red sector, ring 3, facing White, depth 0.\n    - Depth 0 is the front line. So R3/W0.0 is deep in Red's territory (Red's front line is depth 0).\n    - This is a very strong move. It attacks Red's back row (if Red's back row is depth 3). Wait, if depth 0 is front line, then Red's back row is depth 3.\n    - If I move to R3/W0.0, I am at Red's front line.\n    - Wait, let's re-read the depth definition. \"Depth 0 = front line (most aggressive), depth 3 = back row (defensive).\"\n    - So for White, depth 0 is Red's side. Depth 3 is White's side.\n    - So W3/B3.3 is at White's back row.\n    - Moving to R3/W0.0 puts the Marshal at Red's front line (Red's depth 0).\n    - This is a huge advancement. It threatens Red's back row pieces.\n    - Is it legal? Yes, it's in the list.\n    - Is it safe? R3/W0.0 is in Red's sector. Red has pieces there (Red's back row pieces are at depth 3, front at 0).\n    - Red's pieces at depth 0: P:R2/B2.1 (Wait, R2 is ring 2).\n    - Red's pieces: P:R2/B2.1, P:R2/B2.2, P:R2/B2.3, P:R2/W2.1, P:R2/W2.2, P:R3/B2.0, P:R3/W2.0.\n    - Wait, Red's pieces are mostly at Ring 2 and 3.\n    - R3/W0.0 is Ring 3, Depth 0.\n    - Red has T:R3/B3.0 and T:R3/W3.0.\n    - Red has P at R3/B2.0 and R3/W2.0.\n    - Is R3/W0.0 occupied? The board list doesn't show a piece at R3/W0.0.\n    - So moving M to R3/W0.0 places it in an empty spot deep in Red's territory.\n    - This is a very strong attacking move.\n\n3.  **Move Private (W2/B2.3):**\n    - Moves to C/W.B.\n    - C/W.B is a Rosette.\n    - Moving a Private to a Rosette is good for control.\n    - But Private is weak. Marshal is better.\n\n4.  **Move Private (W2/R2.1):**\n    - Moves to W2/R0.1 or W2/R1.1.\n    - W2/R0.1 is depth 1. Good advancement.\n\n5.  **Move Drone (W3/R3.2):**\n    - Moves to B2/R0.1, B3/R1.0, W1/B0.2, W1/B1.3, W2/R2.3.\n    - B3/R1.0 is occupied by Black's Noctis (N:B3/R1.0). So capture?\n    - Wait, the legal moves list usually implies capturing if the destination is occupied by an enemy.\n    - If B3/R1.0 is occupied by Black's Noctis, moving W3/R3.2 to B3/R1.0 captures it.\n    - Capturing a Noctis is very good.\n    - Is B3/R1.0 occupied? Board text: \"BLACK: ... N:B3/R1.0 ...\". Yes.\n    - So Drone captures Noctis.\n    - Drone is a long-range diagonal mover.\n    - W3/R3.2 to B3/R1.0.\n    - W3/R3.2 is Ring 3, Depth 2.\n    - B3/R1.0 is Ring 1, Depth 0.\n    - This is a capture of a Noctis.\n    - This removes a Black piece that is potentially active (Ring 1).\n    - This seems like a very strong candidate.\n\n6.  **Move Leader (W3/R3.3):**\n    - Moves to R3/W0.0, W1/R1.2, W2/R0.1, W2/R2.3.\n    - Moving the Leader is risky. It is the most valuable piece (if captured, you lose).\n    - Moving to R3/W0.0 puts it in Red's territory.\n    - Moving to W2/R0.1 is safer.\n    - Generally, keep Leader safe.\n\n**Comparison:**\n- **Option A: Marshal (W3/B3.3) -> R3/W0.0.**\n  - Aggressive. Places Marshal in Red's front line.\n  - Does not capture.\n  - Opens up the center slightly?\n  - Red's pieces are at Ring 2/3. Depth 0 is very forward.\n  - This puts my Marshal in a position to attack Red's back row (Depth 3).\n  - Wait, Red's back row is Depth 3. Red's front line is Depth 0.\n  - If I am at Depth 0, I am closest to Red's back row? No.\n  - If Depth 0 is \"front line (most aggressive)\", that means it's the line closest to the opponent.\n  - So for White, Depth 0 is Red's side.\n  - So R3/W0.0 is in Red's sector, at Red's front line (Depth 0).\n  - This means it is deep in Red's territory.\n  - This is a very strong position for the Marshal.\n  - However, is it safe? Red's pieces are mostly at Ring 2/3.\n  - Red's Noctis is at R3/B3.1.\n  - Red's Drone is at R3/B3.2.\n  - Red's Marshal is at R3/W3.3.\n  - Red's Train is at R3/B3.0 and R3/W3.0.\n  - If I move M to R3/W0.0, I am at Depth 0.\n  - Red's pieces are at Depth 2, 3.\n  - So I am closer to Red's back row (Depth 3) than Red's pieces are to me?\n  - Wait, if I am at Depth 0, and Red's back row is Depth 3.\n  - Distance is 3 steps.\n  - Red's pieces are at Depth 2, 3.\n  - So Red's pieces are \"behind\" me?\n  - No, if I am White, I move from Depth 3 -> Depth 0.\n  - Red moves from Depth 3 -> Depth 0 (Red's Depth 0 is White's side).\n  - So R3/W0.0 is Red's Depth 0. This is White's side?\n  - Let's clarify the coordinate system.\n  - \"W2/R2.3 = White sector, ring 2, facing Red, depth 3\".\n  - \"Depth 0 = front line\".\n  - So for White, Depth 0 is the line facing Red.\n  - So R3/W0.0: Red Sector. White Facing. Depth 0.\n  - This is the line closest to White's sector?\n  - If I am White, Depth 0 is my front line.\n  - So R3/W0.0 is Red Sector, Depth 0. This is Red's front line (closest to White).\n  - So I am placing my Marshal at Red's front line.\n  - This is attacking Red's back row (Depth 3).\n  - Wait, if I am at Red's front line, I am far from Red's back row.\n  - Red's back row is Depth 3.\n  - So I am at Depth 0. Red's pieces are at Depth 2, 3.\n  - So I am in front of Red's pieces.\n  - This is good for attacking.\n  - But is it safe? Red's Marshal is at R3/W3.3 (Depth 3).\n  - Red's Noctis is at R3/B3.1 (Depth 1).\n  - Red's Drone is at R3/B3.2 (Depth 2).\n  - Red's Private is at R2/B2.x (Depth 2).\n  - So Red has pieces at Depth 1, 2, 3.\n  - If I move M to R3/W0.0 (Depth 0), I am in front of Red's pieces.\n  - Red's Noctis at R3/B3.1 can jump to R3/W0.0? No, Noctis jumps 2+1.\n  - Red's Drone at R3/B3.2 can move diagonally.\n  - Red's Marshal at R3/W3.3 can move.\n  - This move seems very aggressive.\n\n- **Option B: Drone (W3/R3.2) -> B3/R1.0 (Capture Black Noctis).**\n  - Captures an active piece (Noctis).\n  - Removes a threat.\n  - Places Drone at B3/R1.0 (Black Sector, Ring 1, Depth 0).\n  - This is deep in Black's territory.\n  - Black's pieces: N:B3/R1.0 (captured), N:B3/W3.1, M:B3/W3.3, L:B3/R3.3.\n  - Black's Marshal is at B3/W3.3 (Depth 3).\n  - Black's Noctis is at B3/W3.1 (Depth 1).\n  - Black's Train is at B3/R3.0, B3/W3.0.\n  - If I capture N:B3/R1.0, I remove a piece that was controlling the center area (Ring 1).\n  - This seems like a solid tactical gain.\n  - Drone is less valuable than Marshal.\n  - But capturing a Noctis is good.\n  - Is the Drone safe at B3/R1.0?\n  - Black's Marshal at B3/W3.3 can move to B3/R1.0? No, M moves straight/diagonal. B3/W3.3 to B3/R1.0 is diagonal?\n  - B3/W3.3 (Ring 3, Depth 3) to B3/R1.0 (Ring 1, Depth 0).\n  - Ring diff: 2. Depth diff: 3.\n  - M moves any distance in straight lines or diagonals.\n  - Is B3/R1.0 on a diagonal from B3/W3.3?\n  - Coordinates: Sector B, Ring 3, Depth 3 (W side) -> Sector B, Ring 1, Depth 0 (R side).\n  - This seems like a long diagonal.\n  - If Black's Marshal can capture the Drone, it's risky.\n  - But I am White. Black's turn is after Red.\n  - If I capture, Black might capture back.\n  - But Black's turn is after Red.\n  - Red just moved. Now White.\n  - If I capture, Black will move next.\n  - Black might capture the Drone.\n  - However, removing Black's Noctis is a material gain.\n  - Also, Black's Noctis was at Ring 1, which is very active.\n\n- **Option C: Marshal (W3/B3.3) -> W2/R2.3.**\n  - Moves Marshal to W2/R2.3 (White Sector, Ring 2, Depth 3).\n  - This is closer to center.\n  - Less aggressive than R3/W0.0.\n\n- **Option D: Noctis (C/B.R) -> W1/R0.2.**\n  - Moves Noctis to W1/R0.2 (White Sector, Ring 1, Depth 0).\n  - Very aggressive.\n  - Places Noctis at White's front line.\n  - Threatens Red's back row.\n  - Safe? W1/R0.2 is in White sector.\n  - Red's pieces are in Red sector.\n  - This seems safe and strong.\n\n**Decision:**\n- **Capture (Drone -> B3/R1.0):** Material gain. Removes an active enemy piece.\n- **Aggressive Advance (Marshal -> R3/W0.0):** Places Marshal deep in Red's territory.\n- **Center Control (Noctis -> W1/R0.2):** Keeps Noctis active.\n\nLet's look at the \"Last move\": R1/B0.2 → C/B.W.\nRed moved a piece to C/B.W.\nThis means Red is trying to establish presence in the center.\nWhite has N at C/B.R and P at C/W.R.\nRed has D at C/B.W.\nIf I capture Black's Noctis (B3/R1.0), I gain material.\nBlack's Noctis was at B3/R1.0.\nIs it undefended?\nBlack's Marshal is at B3/W3.3.\nBlack's Drone is at B3/R3.2.\nBlack's Train is at B3/R3.0.\nBlack's Private is at B2/R2.1 etc.\nB3/R1.0 is Ring 1, Depth 0.\nBlack's Marshal is Ring 3, Depth 3.\nBlack's Drone is Ring 3, Depth 2.\nBlack's Train is Ring 3, Depth 0.\nDoes Black have a piece protecting B3/R1.0?\nThe Board text does not show any piece at B3/R1.0 other than the Noctis.\nSo it is undefended.\nCapturing it is a free piece.\nDrone (D) is worth less than Noctis (N)?\nIn standard chess, Knight > Pawn. Here, N is Noctis (Knight-like), D is Drone (Bishop-like).\nUsually, capturing a piece of equal or higher value is good.\nIf Drone captures Noctis, it's a trade or gain.\nNoctis is a \"Jumps in an L-shape\". Drone is \"Moves any distance diagonally\".\nUsually, long-range pieces are more valuable than short-range jumpers, but Noctis is a Knight.\nIn this variant, Noctis is likely valuable for its jumping ability.\nHowever, removing an active piece from Ring 1 (Depth 0) is strategically sound.\nIt clears the way for my pieces.\n\nLet's consider **Marshal (W3/B3.3) -> R3/W0.0**.\nThis puts my Marshal at Red's front line.\nRed's back row is Depth 3.\nSo I am 3 steps away from Red's back row.\nRed's pieces are at Depth 2, 3.\nSo I am in front of them.\nThis is very strong.\nBut is it safe?\nRed's Marshal is at R3/W3.3.\nRed's Noctis is at R3/B3.1.\nRed's Drone is at R3/B3.2.\nRed's Train is at R3/B3.0.\nRed's Private is at R2/B2.x.\nIf I move M to R3/W0.0, can Red capture it?\nRed's Noctis at R3/B3.1 (Ring 3, Depth 1).\nTo R3/W0.0 (Ring 3, Depth 0).\nNoctis jumps 2+1.\nFrom R3/B3.1 to R3/W0.0:\nRing diff: 0. Depth diff: 1.\nThis is not a Noctis jump.\nRed's Drone at R3/B3.2 (Ring 3, Depth 2).\nTo R3/W0.0 (Ring 3, Depth 0).\nDrone moves diagonally.\nR3/B3.2 to R3/W0.0.\nRing diff: 0. Depth diff: 2.\nThis is a straight line (if B and W are opposite directions).\nWait, \"B\" and \"W\" in the coordinate usually denote \"Facing Black\" or \"Facing White\".\nIn Red Sector (R), B means facing Black. W means facing White.\nSo R3/B3.2 is facing Black. R3/W0.0 is facing White.\nThese are opposite directions in the Red sector.\nSo Drone at R3/B3.2 cannot move to R3/W0.0 (it's facing away).\nRed's Marshal at R3/W3.3 (Facing White, Depth 3).\nTo R3/W0.0 (Facing White, Depth 0).\nThis is a straight line along the W-facing column.\nSo Red's Marshal CAN capture my Marshal if I move there.\nRed's Marshal is at R3/W3.3.\nMy Marshal moves to R3/W0.0.\nRed's Marshal is at Depth 3. My Marshal is at Depth 0.\nRed's Marshal can move any distance.\nSo Red's Marshal can capture my Marshal immediately on the next turn.\nUnless I capture something else or checkmate.\nSo moving Marshal to R3/W0.0 is risky because it puts it in the line of fire of Red's Marshal.\nRed's Marshal is at R3/W3.3.\nMy Marshal is at W3/B3.3.\nIf I move to R3/W0.0, I am on the same \"W-facing\" line as Red's Marshal.\nSo Red can capture me.\nThis makes the move **Marshal -> R3/W0.0** dangerous.\n\nWhat about **Drone -> B3/R1.0**?\nBlack's Marshal is at B3/W3.3.\nBlack's Drone is at B3/R3.2.\nBlack's Train is at B3/R3.0.\nBlack's Noctis is at B3/R1.0 (Target).\nCan Black capture the Drone at B3/R1.0?\nBlack's Marshal at B3/W3.3.\nTo B3/R1.0.\nB3/W3.3 (Facing White). B3/R1.0 (Facing Red).\nOpposite directions. Marshal can move diagonally.\nIs B3/R1.0 on a diagonal from B3/W3.3?\nRing 3 to Ring 1. Depth 3 to Depth 0.\nYes, likely.\nSo Black's Marshal can capture the Drone.\nBut it's White's turn.\nIf I capture Noctis, Black might capture Drone.\nBut I gain a Noctis.\nIs Noctis worth more than Drone?\nUsually, Knight (Noctis) is worth 3, Bishop (Drone) is worth 3.\nBut Noctis is a jumper.\nAlso, Black's Marshal is at B3/W3.3.\nIf Black captures Drone, Black's Marshal moves to B3/R1.0.\nThen it is Red's turn.\nRed might capture Black's Marshal.\nThis leads to a trade.\nBut I am White. I want to gain advantage.\nCapturing a piece that is undefended is good.\nIs B3/R1.0 truly undefended?\nBoard text: \"BLACK: ... N:B3/R1.0 ...\".\nNo other Black piece listed at B3/R1.0.\nSo it is a free capture.\nEven if Black recaptures, I have removed an active piece from Ring 1.\nAnd I have a Drone at B3/R1.0.\nWait, if Black recaptures, Black's Marshal is at B3/R1.0.\nThen Red can capture Black's Marshal (Red's Marshal is at R3/W3.3).\nSo it becomes a 3-way battle.\nBut gaining the Noctis is a net gain for me (I lose Drone, gain Noctis).\nActually, if Black recaptures, I lose Drone, Black loses Noctis.\nSo it's a trade of Drone for Noctis.\nIs Noctis better than Drone?\nNoctis is a jumper. Drone is a long-range diagonal.\nIn open boards, Drone is better. In closed, Noctis.\nBut Noctis is currently at Ring 1 (very active).\nSo removing it is good.\n\nLet's check **Noctis (C/B.R) -> W1/R0.2**.\nMoves Noctis to White Sector, Ring 1, Depth 0.\nThis is very active.\nIt is in my sector.\nRed's pieces are in Red sector.\nBlack's pieces are in Black sector.\nThis is safe from immediate capture (unless Red/Black pieces can jump/move there).\nRed's Noctis is at R3/B3.1.\nBlack's Noctis is at B3/R1.0.\nNeither can reach W1/R0.2 easily.\nThis move keeps the Noctis active and safe.\nBut does it create threats?\nW1/R0.2 is at Depth 0.\nIt threatens pieces at Depth 1, 2, 3 in adjacent sectors?\nNoctis jumps 2+1.\nFrom W1/R0.2:\n- W3/R1.0? (White Sector, Ring 3, Depth 0).\n- W3/R3.1?\n- W3/B1.0?\n- W3/B3.1?\n- W2/R2.0?\n- W2/R2.4?\nIt can jump to W3/R1.0 (White's back row).\nIt can jump to W2/R2.0 (White's Private).\nIt can jump to W1/R0.2 -> W3/R1.0.\nThis is a strong position.\nBut does it improve the board state compared to capturing?\nCapturing (Drone -> B3/R1.0) gives material.\nMaterial is important.\nHowever, keeping the Noctis in the center (C/B.R) is also strong.\nBut the move list for C/B.R includes W1/R0.2.\nIf I move Noctis to W1/R0.2, I leave C/B.R empty.\nRed has a Drone at C/B.W.\nWhite has a Private at C/W.R.\nSo the center is contested.\nIf I move Noctis to W1/R0.2, I have a piece at W1/R0.2.\nIf I capture B3/R1.0, I have a Drone at B3/R1.0.\nWhich is better?\nA Noctis at W1/R0.2 is safer than a Drone at B3/R1.0 (which might be captured by Black's Marshal).\nBut capturing is a free piece.\nLet's check the legal moves again.\nW3/R3.2 (Drone) -> B3/R1.0.\nIs B3/R1.0 occupied? Yes, by Black's Noctis.\nSo it is a capture.\nIf I play this, I remove Black's Noctis.\nBlack's Noctis was at Ring 1.\nThis reduces Black's activity.\nI place my Drone at Ring 1.\nThis increases my activity.\nEven if Black recaptures, I have removed a piece.\nWait, if Black recaptures, Black's Marshal is at B3/R1.0.\nThen Red can capture Black's Marshal.\nSo Black loses a Marshal?\nNo, Black's Marshal is at B3/W3.3.\nIf Black's Marshal moves to B3/R1.0 to capture my Drone.\nThen Red's Marshal (R3/W3.3) can capture Black's Marshal (B3/R1.0)?\nR3/W3.3 to B3/R1.0.\nR3 (Red Sector). B3 (Black Sector).\nCross-sector move.\nMarshal can move in straight lines or diagonals.\nCan Marshal move across sectors?\n\"Sectors connect through shared border columns (bridges).\"\n\"Center rosette (C/...) cells are the most powerful positions\".\nUsually, pieces can move across sectors if the line is clear.\nB3/R1.0 is in Black Sector. R3/W3.3 is in Red Sector.\nThey are adjacent?\nBlack and Red sectors share a border.\nWhite is the third sector.\nSo B and R are adjacent.\nSo a Marshal can move from R3/W3.3 to B3/R1.0 if the path is clear.\nPath: R3/W3.3 -> ... -> B3/R1.0.\nThis is a long move.\nIf Red captures Black's Marshal, Black loses a Marshal.\nSo if I capture Noctis with Drone, and Black recaptures with Marshal, and Red captures Marshal...\nBlack loses Noctis and Marshal.\nRed gains Marshal.\nI gain Noctis (temporarily, then lose Drone).\nNet: I lose Drone, gain Noctis. Black loses Noctis, loses Marshal. Red gains Marshal.\nThis seems very favorable for me if Red captures Black's Marshal.\nBut Red might not capture.\nRed might just move.\nBut Black loses a Noctis for a Drone.\nThis is a material advantage for me (Noctis > Drone usually).\nSo **Drone -> B3/R1.0** looks like a very strong move.\n\nLet's check **Marshal (W3/B3.3) -> W2/R2.3**.\nMoves Marshal to W2/R2.3.\nThis is safer than R3/W0.0.\nIt activates the Marshal.\nBut it doesn't capture.\nCapturing is usually better if safe.\n\nLet's check **Noctis (C/B.R) -> W1/R0.2**.\nActivates Noctis.\nSafe.\nBut doesn't capture.\n\n**Conclusion:**\nCapturing the Black Noctis at B3/R1.0 with my Drone at W3/R3.2 seems the most aggressive and advantageous move.\nIt removes an active enemy piece.\nIt places my Drone in a strong position (Ring 1).\nEven if Black recaptures, the exchange favors me (Noctis for Drone) or leads to Black losing a Marshal to Red.\nI should prioritize material gain and removing threats.\nBlack's Noctis at B3/R1.0 is a threat (Ring 1).\nRemoving it is good.\n\nOne detail: \"Captured player's pieces (except Leader) transfer to the mating player.\"\nThis is not checkmate. Just capture.\nSo pieces are removed.\nWait, \"Checkmated player's pieces ... transfer\".\nStandard capture: pieces are removed.\nSo I gain a Noctis? No, I capture it. It is removed.\nI lose",
+      "response_chars": 22846,
+      "time_sec": 116.592,
+      "usage": {
+        "prompt_tokens": 1862,
+        "completion_tokens": 8192,
+        "reasoning_tokens": 0,
+        "total_tokens": 10054,
+        "provider_reported_cost_usd": null
+      },
+      "cost": {
+        "input_cost_usd": 0.00030257,
+        "output_cost_usd": 0.0106496,
+        "reasoning_cost_usd": 0.0,
+        "total_cost_usd": 0.01095217,
+        "provider_reported_cost_usd": null
+      }
+    },
+    {
+      "attempt": 2,
+      "raw_response": "{\n\"thinking\": \"White's Marshal at W3/B3.3 is currently at buried level 6 (Ring 3 + Depth 3), which is too passive. Moving it to W1/R1.2 (Ring 1, Depth 1) reduces the buried level to 2, significantly improving piece activity and central control. This square is empty and safe from immediate enemy threats. White's Leader at W3/R3.3 is safe on the back row. Center control is contested with Red's Private at C/B.W and White's Noctis at C/B.R, but activating the Marshal supports this area. The move W2/B2.1 -> W2/B0.1 advances a Private but doesn't promote (Depth 0 is not promotion row given P:W3/B2.0 exists). The Noctis move C/B.R -> W1/R0.2 is also active (buried 1) but Marshal development is higher priority.\",\n\"move_from\": \"W3/B3.3\",\n\"move_to\": \"W1/R1.2\"\n}",
+      "response_chars": 761,
+      "time_sec": 76.861,
+      "usage": {
+        "prompt_tokens": 1897,
+        "completion_tokens": 9588,
+        "reasoning_tokens": 9353,
+        "total_tokens": 11485,
+        "provider_reported_cost_usd": null
+      },
+      "cost": {
+        "input_cost_usd": 0.00030826,
+        "output_cost_usd": 0.0124644,
+        "reasoning_cost_usd": 0.0121589,
+        "total_cost_usd": 0.02493156,
+        "provider_reported_cost_usd": null
+      }
+    }
+  ],
+  "parser_attempts": [
+    {
+      "attempt": 1,
+      "coordinates_found": [
+        "W3/R3.3",
+        "W3/B3.3",
+        "C/B.R",
+        "W3/B2.0",
+        "W3/R2.0",
+        "C/W.R",
+        "C/W.R",
+        "W3/B2.0",
+        "W3/R2.0",
+        "C/B.R",
+        "C/W.R",
+        "W3/R3.3",
+        "W3/R3.0",
+        "W3/B3.3",
+        "W3/R2.0",
+        "B3/W3.3",
+        "R3/W3.3",
+        "B3/R1.0",
+        "R3/B3.1",
+        "B3/R3.0",
+        "R3/B3.0",
+        "B3/R3.2",
+        "R3/B3.2",
+        "R1/B0.2",
+        "C/B.W",
+        "C/B.W",
+        "C/R.W",
+        "C/R.W",
+        "R1/B0.2",
+        "C/B.W",
+        "C/B.W",
+        "C/R.W",
+        "R1/B0.2",
+        "C/B.W",
+        "C/R.W",
+        "C/W.R",
+        "C/B.R",
+        "C/B.W",
+        "C/B.W",
+        "C/B.W",
+        "R3/B3.2",
+        "C/B.W",
+        "C/B.R",
+        "C/W.R",
+        "C/B.R",
+        "C/W.R",
+        "C/B.W",
+        "C/B.R",
+        "C/W.R",
+        "C/B.R",
+        "B1/W1.2",
+        "B2/R1.1",
+        "B2/R2.2",
+        "B2/W2.3",
+        "R1/B0.2",
+        "R1/B1.3",
+        "W1/B1.2",
+        "W1/R0.2",
+        "W1/R1.3",
+        "W2/B0.1",
+        "W2/B2.1",
+        "W2/B0.1",
+        "W2/B1.1",
+        "W2/B2.2",
+        "W1/B0.2",
+        "W1/B1.2",
+        "W2/B2.3",
+        "C/W.B",
+        "W1/B1.3",
+        "W2/R2.1",
+        "W2/R0.1",
+        "W2/R1.1",
+        "W2/R2.2",
+        "W1/R0.2",
+        "W1/R1.2",
+        "W3/B2.0",
+        "W3/B0.0",
+        "W3/B1.0",
+        "W3/B3.0",
+        "W3/B3.1",
+        "W3/B3.3",
+        "R3/W0.0",
+        "W1/R1.2",
+        "W2/R0.1",
+        "W2/R2.3",
+        "W3/R2.0",
+        "W3/R0.0",
+        "W3/R1.0",
+        "W3/R3.1",
+        "W1/R1.2",
+        "W2/R2.3",
+        "W3/R1.0",
+        "W3/R3.2",
+        "B2/R0.1",
+        "B3/R1.0",
+        "W1/B0.2",
+        "W1/B1.3",
+        "W2/R2.3",
+        "W3/R3.3",
+        "R3/W0.0",
+        "W1/R1.2",
+        "W2/R0.1",
+        "W2/R2.3",
+        "C/B.R",
+        "C/B.R",
+        "W1/R1.3",
+        "W1/R0.2",
+        "W1/R0.2",
+        "W1/R1.3",
+        "C/B.R",
+        "C/B.R",
+        "C/B.W",
+        "C/W.R",
+        "C/B.R",
+        "W1/R0.2",
+        "C/B.W",
+        "C/B.W",
+        "C/B.W",
+        "C/B.R",
+        "C/B.W",
+        "C/B.R",
+        "C/B.R",
+        "W3/B3.3",
+        "W3/B3.3",
+        "R3/W0.0",
+        "W1/R1.2",
+        "W2/R0.1",
+        "W2/R2.3",
+        "R3/W0.0",
+        "W3/B3.3",
+        "R3/W0.0",
+        "W2/R2.3",
+        "W3/B3.3",
+        "R3/W0.0",
+        "R3/W0.0",
+        "R3/W0.0",
+        "W3/B3.3",
+        "R3/W0.0",
+        "R3/W0.0",
+        "R2/B2.1",
+        "R2/B2.1",
+        "R2/B2.2",
+        "R2/B2.3",
+        "R2/W2.1",
+        "R2/W2.2",
+        "R3/B2.0",
+        "R3/W2.0",
+        "R3/W0.0",
+        "R3/B3.0",
+        "R3/W3.0",
+        "R3/B2.0",
+        "R3/W2.0",
+        "R3/W0.0",
+        "R3/W0.0",
+        "R3/W0.0",
+        "W2/B2.3",
+        "C/W.B",
+        "C/W.B",
+        "W2/R2.1",
+        "W2/R0.1",
+        "W2/R1.1",
+        "W2/R0.1",
+        "W3/R3.2",
+        "B2/R0.1",
+        "B3/R1.0",
+        "W1/B0.2",
+        "W1/B1.3",
+        "W2/R2.3",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "W3/R3.2",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "W3/R3.2",
+        "B3/R1.0",
+        "W3/R3.2",
+        "B3/R1.0",
+        "W3/R3.3",
+        "R3/W0.0",
+        "W1/R1.2",
+        "W2/R0.1",
+        "W2/R2.3",
+        "R3/W0.0",
+        "W2/R0.1",
+        "W3/B3.3",
+        "R3/W0.0",
+        "R3/W0.0",
+        "R3/B3.1",
+        "R3/B3.2",
+        "R3/W3.3",
+        "R3/B3.0",
+        "R3/W3.0",
+        "R3/W0.0",
+        "R3/W0.0",
+        "W2/R2.3",
+        "R3/W0.0",
+        "R3/W0.0",
+        "R3/W3.3",
+        "R3/B3.1",
+        "R3/B3.2",
+        "R3/W0.0",
+        "R3/B3.1",
+        "R3/W0.0",
+        "R3/B3.2",
+        "R3/W3.3",
+        "W3/R3.2",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/W3.1",
+        "B3/W3.3",
+        "B3/R3.3",
+        "B3/W3.3",
+        "B3/W3.1",
+        "B3/R3.0",
+        "B3/W3.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/W3.3",
+        "B3/R1.0",
+        "B3/W3.3",
+        "B3/R1.0",
+        "B3/W3.3",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/W3.3",
+        "W3/B3.3",
+        "W2/R2.3",
+        "W2/R2.3",
+        "R3/W0.0",
+        "C/B.R",
+        "W1/R0.2",
+        "W1/R0.2",
+        "W1/R0.2",
+        "B3/R1.0",
+        "R3/W0.0",
+        "W1/R0.2",
+        "R1/B0.2",
+        "C/B.W",
+        "C/B.W",
+        "C/B.R",
+        "C/W.R",
+        "C/B.W",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/W3.3",
+        "B3/R3.2",
+        "B3/R3.0",
+        "B2/R2.1",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "W3/B3.3",
+        "R3/W0.0",
+        "R3/W3.3",
+        "R3/B3.1",
+        "R3/B3.2",
+        "R3/B3.0",
+        "R3/W0.0",
+        "R3/B3.1",
+        "R3/W0.0",
+        "R3/B3.1",
+        "R3/W0.0",
+        "R3/B3.2",
+        "R3/W0.0",
+        "R3/B3.2",
+        "R3/W0.0",
+        "R3/B3.2",
+        "R3/W0.0",
+        "R3/B3.2",
+        "R3/W0.0",
+        "R3/W3.3",
+        "R3/W0.0",
+        "R3/W3.3",
+        "R3/W0.0",
+        "R3/W0.0",
+        "R3/W3.3",
+        "W3/B3.3",
+        "R3/W0.0",
+        "R3/W0.0",
+        "B3/R1.0",
+        "B3/W3.3",
+        "B3/R3.2",
+        "B3/R3.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/W3.3",
+        "B3/R1.0",
+        "B3/W3.3",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/W3.3",
+        "B3/W3.3",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "R3/W3.3",
+        "C/B.R",
+        "W1/R0.2",
+        "R3/B3.1",
+        "B3/R1.0",
+        "W1/R0.2",
+        "W1/R0.2",
+        "W1/R0.2",
+        "W3/R1.0",
+        "W3/R3.1",
+        "W3/B1.0",
+        "W3/B3.1",
+        "W2/R2.0",
+        "W3/R1.0",
+        "W2/R2.0",
+        "W1/R0.2",
+        "W3/R1.0",
+        "B3/R1.0",
+        "C/B.R",
+        "C/B.R",
+        "W1/R0.2",
+        "W1/R0.2",
+        "C/B.R",
+        "C/B.W",
+        "C/W.R",
+        "W1/R0.2",
+        "W1/R0.2",
+        "B3/R1.0",
+        "B3/R1.0",
+        "W1/R0.2",
+        "B3/R1.0",
+        "W3/R3.2",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/R1.0",
+        "B3/W3.3",
+        "B3/R1.0",
+        "R3/W3.3",
+        "B3/R1.0",
+        "R3/W3.3",
+        "B3/R1.0",
+        "B3/R1.0",
+        "R3/W3.3",
+        "R3/W3.3",
+        "B3/R1.0",
+        "R3/W3.3",
+        "B3/R1.0",
+        "B3/R1.0",
+        "W3/B3.3",
+        "W2/R2.3",
+        "W2/R2.3",
+        "R3/W0.0",
+        "C/B.R",
+        "W1/R0.2",
+        "B3/R1.0",
+        "W3/R3.2",
+        "B3/R1.0"
+      ],
+      "pairs_tested": [
+        "W3/R3.3→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→C/B.R(ILLEGAL)",
+        "C/B.R→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→C/W.R(ILLEGAL)",
+        "C/W.R→C/W.R(ILLEGAL)",
+        "C/W.R→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→C/B.R(ILLEGAL)",
+        "C/B.R→C/W.R(ILLEGAL)",
+        "C/W.R→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→W3/R3.0(ILLEGAL)",
+        "W3/R3.0→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→R3/B3.1(ILLEGAL)",
+        "R3/B3.1→B3/R3.0(ILLEGAL)",
+        "B3/R3.0→R3/B3.0(ILLEGAL)",
+        "R3/B3.0→B3/R3.2(ILLEGAL)",
+        "B3/R3.2→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→R1/B0.2(ILLEGAL)",
+        "R1/B0.2→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→C/R.W(ILLEGAL)",
+        "C/R.W→C/R.W(ILLEGAL)",
+        "C/R.W→R1/B0.2(ILLEGAL)",
+        "R1/B0.2→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→C/R.W(ILLEGAL)",
+        "C/R.W→R1/B0.2(ILLEGAL)",
+        "R1/B0.2→C/B.W(ILLEGAL)",
+        "C/B.W→C/R.W(ILLEGAL)",
+        "C/R.W→C/W.R(ILLEGAL)",
+        "C/W.R→C/B.R(ILLEGAL)",
+        "C/B.R→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.R(ILLEGAL)",
+        "C/B.R→C/W.R(ILLEGAL)",
+        "C/W.R→C/B.R(ILLEGAL)",
+        "C/B.R→C/W.R(ILLEGAL)",
+        "C/W.R→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.R(ILLEGAL)",
+        "C/B.R→C/W.R(ILLEGAL)",
+        "C/W.R→C/B.R(ILLEGAL)",
+        "C/B.R→B1/W1.2(OK)",
+        "B1/W1.2→B2/R1.1(ILLEGAL)",
+        "B2/R1.1→B2/R2.2(ILLEGAL)",
+        "B2/R2.2→B2/W2.3(ILLEGAL)",
+        "B2/W2.3→R1/B0.2(ILLEGAL)",
+        "R1/B0.2→R1/B1.3(ILLEGAL)",
+        "R1/B1.3→W1/B1.2(ILLEGAL)",
+        "W1/B1.2→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W1/R1.3(ILLEGAL)",
+        "W1/R1.3→W2/B0.1(ILLEGAL)",
+        "W2/B0.1→W2/B2.1(ILLEGAL)",
+        "W2/B2.1→W2/B0.1(OK)",
+        "W2/B0.1→W2/B1.1(ILLEGAL)",
+        "W2/B1.1→W2/B2.2(ILLEGAL)",
+        "W2/B2.2→W1/B0.2(OK)",
+        "W1/B0.2→W1/B1.2(ILLEGAL)",
+        "W1/B1.2→W2/B2.3(ILLEGAL)",
+        "W2/B2.3→C/W.B(OK)",
+        "C/W.B→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W2/R2.1(ILLEGAL)",
+        "W2/R2.1→W2/R0.1(OK)",
+        "W2/R0.1→W2/R1.1(ILLEGAL)",
+        "W2/R1.1→W2/R2.2(ILLEGAL)",
+        "W2/R2.2→W1/R0.2(OK)",
+        "W1/R0.2→W1/R1.2(ILLEGAL)",
+        "W1/R1.2→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→W3/B0.0(OK)",
+        "W3/B0.0→W3/B1.0(ILLEGAL)",
+        "W3/B1.0→W3/B3.0(ILLEGAL)",
+        "W3/B3.0→W3/B3.1(OK)",
+        "W3/B3.1→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→R3/W0.0(OK)",
+        "R3/W0.0→W1/R1.2(ILLEGAL)",
+        "W1/R1.2→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/R2.0(ILLEGAL)",
+        "W3/R2.0→W3/R0.0(OK)",
+        "W3/R0.0→W3/R1.0(ILLEGAL)",
+        "W3/R1.0→W3/R3.1(ILLEGAL)",
+        "W3/R3.1→W1/R1.2(OK)",
+        "W1/R1.2→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/R1.0(ILLEGAL)",
+        "W3/R1.0→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B2/R0.1(OK)",
+        "B2/R0.1→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→W1/R1.2(ILLEGAL)",
+        "W1/R1.2→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→C/B.R(ILLEGAL)",
+        "C/B.R→C/B.R(ILLEGAL)",
+        "C/B.R→W1/R1.3(OK)",
+        "W1/R1.3→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W1/R1.3(ILLEGAL)",
+        "W1/R1.3→C/B.R(ILLEGAL)",
+        "C/B.R→C/B.R(ILLEGAL)",
+        "C/B.R→C/B.W(ILLEGAL)",
+        "C/B.W→C/W.R(ILLEGAL)",
+        "C/W.R→C/B.R(ILLEGAL)",
+        "C/B.R→W1/R0.2(OK)",
+        "W1/R0.2→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.R(ILLEGAL)",
+        "C/B.R→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.R(ILLEGAL)",
+        "C/B.R→C/B.R(ILLEGAL)",
+        "C/B.R→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→R3/W0.0(OK)",
+        "R3/W0.0→W1/R1.2(ILLEGAL)",
+        "W1/R1.2→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→R3/W0.0(OK)",
+        "R3/W0.0→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→R3/W0.0(OK)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→R3/W0.0(OK)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R2/B2.1(ILLEGAL)",
+        "R2/B2.1→R2/B2.1(ILLEGAL)",
+        "R2/B2.1→R2/B2.2(ILLEGAL)",
+        "R2/B2.2→R2/B2.3(ILLEGAL)",
+        "R2/B2.3→R2/W2.1(ILLEGAL)",
+        "R2/W2.1→R2/W2.2(ILLEGAL)",
+        "R2/W2.2→R3/B2.0(ILLEGAL)",
+        "R3/B2.0→R3/W2.0(ILLEGAL)",
+        "R3/W2.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.0(ILLEGAL)",
+        "R3/B3.0→R3/W3.0(ILLEGAL)",
+        "R3/W3.0→R3/B2.0(ILLEGAL)",
+        "R3/B2.0→R3/W2.0(ILLEGAL)",
+        "R3/W2.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→W2/B2.3(ILLEGAL)",
+        "W2/B2.3→C/W.B(OK)",
+        "C/W.B→C/W.B(ILLEGAL)",
+        "C/W.B→W2/R2.1(ILLEGAL)",
+        "W2/R2.1→W2/R0.1(OK)",
+        "W2/R0.1→W2/R1.1(ILLEGAL)",
+        "W2/R1.1→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B2/R0.1(OK)",
+        "B2/R0.1→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W1/B0.2(ILLEGAL)",
+        "W1/B0.2→W1/B1.3(ILLEGAL)",
+        "W1/B1.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B3/R1.0(OK)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B3/R1.0(OK)",
+        "B3/R1.0→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B3/R1.0(OK)",
+        "B3/R1.0→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→W1/R1.2(ILLEGAL)",
+        "W1/R1.2→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→W2/R0.1(ILLEGAL)",
+        "W2/R0.1→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→R3/W0.0(OK)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.1(ILLEGAL)",
+        "R3/B3.1→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→R3/B3.0(ILLEGAL)",
+        "R3/B3.0→R3/W3.0(ILLEGAL)",
+        "R3/W3.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→R3/B3.1(ILLEGAL)",
+        "R3/B3.1→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.1(ILLEGAL)",
+        "R3/B3.1→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B3/R1.0(OK)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.1(ILLEGAL)",
+        "B3/W3.1→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R3.3(ILLEGAL)",
+        "B3/R3.3→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/W3.1(ILLEGAL)",
+        "B3/W3.1→B3/R3.0(ILLEGAL)",
+        "B3/R3.0→B3/W3.0(ILLEGAL)",
+        "B3/W3.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→W2/R2.3(OK)",
+        "W2/R2.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→C/B.R(ILLEGAL)",
+        "C/B.R→W1/R0.2(OK)",
+        "W1/R0.2→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→R1/B0.2(ILLEGAL)",
+        "R1/B0.2→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.R(ILLEGAL)",
+        "C/B.R→C/W.R(ILLEGAL)",
+        "C/W.R→C/B.W(ILLEGAL)",
+        "C/B.W→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R3.2(ILLEGAL)",
+        "B3/R3.2→B3/R3.0(ILLEGAL)",
+        "B3/R3.0→B2/R2.1(ILLEGAL)",
+        "B2/R2.1→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→R3/W0.0(OK)",
+        "R3/W0.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→R3/B3.1(ILLEGAL)",
+        "R3/B3.1→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→R3/B3.0(ILLEGAL)",
+        "R3/B3.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.1(ILLEGAL)",
+        "R3/B3.1→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.1(ILLEGAL)",
+        "R3/B3.1→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/B3.2(ILLEGAL)",
+        "R3/B3.2→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→R3/W0.0(OK)",
+        "R3/W0.0→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R3.2(ILLEGAL)",
+        "B3/R3.2→B3/R3.0(ILLEGAL)",
+        "B3/R3.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→C/B.R(ILLEGAL)",
+        "C/B.R→W1/R0.2(OK)",
+        "W1/R0.2→R3/B3.1(ILLEGAL)",
+        "R3/B3.1→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W3/R1.0(ILLEGAL)",
+        "W3/R1.0→W3/R3.1(ILLEGAL)",
+        "W3/R3.1→W3/B1.0(ILLEGAL)",
+        "W3/B1.0→W3/B3.1(ILLEGAL)",
+        "W3/B3.1→W2/R2.0(ILLEGAL)",
+        "W2/R2.0→W3/R1.0(ILLEGAL)",
+        "W3/R1.0→W2/R2.0(ILLEGAL)",
+        "W2/R2.0→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W3/R1.0(ILLEGAL)",
+        "W3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→C/B.R(ILLEGAL)",
+        "C/B.R→C/B.R(ILLEGAL)",
+        "C/B.R→W1/R0.2(OK)",
+        "W1/R0.2→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→C/B.R(ILLEGAL)",
+        "C/B.R→C/B.W(ILLEGAL)",
+        "C/B.W→C/W.R(ILLEGAL)",
+        "C/W.R→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W1/R0.2(ILLEGAL)",
+        "W1/R0.2→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B3/R1.0(OK)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/W3.3(ILLEGAL)",
+        "B3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→R3/W3.3(ILLEGAL)",
+        "R3/W3.3→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→W2/R2.3(OK)",
+        "W2/R2.3→W2/R2.3(ILLEGAL)",
+        "W2/R2.3→R3/W0.0(ILLEGAL)",
+        "R3/W0.0→C/B.R(ILLEGAL)",
+        "C/B.R→W1/R0.2(OK)",
+        "W1/R0.2→B3/R1.0(ILLEGAL)",
+        "B3/R1.0→W3/R3.2(ILLEGAL)",
+        "W3/R3.2→B3/R1.0(OK)"
+      ],
+      "valid": false
+    },
+    {
+      "attempt": 2,
+      "coordinates_found": [
+        "W3/B3.3",
+        "W1/R1.2",
+        "W3/R3.3",
+        "C/B.W",
+        "C/B.R",
+        "W2/B2.1",
+        "W2/B0.1",
+        "W3/B2.0",
+        "C/B.R",
+        "W1/R0.2",
+        "W3/B3.3",
+        "W1/R1.2"
+      ],
+      "pairs_tested": [
+        "W3/B3.3→W1/R1.2(OK)",
+        "W1/R1.2→W3/R3.3(ILLEGAL)",
+        "W3/R3.3→C/B.W(ILLEGAL)",
+        "C/B.W→C/B.R(ILLEGAL)",
+        "C/B.R→W2/B2.1(ILLEGAL)",
+        "W2/B2.1→W2/B0.1(OK)",
+        "W2/B0.1→W3/B2.0(ILLEGAL)",
+        "W3/B2.0→C/B.R(ILLEGAL)",
+        "C/B.R→W1/R0.2(OK)",
+        "W1/R0.2→W3/B3.3(ILLEGAL)",
+        "W3/B3.3→W1/R1.2(OK)"
+      ],
+      "valid": true
+    }
+  ],
+  "move_selected": {
+    "from": "W3/B3.3",
+    "to": "W1/R1.2",
+    "promotion": null
+  },
+  "server_move_request": {
+    "from": "D1",
+    "to": "F3",
+    "move_number": 4
+  },
+  "server_move_response": {
+    "status_code": 200,
+    "data": {
+      "success": true,
+      "state": {
+        "game_id": "52d507e9-0871-4110-8836-70284b36f13e",
+        "board": [
+          {
+            "notation": "A1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E1",
+            "type": "K",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F1",
+            "type": "B",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G1",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H1",
+            "type": "R",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "B2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "D2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "F2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "G2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H2",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "A8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "C8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "D8",
+            "type": "K",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I8",
+            "type": "Q",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J8",
+            "type": "B",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K8",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L8",
+            "type": "R",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "B7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "D7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "J7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "K7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "L7",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "H12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "G12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "E12",
+            "type": "Q",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I12",
+            "type": "K",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "J12",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "K12",
+            "type": "N",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "L12",
+            "type": "R",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "H11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "G11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "F11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "I11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "J11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "K11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "L11",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "black"
+          },
+          {
+            "notation": "C5",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E9",
+            "type": "P",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "E4",
+            "type": "P",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": false,
+            "promotion_target_color": "red"
+          },
+          {
+            "notation": "A5",
+            "type": "P",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": false,
+            "promotion_target_color": "white"
+          },
+          {
+            "notation": "D5",
+            "type": "N",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "A6",
+            "type": "N",
+            "color": "black",
+            "owner": "black",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "I5",
+            "type": "B",
+            "color": "red",
+            "owner": "red",
+            "is_stuck": null,
+            "promotion_target_color": null
+          },
+          {
+            "notation": "F3",
+            "type": "Q",
+            "color": "white",
+            "owner": "white",
+            "is_stuck": null,
+            "promotion_target_color": null
+          }
+        ],
+        "current_player": "black",
+        "legal_moves": {
+          "A8": [
+            "A7",
+            "B8"
+          ],
+          "K8": [
+            "J6",
+            "L6"
+          ],
+          "B7": [
+            "B5",
+            "B6"
+          ],
+          "D7": [
+            "D6"
+          ],
+          "I7": [
+            "I6"
+          ],
+          "J7": [
+            "J5",
+            "J6"
+          ],
+          "K7": [
+            "K5",
+            "K6"
+          ],
+          "L7": [
+            "L5",
+            "L6"
+          ],
+          "C5": [
+            "C4"
+          ],
+          "A5": [
+            "A4"
+          ],
+          "A6": [
+            "B4",
+            "B8",
+            "C7"
+          ]
+        },
+        "promotion_moves": [],
+        "last_move": {
+          "from_square": "D1",
+          "to_square": "F3",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "prev_move": {
+          "from_square": "J9",
+          "to_square": "I5",
+          "move_type": "normal",
+          "promotion": null,
+          "captured": null
+        },
+        "players": [
+          {
+            "color": "white",
+            "name": "LLM_OpenRouter_qwen/qwen3.5-35b-a3b",
+            "player_type": "llm",
+            "model": "qwen/qwen3.5-35b-a3b",
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "black",
+            "name": "SmartBot-Black",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          },
+          {
+            "color": "red",
+            "name": "SmartBot-Red",
+            "player_type": "smartbot",
+            "model": null,
+            "status": "active",
+            "is_replacement": false
+          }
+        ],
+        "move_number": 4,
+        "game_status": "playing",
+        "check": null,
+        "position_3pf": "wRA1,wPA2,bPA5,bNA6,bRA8,wPB2,bPB7,wBC1,wPC2,bPC5,bBC8,wPD2,wND5,bPD7,bKD8,wKE1,wPE4,rPE9,rQE12,wBF1,wPF2,wQF3,rPF11,wNG1,wPG2,rPG11,rNG12,wRH1,wPH2,rPH11,rRH12,rBI5,bPI7,bQI8,rPI11,rKI12,bPJ7,bBJ8,rPJ11,rBJ12,bPK7,bNK8,rPK11,rNK12,bPL7,bRL8,rPL11,rRL12 b wKQ.bKQ.rKQ - aaa 5 4",
+        "server_version": "0.1.0"
+      },
+      "is_check": false,
+      "is_checkmate": false,
+      "is_stalemate": false,
+      "eliminated_player": null,
+      "inherited_pieces": [],
+      "game_over": false,
+      "winner": null,
+      "reason": null
+    }
+  },
+  "statistics": {
+    "time_total_sec": 194.635,
+    "llm_time_sec": 193.453,
+    "prompt_chars": 9747,
+    "response_chars": 23607,
+    "total_llm_chars": 33354,
+    "llm_calls": 2,
+    "retries": 1,
+    "total_prompt_tokens": 3759,
+    "total_completion_tokens": 17780,
+    "total_reasoning_tokens": 9353,
+    "total_tokens": 21539,
+    "total_cost_usd": 0.03588373,
+    "provider_reported_cost_usd": null,
+    "model_pricing": {
+      "prompt_per_1m_usd": 0.1625,
+      "completion_per_1m_usd": 1.3,
+      "source": "openrouter_api"
+    }
+  }
+}

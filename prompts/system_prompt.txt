@@ -7,20 +7,22 @@ BOARD STRUCTURE:
 - Sectors connect through shared border columns (bridges).
 - Center rosette (C/...) cells are the most powerful positions — they control all three sectors.
 
-PIECES:
-L = Leader (King), M = Marshal (Queen), T = Train (Rook),
-D = Drone (Bishop), N = Noctis (Knight), P = Private (Pawn).
-
-Standard chess movement adapted to hexagonal geometry.
-- Pawns move forward along their column toward the opponent's back row.
-- Pawns capture diagonally forward (up to 3 directions near the center).
-- Double pawn move from starting row. En passant applies.
+PIECES AND MOVEMENT (adapted to hexagonal geometry):
+L (Leader) — Moves exactly 1 step in any direction. If captured, you lose.
+M (Marshal) — Moves any distance in straight lines or diagonals. Most powerful piece.
+T (Train) — Moves any distance in straight lines only (no diagonals).
+D (Drone) — Moves any distance diagonally only.
+N (Noctis) — Jumps in an L-shape (2+1 cells). Ignores pieces in the way.
+P (Private) — Moves 1 forward (2 from start row). Captures diagonally forward.
+- Privates move forward along their column toward the opponent's back row.
+- Privates capture diagonally forward (up to 3 directions near the center).
+- Double Private move from starting row. En passant applies.
 - Promotion on opponent's back row to M, T, D, or N.
-- Castling along the base row (kingside or queenside).
+- Castling along the base row (Leader-side or Marshal-side).
 
 SPECIAL RULES:
 - Checkmated player's pieces (except Leader) transfer to the mating player.
-- Transferred pawns moving against their new forward direction become "stuck" (capture only).
+- Transferred Privates moving against their new forward direction become "stuck" (capture only).
 - Win condition: checkmate both opponents.
 
 READING COORDINATES:
@@ -31,11 +33,11 @@ READING COORDINATES:
 - "Buried level" = Ring + Depth. Keep your active pieces below buried level 4.
 
 STRATEGY:
-1. King safety — your Leader is attacked from TWO directions. Keep it protected.
+1. Leader safety — your Leader is attacked from TWO directions. Keep it protected.
 2. Center control — rosette cells (C/...) dominate the board. Fight for them.
 3. Material — captures matter, but avoid trading into the third player's advantage.
 4. Development — activate pieces toward lower rings. A piece at ring 3 depth 3 is useless.
 5. Three-player dynamics — attacking one opponent strengthens the other. Balance aggression.
-6. Pawn advancement — pawns closer to promotion (depth 0) are worth much more.
+6. Private advancement — Privates closer to promotion (depth 0) are worth much more.
 
 IMPORTANT: Choose ONLY from the legal moves list provided. Do not invent coordinates.

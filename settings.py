@@ -23,7 +23,7 @@ _FALLBACK_SYSTEM = (
     "You are a chess engine playing Three-Player Chess on a 96-cell hexagonal board.\n"
     "Columns A–L, rows 1–12. Three players: White, Black, Red.\n"
     "Turn order: White → Black → Red.\n"
-    "Analyze the position carefully. Prioritize king safety, material, center control."
+    "Analyze the position carefully. Prioritize Leader safety, material, center control."
 )
 
 _FALLBACK_USER_TEMPLATE = (
@@ -58,30 +58,71 @@ def _write_prompt_file(rel_path: str, content: str) -> None:
     p.write_text(content, encoding="utf-8")
 
 
-# ─── Response format defaults ────────────────────────────────────────────────
+# ─── Response format: file-based with hardcoded fallbacks ────────────────────
+
+def _format_file_path(fmt: str) -> str:
+    """Compute the prompts/ file path for a response format name.
+
+    Convention:  ``prompts/format_{fmt}.txt``
+    Examples:
+        "json_thinking" → "prompts/format_json_thinking.txt"
+        "json"          → "prompts/format_json.txt"
+        "simple"        → "prompts/format_simple.txt"
+    """
+    return f"prompts/format_{fmt}.txt"
+
+
+# Hardcoded fallbacks — used ONLY when the corresponding file does not exist.
 DEFAULT_RESPONSE_FORMAT: dict[str, str] = {
     "simple": (
         "Reply with EXACTLY one line: FROM TO\n"
-        "Example: E2 E4\n"
-        "For promotion: E7 E8 =Q\n"
-        "Valid promotion pieces: Q R B N\n"
-        "ONLY use moves from the legal moves list provided."
+        "Example: W2/R2.3 C/W.R\n"
+        "For promotion: W1/B0.2 B3/R3.1 =M\n"
+        "Valid promotion pieces: M T D N\n"
+        "Use ONLY coordinates from the legal moves list provided."
     ),
     "json": (
         "Respond with a JSON object only (no markdown, no explanation):\n"
-        '{"move_from": "E2", "move_to": "E4"}\n'
-        'For promotion: {"move_from": "E7", "move_to": "E8", "promotion": "queen"}\n'
-        "Promotion values: queen | rook | bishop | knight\n"
-        "ONLY use moves from the legal moves list."
+        '{"move_from": "W2/R2.3", "move_to": "C/W.R"}\n'
+        "For Private promotion:\n"
+        '{"move_from": "W1/B0.2", "move_to": "B3/R3.1", "promotion": "marshal"}\n'
+        "Promotion values: marshal | train | drone | noctis\n"
+        "CRITICAL: Use ONLY coordinates from the legal moves list. "
+        "Coordinates are case-sensitive uppercase."
     ),
     "json_thinking": (
-        "Respond with a JSON object only (no markdown):\n"
-        '{"thinking": "your analysis", "move_from": "E2", "move_to": "E4"}\n'
-        'For promotion: {"thinking": "...", "move_from": "E7", "move_to": "E8", "promotion": "queen"}\n'
-        "Use the thinking field to reason step by step before deciding.\n"
-        "ONLY use moves from the legal moves list."
+        "Respond with a single JSON object. No markdown, no commentary outside JSON.\n\n"
+        '{"thinking": "your step-by-step analysis", '
+        '"move_from": "W2/R2.3", "move_to": "C/W.R"}\n\n'
+        'For Private promotion add: "promotion": "marshal"\n'
+        "Promotion values: marshal | train | drone | noctis\n\n"
+        "In your thinking, consider:\n"
+        "1. Is my Leader safe? Any immediate threats?\n"
+        "2. Can I capture an undefended piece or create a fork?\n"
+        "3. Does this move improve piece activity (lower buried level)?\n"
+        "4. How does this move affect BOTH opponents — am I helping the third player?\n\n"
+        "CRITICAL: Use ONLY coordinates from the legal moves list provided. "
+        "Coordinates are case-sensitive uppercase."
     ),
 }
+
+
+def get_response_format(fmt: str) -> str:
+    """Return the response-format instruction for *fmt*.
+
+    Lookup order:
+    1. ``prompts/format_{fmt}.txt`` — if file exists and is non-empty.
+    2. Hardcoded ``DEFAULT_RESPONSE_FORMAT[fmt]``.
+    3. Hardcoded ``DEFAULT_RESPONSE_FORMAT["json_thinking"]`` (ultimate fallback).
+    """
+    file_path = _format_file_path(fmt)
+    text = _read_prompt_file(file_path, "")
+    if text:
+        return text
+    return DEFAULT_RESPONSE_FORMAT.get(
+        fmt, DEFAULT_RESPONSE_FORMAT["json_thinking"]
+    )
+
 
 # ─── Keys that are prompt file paths (not stored as text) ────────────────────
 _PROMPT_FILE_KEYS = {"system_prompt_file", "user_template_file"}

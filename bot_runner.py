@@ -29,7 +29,7 @@ from notation_converter import (
 )
 from pricing import PricingManager
 from prompt_builder import PromptBuilder
-from settings import DEFAULT_RESPONSE_FORMAT, Settings
+from settings import Settings, get_response_format
 from tracer import MoveTracer
 
 
@@ -188,8 +188,23 @@ class BotRunner:
 
                 gst = state.get("game_status", "playing")
                 if gst == "finished":
-                    self._log("🏆 Игра завершена")
-                    self._set_status("Игра завершена")
+                    winner = state.get("winner")
+                    reason = state.get("reason", "")
+                    if winner:
+                        reason_str = f" ({reason})" if reason else ""
+                        self._log(
+                            f"🏆 Игра завершена: победил "
+                            f"{winner.upper()}{reason_str}"
+                        )
+                        self._set_status(
+                            f"Игра завершена: победил {winner.upper()}"
+                        )
+                    else:
+                        reason_str = f" ({reason})" if reason else ""
+                        self._log(
+                            f"🏆 Игра завершена: ничья{reason_str}"
+                        )
+                        self._set_status("Игра завершена: ничья")
                     self._set_state(state)
                     break
 
@@ -446,9 +461,7 @@ class BotRunner:
                 "system_prompt": s["system_prompt"],
                 "user_template": s["user_template"],
                 "additional_rules": s.get("additional_rules") or "",
-                "response_format_instruction": DEFAULT_RESPONSE_FORMAT.get(
-                    fmt, ""
-                ),
+                "response_format_instruction": get_response_format(fmt),
                 "rendered_system": (
                     original_messages[0]["content"]
                     if original_messages

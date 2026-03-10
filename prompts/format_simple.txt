@@ -1,0 +1,5 @@
+Reply with EXACTLY one line: FROM TO
+Example: W2/R2.3 C/W.R
+For promotion: W1/B0.2 B3/R3.1 =M
+Valid promotion pieces: M T D N
+Use ONLY coordinates from the legal moves list provided.

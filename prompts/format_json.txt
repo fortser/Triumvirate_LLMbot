@@ -1,0 +1,8 @@
+Respond with a JSON object only (no markdown, no explanation):
+{"move_from": "W2/R2.3", "move_to": "C/W.R"}
+
+For Private promotion:
+{"move_from": "W1/B0.2", "move_to": "B3/R3.1", "promotion": "marshal"}
+Promotion values: marshal | train | drone | noctis
+
+CRITICAL: Use ONLY coordinates from the legal moves list. Coordinates are case-sensitive uppercase.

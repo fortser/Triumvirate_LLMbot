@@ -16,7 +16,12 @@ import re
 from typing import Any
 
 # ─── Constants ────────────────────────────────────────────────────────────────
-PROMO_MAP = {"q": "queen", "r": "rook", "b": "bishop", "n": "knight"}
+PROMO_MAP = {
+    "q": "queen", "r": "rook", "b": "bishop", "n": "knight",
+    # Triumvirate single-letter codes
+    "m": "queen", "t": "rook", "d": "bishop",
+    # "n" already maps to knight (Noctis)
+}
 
 # Server notation: A1, B12, L9, etc.
 COORD_RE = re.compile(r"[A-La-l]\d{1,2}")
@@ -147,7 +152,11 @@ class MoveParser:
         return s
 
     def _strip_piece_prefix_tri(self, s: str) -> str:
-        """Remove piece prefix for Triumvirate (e.g. 'PW3/B2.0' → 'W3/B2.0')."""
+        """Remove piece prefix for Triumvirate (e.g. 'PW3/B2.0' or 'P:W3/B2.0' → 'W3/B2.0')."""
+        # With colon separator: L:W3/R3.3 → W3/R3.3
+        if len(s) >= 7 and s[0] in "LMTDNP" and s[1] == ":" and TRI_COORD_RE.match(s[2:]):
+            return s[2:]
+        # Without separator (legacy): PW3/B2.0 → W3/B2.0
         if (
             len(s) >= 6
             and s[0] in "LMTDNP"
@@ -210,7 +219,7 @@ class MoveParser:
         upper = text.upper()
 
         promo = None
-        m = re.search(r"=([QRBN])", upper)
+        m = re.search(r"=([QRBNMTD])", upper)
         if m:
             promo = PROMO_MAP.get(m.group(1).lower())
 
@@ -242,4 +251,11 @@ class MoveParser:
         s = str(raw).lower().strip()
         if s in ("queen", "rook", "bishop", "knight"):
             return s
+        # Triumvirate piece names → server API names
+        _TRI_PROMO = {
+            "marshal": "queen", "train": "rook",
+            "drone": "bishop", "noctis": "knight",
+        }
+        if s in _TRI_PROMO:
+            return _TRI_PROMO[s]
         return PROMO_MAP.get(s)

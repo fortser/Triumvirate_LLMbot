@@ -119,7 +119,7 @@
 # PROJECT REPORTS
 
 # Project: .
-Source: Python: 20 py | 5,200 lines | 198 KB
+Source: Python: 20 py | 5,342 lines | 204 KB
 Language: PYTHON
 
 ## Packages
@@ -128,11 +128,11 @@ trace_analyzer.views/ — 4 modules, 0 subpackages
 ## Key Classes
 MoveTracer (tracer.py)
 ArenaClient (arena_client.py)
+Settings (settings.py)
 MoveParser (move_parser.py)
 PricingManager (pricing.py)
 BotRunner (bot_runner.py)
 PromptBuilder (prompt_builder.py)
-Settings (settings.py)
 LLMClient (llm_client.py)
 
 ## Entry Points
@@ -150,7 +150,7 @@ LLMClient (llm_client.py)
   imports: __future__, httpx
   imported_by: bot_runner.py
 
-**bot_runner.py** (824 lines)
+**bot_runner.py** (822 lines)
   classes: BotRunner
   imports: __future__, asyncio, random, time, pathlib
   imported_by: gui.py
@@ -160,7 +160,7 @@ LLMClient (llm_client.py)
   imports: __future__
   imported_by: bot_runner.py, gui.py
 
-**gui.py** (712 lines)
+**gui.py** (738 lines)
   functions: create_gui
   imports: __future__, time, httpx, nicegui, bot_runner
   imported_by: main.py
@@ -174,7 +174,7 @@ LLMClient (llm_client.py)
   functions: main
   imports: __future__, argparse, pathlib, nicegui, gui
 
-**move_parser.py** (246 lines)
+**move_parser.py** (262 lines)
   classes: MoveParser
   functions: _sanitize_json_string
   imports: __future__
@@ -190,14 +190,14 @@ LLMClient (llm_client.py)
   imports: __future__, httpx
   imported_by: bot_runner.py
 
-**prompt_builder.py** (226 lines)
+**prompt_builder.py** (181 lines)
   classes: PromptBuilder
   imports: __future__, settings
   imported_by: bot_runner.py
 
-**settings.py** (128 lines)
+**settings.py** (275 lines)
   classes: Settings
-  functions: _read_prompt
+  functions: _read_prompt_file, _write_prompt_file, _format_file_path, get_response_format
   imports: __future__, pathlib
   imported_by: bot_runner.py, gui.py, main.py, prompt_builder.py
 
@@ -317,7 +317,6 @@ methods:
 ## PromptBuilder (prompt_builder.py)
 methods:
   def build(self, state: dict, settings: Settings, *, tri_legal: ... = None, tri_board: ... = None, tri_last_move: ... = None) -> list[dict]
-  def _adapt_format_for_tri(self, fmt_instruction: str) -> str
   def _fill_template(self, template: str, subs: dict) -> str
   def _fmt_legal(self, legal: dict) -> str
   def _fmt_board(self, board: list[dict], my_color: str) -> str
@@ -331,11 +330,14 @@ members:
 methods:
   def __init__(self) -> None
   def _load(self) -> None
+  def _migrate_legacy_prompts(self, stored: dict) -> bool
   def save(self) -> None
   def __getitem__(self, key: str) -> Any
   def __setitem__(self, key: str, value: Any) -> None
   def get(self, key: str, default: Any = None) -> Any
-"""JSON-backed application settings."""
+  property def system_prompt_path(self) -> Path
+  property def user_template_path(self) -> Path
+"""JSON-backed application settings.  Prompt texts are stored in external files (prompts/ directory). T..."""
 
 
 ---
@@ -365,7 +367,10 @@ def to_server(tri_notation: str) -> str
 def to_triumvirate(server_notation: str) -> str
 
 ## settings.py
-def _read_prompt(filename: str, fallback: str) -> str
+def _format_file_path(fmt: str) -> str
+def _read_prompt_file(rel_path: str, fallback: str) -> str
+def _write_prompt_file(rel_path: str, content: str) -> None
+def get_response_format(fmt: str) -> str
 
 ## trace_analyzer/app.py
 def create_app(logs_dir: str) -> None
