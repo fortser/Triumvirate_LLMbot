@@ -1,0 +1,37 @@
+# Secrets
+.env
+.env.*
+
+# Settings with API keys
+llm_bot_gui_settings_v2.json
+
+# Logs
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Claude Code local config
+.claude/
+
+# Personal scripts (contain local paths or credentials)
+claude_start.bat
+ЯMake_llm_report.bat
+
+# Internal dev notes (not needed for users)
+code_review_report.md
+LLM_report.md
+оглавление_llmbot.md
+багрепорт для бота.txt
+tri/
+
+# OS
+Thumbs.db
+.DS_Store

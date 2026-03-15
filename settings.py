@@ -3,19 +3,42 @@
 Промпты хранятся в отдельных текстовых файлах (prompts/),
 а в JSON-настройках — только пути к ним.
 
-Зависимости: нет.
+Зависимости: constants.py (PROVIDER_ENV_KEY).
 Зависимые: bot_runner, gui, main, prompt_builder.
 """
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Any
+
+from constants import PROVIDER_ENV_KEY
+
+# ─── .env loader (no external deps) ─────────────────────────────────────────
+def _load_dotenv(path: Path) -> None:
+    """Load KEY=VALUE lines from a .env file into os.environ (if not already set)."""
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        value = value.strip().strip("\"'")
+        if key:
+            os.environ.setdefault(key, value)
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
 _HERE = Path(__file__).parent
 SETTINGS_FILE = _HERE / "llm_bot_gui_settings_v2.json"
 _PROMPTS_DIR = _HERE / "prompts"
+
+# Load .env on module import
+_load_dotenv(_HERE / ".env")
 
 # ─── Built-in fallback prompts ───────────────────────────────────────────────
 # Used ONLY when prompt files do not exist on disk (first launch / deleted).
@@ -231,6 +254,17 @@ class Settings:
         except Exception:
             pass
 
+    def _resolve_api_key(self) -> str:
+        """Return API key: from JSON settings, or fallback to env var."""
+        stored = self._d.get("api_key", "")
+        if stored:
+            return stored
+        provider = self._d.get("provider", "")
+        env_name = PROVIDER_ENV_KEY.get(provider, "")
+        if env_name:
+            return os.environ.get(env_name, "")
+        return ""
+
     def __getitem__(self, key: str) -> Any:
         # Virtual keys: resolve prompt text from files on access
         if key == "system_prompt":
@@ -245,6 +279,9 @@ class Settings:
             )
             return _read_prompt_file(path, _FALLBACK_USER_TEMPLATE)
 
+        if key == "api_key":
+            return self._resolve_api_key()
+
         return self._d.get(key, self.DEFAULTS.get(key))
 
     def __setitem__(self, key: str, value: Any) -> None:
@@ -255,7 +292,7 @@ class Settings:
 
     def get(self, key: str, default: Any = None) -> Any:
         # Route virtual keys through __getitem__
-        if key in _LEGACY_PROMPT_KEYS:
+        if key in _LEGACY_PROMPT_KEYS or key == "api_key":
             return self[key]
         return self._d.get(key, default)
 
