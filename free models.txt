@@ -1,0 +1,13 @@
+stepfun/step-3.5-flash:free
+openrouter/hunter-alpha
+arcee-ai/trinity-large-preview:free
+nvidia/nemotron-3-super-120b-a12b:free
+openrouter/healer-alpha
+z-ai/glm-4.5-air:free
+nvidia/nemotron-3-nano-30b-a3b:free
+arcee-ai/trinity-mini:free
+qwen/qwen3-coder:free
+meta-llama/llama-3.3-70b-instruct:free
+openai/gpt-oss-120b:free
+bytedance-seed/seedream-4.5
+minimax/minimax-m2.5:free

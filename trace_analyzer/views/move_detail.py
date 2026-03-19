@@ -104,10 +104,12 @@ def create_move_detail(
                         move_str += f" ={trace['promotion']}"
 
                     outcome = trace["outcome"]
-                    outcome_color = {
-                        "success": "green",
-                        "fallback_random": "orange",
-                    }.get(outcome, "red")
+                    if outcome == "success":
+                        outcome_color = "green"
+                    elif outcome.startswith("fallback_random"):
+                        outcome_color = "orange"
+                    else:
+                        outcome_color = "red"
 
                     ui.label(
                         f"Game {trace['game_id_short']}"

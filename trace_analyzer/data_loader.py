@@ -159,7 +159,7 @@ def get_games_summary(traces: list[dict]) -> list[dict]:
         success_count = sum(1 for o in outcomes if o == "success")
         retry_count = sum(1 for m in moves if m["retries"] > 0)
         fallback_count = sum(
-            1 for o in outcomes if o == "fallback_random"
+            1 for o in outcomes if o.startswith("fallback_random")
         )
 
         summaries.append(

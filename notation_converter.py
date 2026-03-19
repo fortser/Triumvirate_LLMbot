@@ -148,6 +148,51 @@ def convert_board(board: list[dict]) -> list[dict]:
     return result
 
 
+def parse_triumvirate(tri: str) -> dict:
+    """Парсит TRIUMVIRATE нотацию в компоненты.
+
+    'W2/B2.3' → {'sector':'W', 'ring':2, 'opponent':'B',
+                  'depth':2, 'flank':3, 'buried':4, 'rosette':False}
+    'C/W.B'   → {'sector':'W', 'ring':0, 'opponent':'B',
+                  'depth':0, 'flank':0, 'buried':0, 'rosette':True}
+
+    Raises KeyError if notation is invalid.
+    """
+    tri = tri.strip()
+    if tri not in _TRI_TO_SERVER:
+        raise KeyError(f"Unknown Triumvirate notation: '{tri}'")
+
+    if tri.startswith("C/"):
+        # Rosette: C/W.B or C/B.R etc.
+        parts = tri[2:].split(".")
+        return {
+            "sector": parts[0],
+            "ring": 0,
+            "opponent": parts[1],
+            "depth": 0,
+            "flank": 0,
+            "buried": 0,
+            "rosette": True,
+        }
+
+    # Regular: W2/B2.3
+    sector = tri[0]
+    ring = int(tri[1])
+    opponent = tri[3]
+    rest = tri[4:].split(".")
+    depth = int(rest[0])
+    flank = int(rest[1])
+    return {
+        "sector": sector,
+        "ring": ring,
+        "opponent": opponent,
+        "depth": depth,
+        "flank": flank,
+        "buried": ring + depth,
+        "rosette": False,
+    }
+
+
 def convert_move_back(tri_from: str, tri_to: str) -> tuple[str, str]:
     """Конвертирует ход из Triumvirate обратно в серверную нотацию."""
     return to_server(tri_from), to_server(tri_to)

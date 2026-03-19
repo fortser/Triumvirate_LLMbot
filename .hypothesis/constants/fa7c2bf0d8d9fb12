@@ -1,0 +1,4 @@
+# file: T:\test_python\Triumvirate_LLMbot\examples\decomp\settings.py
+# hypothesis_version: 6.151.9
+
+[0.3, 0.5, 24000, '"\'', '#', '.env', '=', 'OpenAI API', 'additional_rules', 'api_key', 'auto_bot_name', 'auto_skip_waiting', 'base_url', 'bot_name', 'compat', 'custom_headers', 'fallback_random', 'gpt-4o-mini', 'json', 'json_thinking', 'max_retries', 'max_tokens', 'model', 'poll_interval', 'prompts', 'provider', 'response_format', 'server_url', 'simple', 'system_prompt', 'system_prompt_file', 'temperature', 'user_template', 'user_template_file', 'utf-8']

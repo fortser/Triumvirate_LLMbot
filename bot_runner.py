@@ -56,6 +56,7 @@ class BotRunner:
         self.tracer = MoveTracer(Path(__file__).parent / "logs")
         self.pricing = PricingManager()
         self._is_openrouter = False
+        self._consecutive_fallbacks = 0
         self.stats: dict[str, Any] = {
             "moves": 0,
             "llm_calls": 0,
@@ -82,6 +83,39 @@ class BotRunner:
         self._running = False
         if self._task:
             self._task.cancel()
+
+    def _should_resign_due_to_fallbacks(self, is_fallback: bool) -> bool:
+        """Check if the bot should resign due to excessive fallbacks.
+
+        Returns True if the bot should resign.
+        """
+        if is_fallback:
+            self._consecutive_fallbacks += 1
+        else:
+            self._consecutive_fallbacks = 0
+
+        max_consec = int(self.s.get("max_consecutive_fallbacks", 10))
+        if max_consec > 0 and self._consecutive_fallbacks >= max_consec:
+            self._log(
+                f"🛑 {self._consecutive_fallbacks} случайных ходов подряд — "
+                f"модель не справляется, сдаюсь"
+            )
+            return True
+
+        min_rate = float(self.s.get("min_success_rate_threshold", 0.1))
+        min_moves = int(self.s.get("min_moves_for_success_check", 20))
+        total = self.stats["moves"]
+        fallbacks = self.stats["fallbacks"]
+        if min_rate > 0 and total >= min_moves and fallbacks > 0:
+            success_rate = (total - fallbacks) / total
+            if success_rate < min_rate:
+                self._log(
+                    f"🛑 Success rate {success_rate:.0%} < {min_rate:.0%} "
+                    f"после {total} ходов ({fallbacks} случайных) — сдаюсь"
+                )
+                return True
+
+        return False
 
     def _detect_openrouter(self) -> bool:
         provider = self.s.get("provider", "")
@@ -274,6 +308,7 @@ class BotRunner:
                         tri_last_move=tri_last_move,
                     )
 
+                    is_fallback = result is None
                     if result is None:
                         if s.get("fallback_random", True):
                             src = random.choice(list(legal.keys()))
@@ -319,9 +354,15 @@ class BotRunner:
                         from_sq, to_sq, move_num, promo
                     )
                     self.tracer.set_server_move_response(code, data)
-                    self.tracer.set_outcome(
-                        "success" if code == 200 else f"server_error_{code}"
-                    )
+                    # Не перезаписывать outcome если уже fallback_random
+                    current_outcome = self.tracer._data.get("outcome", "unknown")
+                    if current_outcome == "fallback_random":
+                        server_tag = "ok" if code == 200 else f"error_{code}"
+                        self.tracer.set_outcome(f"fallback_random_server_{server_tag}")
+                    else:
+                        self.tracer.set_outcome(
+                            "success" if code == 200 else f"server_error_{code}"
+                        )
                     self.tracer.finalize_statistics()
                     self.tracer.save()
                     _trace_saved = True
@@ -383,6 +424,18 @@ class BotRunner:
                 else:
                     self._log(f"❌ {code}: {str(data)[:120]}")
                     self.stats["errors"] += 1
+
+                # ── Check fallback thresholds after move ──────────
+                if code == 200 and self._should_resign_due_to_fallbacks(
+                    is_fallback
+                ):
+                    try:
+                        await self.arena.resign()
+                        self._log("🏳️ Бот сдался из-за систематических ошибок модели")
+                        self._set_status("Сдался (модель не справляется)")
+                    except Exception as resign_err:
+                        self._log(f"⚠️ Ошибка при сдаче: {resign_err}")
+                    break
 
                 await asyncio.sleep(0.05)
 
@@ -726,6 +779,13 @@ class BotRunner:
                 self._log(
                     f"⚠️ LLM ошибка ({elapsed:.1f}s, "
                     f"попытка {attempt + 1}/{max_retries}): {e}"
+                )
+                # Записать ошибку в трейс (иначе теряется причина fallback)
+                self.tracer.add_llm_response(
+                    attempt + 1,
+                    raw=f"ERROR: {e}",
+                    chars=0,
+                    time_sec=elapsed,
                 )
                 last_raw = str(e)
                 await asyncio.sleep(1)

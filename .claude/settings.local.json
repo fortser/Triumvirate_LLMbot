@@ -1,0 +1,60 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(pip show:*)",
+      "Bash(xargs grep:*)",
+      "Bash(npx ccusage:*)",
+      "Bash(npm list:*)",
+      "Bash(time npx:*)",
+      "Bash(printf:*)",
+      "WebSearch",
+      "Bash(ccusage blocks:*)",
+      "Bash(bash ~/.claude/statusline.sh)",
+      "Bash(cd:*)",
+      "Bash(python -c \":*)",
+      "Bash(find /T/test_python/Triumvirate_LLMbot/examples/decomp/logs -type f -name *.json)",
+      "Bash(find T:/test_python/Triumvirate_LLMbot/examples/decomp/trace_analyzer/ -type f -name *.py -o -name *.txt -o -name *.json)",
+      "Bash(find T:/test_python/Triumvirate_LLMbot/examples/decomp/logs/ -type f -name *.json)",
+      "Bash(date /T)",
+      "Bash(time /T)",
+      "Skill(update-config)",
+      "Bash(cat T:/test_python/Triumvirate_LLMbot/examples/decomp/.claude/skills/writing-tests/*.md)",
+      "Bash(find /t/test_python/Triumvirate_LLMbot/examples/decomp/logs -type f -name move_*.json)",
+      "Bash(find /t/test_python/Triumvirate_LLMbot/examples/decomp/logs -name move_*.json -type f)",
+      "Bash(while read:*)",
+      "Bash(do if:*)",
+      "Bash(then echo:*)",
+      "Bash(find logs:*)",
+      "Bash(ls -la /t/test_python/Triumvirate_Smartbot/*.py)",
+      "Bash(ls -d \"T:\\\\test_python\\\\Triumvirate_LLMbot\\\\examples\\\\decomp\\\\logs/game_\"*)",
+      "Bash(ls -d game_*/)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"T:/test_python/Triumvirate_LLMbot/examples/decomp/.claude/hooks/track_changes.py\" 2>/dev/null || true",
+            "statusMessage": "Отслеживание изменений..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"T:/test_python/Triumvirate_LLMbot/examples/decomp/.claude/hooks/changelog_reminder.py\" 2>/dev/null || true",
+            "statusMessage": "Проверка CHANGELOG..."
+          }
+        ]
+      }
+    ]
+  }
+}

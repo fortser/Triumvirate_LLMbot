@@ -178,7 +178,7 @@ def create_moves_table(
         <q-td :props="props">
             <q-badge
                 :color="props.value === 'success' ? 'green'
-                      : props.value === 'fallback_random' ? 'orange'
+                      : props.value.startsWith('fallback_random') ? 'orange'
                       : 'red'"
                 :label="props.value"
                 outline

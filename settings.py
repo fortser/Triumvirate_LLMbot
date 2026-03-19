@@ -186,6 +186,9 @@ class Settings:
         "poll_interval": 0.5,
         "auto_skip_waiting": False,
         "fallback_random": True,
+        "max_consecutive_fallbacks": 10,
+        "min_success_rate_threshold": 0.1,
+        "min_moves_for_success_check": 20,
         "use_triumvirate_notation": False,
     }
 

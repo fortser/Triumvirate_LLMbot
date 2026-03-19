@@ -1,0 +1,4 @@
+# file: T:\test_python\Triumvirate_LLMbot\examples\decomp\constants.py
+# hypothesis_version: 6.151.9
+
+[0.5, 4096, '-', '2.2.0', 'ANTHROPIC_API_KEY', 'Anthropic', 'Anthropic (native)', 'Custom', 'HTTP-Referer', 'LM Studio', 'LMStudio', 'OPENAI_API_KEY', 'OPENROUTER_API_KEY', 'Ollama', 'Ollama (локальный)', 'OpenAI', 'OpenAI API', 'OpenRouter', 'X-Title', 'api_key', 'base_url', 'compat', 'custom_headers', 'gpt-4o-mini', 'json', 'json_thinking', 'llama3.2', 'lm-studio', 'max_tokens', 'model', 'ollama', 'openai/gpt-4.1-nano', 'response_format', 'simple', 'temperature', 'unknown', 'Кастомный URL']

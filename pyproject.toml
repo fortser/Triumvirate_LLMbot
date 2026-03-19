@@ -1,0 +1,32 @@
+[project]
+name = "triumvirate-llm-bot"
+version = "2.2.0"
+description = "LLM bot for Three-Player Chess Arena"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "slow: long-running tests (>5 sec)",
+    "integration: integration tests with real dependencies",
+]
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+    "tests/*",
+    "main.py",
+    "gui.py",
+    "trace_analyzer/*",
+]
+
+[tool.coverage.report]
+fail_under = 75
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.",
+    "pass",
+]

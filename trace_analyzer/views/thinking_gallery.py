@@ -199,10 +199,12 @@ def create_thinking_gallery(
     def _render_card(idx: int, orig_i: int, t: dict) -> None:
         thinking = t.get("thinking", "")
         outcome = t["outcome"]
-        outcome_color = {
-            "success": "green",
-            "fallback_random": "orange",
-        }.get(outcome, "red")
+        if outcome == "success":
+            outcome_color = "green"
+        elif outcome.startswith("fallback_random"):
+            outcome_color = "orange"
+        else:
+            outcome_color = "red"
 
         move_str = (
             f"{t['move_from']}→{t['move_to']}"

@@ -1,0 +1,4 @@
+# file: T:\test_python\Triumvirate_LLMbot\examples\decomp\prompt_builder.py
+# hypothesis_version: 6.151.9
+
+[' ← YOU', '(none)', ', ', '?', 'B', 'BISHOP', 'D', 'K', 'KING', 'KNIGHT', 'L', 'M', 'N', 'N/A', 'P', 'PAWN', 'Q', 'QUEEN', 'R', 'ROOK', 'T', 'additional_rules', 'board', 'check', 'checked_colors', 'color', 'content', 'current_player', 'in_check', 'is_check', 'last_move', 'legal_moves', 'move_number', 'move_type', 'none (game start)', 'normal', 'notation', 'owner', 'players', 'position_3pf', 'response_format', 'role', 'status', 'system', 'system_prompt', 'tri_notation', 'type', 'user', 'user_template']

@@ -320,7 +320,7 @@ def _show_anomalies(traces: list[dict]) -> None:
     errors = [
         t
         for t in traces
-        if t["outcome"] not in ("success", "fallback_random")
+        if t["outcome"] != "success" and not t["outcome"].startswith("fallback_random")
     ]
 
     with ui.row().classes("w-full gap-4"):

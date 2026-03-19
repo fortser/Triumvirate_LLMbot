@@ -1,0 +1,4 @@
+# file: T:\test_python\Triumvirate_LLMbot\examples\decomp\gui_helpers.py
+# hypothesis_version: 6.151.9
+
+['*(активных игр нет)*', '***', ', ', '?', 'api_key', 'api_key_preset', 'base_url', 'bot_name', 'check', 'compat', 'current_player', 'custom_headers', 'game_id', 'game_status', 'is_check', 'json', 'json_thinking', 'last_move', 'legal_moves', 'max_tokens', 'model', 'move_number', 'players', 'provider', 'response_format', 'server_url', 'simple', 'temperature', 'Ответ: «E2 E4»', '—']
