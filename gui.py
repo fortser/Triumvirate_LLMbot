@@ -88,6 +88,20 @@ def create_gui(settings: Settings) -> None:  # noqa: C901
         else:
             legal_md.set_content("*(нет допустимых ходов)*")
 
+        # Chat history
+        chat = state.get("chat_history", [])
+        if chat:
+            chat_lines = []
+            for msg in chat:
+                c = msg.get("color", "?").upper()
+                name = msg.get("player_name", c)
+                text = msg.get("message", "")
+                mn = msg.get("move_number", "?")
+                chat_lines.append(f"**#{mn} {name}** ({c}): {text}")
+            chat_md.set_content("\n\n".join(chat_lines))
+        else:
+            chat_md.set_content("*(нет сообщений)*")
+
     # ── dynamic bot name ──────────────────────────────────────────────────
     def _update_bot_name() -> None:
         if cb_auto_name.value:
@@ -616,6 +630,14 @@ def create_gui(settings: Settings) -> None:  # noqa: C901
                                 legal_md = ui.markdown("—").classes(
                                     "text-xs font-mono"
                                 )
+
+                        with ui.card().classes("w-full"):
+                            ui.label("💬 Чат").classes(
+                                "font-bold text-xs text-gray-500 mb-1"
+                            )
+                            chat_md = ui.markdown(
+                                "*(нет сообщений)*"
+                            ).classes("text-sm")
 
                         with ui.card().classes("w-full").style(
                             "flex: 1; display: flex; flex-direction: column; "

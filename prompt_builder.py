@@ -5,7 +5,7 @@
 """
 from __future__ import annotations
 
-from settings import Settings, get_response_format
+from settings import Settings, get_response_format, _read_prompt_file
 
 
 class PromptBuilder:
@@ -36,6 +36,18 @@ class PromptBuilder:
         pos3pf = state.get("position_3pf") or "N/A"
         last_raw = state.get("last_move")
         check_info = state.get("check")
+
+        # ── Chat history ─────────────────────────────────────────────
+        chat_history = state.get("chat_history", [])
+        chat_text = ""
+        if chat_history:
+            chat_lines = []
+            for msg in chat_history:
+                c = msg.get("color", "?").upper()
+                name = msg.get("player_name", c)
+                text = msg.get("message", "")
+                chat_lines.append(f"  [{name} ({c})]: {text}")
+            chat_text = "\n".join(chat_lines)
 
         # ── Last move text ────────────────────────────────────────────
         last_text = "none (game start)"
@@ -86,6 +98,7 @@ class PromptBuilder:
             "board": board_text,
             "check": check_text,
             "color": current.upper(),
+            "chat": chat_text,
         }
         user = self._fill_template(tmpl, subs)
 
@@ -94,6 +107,8 @@ class PromptBuilder:
             user += f"\n\nBoard:\n{board_text}"
         if check_text and "check" not in raw_tmpl:
             user += f"\n\n{check_text}"
+        if chat_text and "chat" not in raw_tmpl:
+            user += f"\n\nChat:\n{chat_text}"
 
         # ── Response format from file (no more _adapt_format_for_tri) ─
         fmt = settings["response_format"]
@@ -101,6 +116,9 @@ class PromptBuilder:
 
         # ── System prompt ─────────────────────────────────────────────
         sys_parts = [settings["system_prompt"].strip()]
+        chat_rules = _read_prompt_file("prompts/chat_instructions.txt", "")
+        if chat_rules:
+            sys_parts.append(f"\n### {chat_rules}")
         rules = (settings["additional_rules"] or "").strip()
         if rules:
             sys_parts.append(f"\nADDITIONAL RULES:\n{rules}")

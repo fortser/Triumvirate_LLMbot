@@ -5,4 +5,7 @@ For Private promotion:
 {"move_from": "W1/B0.2", "move_to": "B3/R3.1", "promotion": "marshal"}
 Promotion values: marshal | train | drone | noctis
 
+Optionally, you can add a short chat message (up to 256 chars) visible to all players:
+{"move_from": "W2/R2.3", "move_to": "C/W.R", "message": "Interesting position!"}
+
 CRITICAL: Use ONLY coordinates from the legal moves list. Coordinates are case-sensitive uppercase.

@@ -49,11 +49,14 @@ class ArenaClient:
             return r.json()
 
     async def make_move(
-        self, from_sq: str, to_sq: str, move_number: int, promotion: str | None = None
+        self, from_sq: str, to_sq: str, move_number: int,
+        promotion: str | None = None, message: str | None = None,
     ) -> tuple[int, Any]:
         body: dict[str, Any] = {"from": from_sq, "to": to_sq, "move_number": move_number}
         if promotion:
             body["promotion"] = promotion
+        if message and message.strip():
+            body["message"] = message.strip()
         async with httpx.AsyncClient(timeout=30) as c:
             r = await c.post(f"{self._base}/move", json=body, headers=self._headers)
         try:

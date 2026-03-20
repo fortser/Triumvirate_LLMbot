@@ -245,6 +245,27 @@ class MoveParser:
             return (f, t, promo)
         return None
 
+    def extract_message(self, text: str) -> str | None:
+        """Extract optional chat message from LLM JSON response.
+
+        Looks for a "message" key in the JSON object (up to 256 chars).
+        Returns None if not found or not a JSON response.
+        """
+        sanitized = _sanitize_json_string(text)
+        s = sanitized.find("{")
+        e = sanitized.rfind("}")
+        if s == -1 or e <= s:
+            return None
+        try:
+            obj = json.loads(sanitized[s : e + 1])
+        except json.JSONDecodeError:
+            return None
+        msg = obj.get("message")
+        if msg and isinstance(msg, str):
+            cleaned = msg.strip()
+            return cleaned[:256] if cleaned else None
+        return None
+
     def _norm_promo(self, raw: Any) -> str | None:
         if raw is None:
             return None

@@ -57,6 +57,7 @@ class BotRunner:
         self.pricing = PricingManager()
         self._is_openrouter = False
         self._consecutive_fallbacks = 0
+        self._last_llm_raw: str = ""
         self.stats: dict[str, Any] = {
             "moves": 0,
             "llm_calls": 0,
@@ -342,6 +343,11 @@ class BotRunner:
                                 f"using raw: {from_sq} → {to_sq}"
                             )
 
+                    # ── Extract chat message from LLM response ──
+                    chat_msg: str | None = None
+                    if not is_fallback and self._last_llm_raw:
+                        chat_msg = self.parser.extract_message(self._last_llm_raw)
+
                     move_req: dict[str, Any] = {
                         "from": from_sq,
                         "to": to_sq,
@@ -349,9 +355,11 @@ class BotRunner:
                     }
                     if promo:
                         move_req["promotion"] = promo
+                    if chat_msg:
+                        move_req["message"] = chat_msg
                     self.tracer.set_server_move_request(move_req)
                     code, data = await self.arena.make_move(
-                        from_sq, to_sq, move_num, promo
+                        from_sq, to_sq, move_num, promo, chat_msg
                     )
                     self.tracer.set_server_move_response(code, data)
                     # Не перезаписывать outcome если уже fallback_random
@@ -377,6 +385,8 @@ class BotRunner:
                     raise
 
                 if code == 200:
+                    if chat_msg:
+                        self._log(f"💬 Сообщение: «{chat_msg[:80]}»")
                     tags = ""
                     if isinstance(data, dict):
                         if data.get("is_check"):
@@ -824,6 +834,7 @@ class BotRunner:
                     f"[{fmt}]"
                 )
                 self.tracer.set_move_selected(f, t, promo)
+                self._last_llm_raw = raw or ""
                 return result
 
             # ── Move not parsed — log details and retry ───────────

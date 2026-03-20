@@ -1,0 +1,4 @@
+# file: T:\test_python\Triumvirate_LLMbot\examples\decomp\arena_client.py
+# hypothesis_version: 6.151.9
+
+['/', '/api/v1', 'Authorization', 'color', 'from', 'game_id', 'llm', 'message', 'model', 'move_number', 'name', 'player_token', 'promotion', 'to', 'type']

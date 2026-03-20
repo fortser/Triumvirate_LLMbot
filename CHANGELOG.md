@@ -6,9 +6,24 @@
 
 ---
 
-## [Unreleased] — 2026-03-19 18:00
+## [Unreleased] — 2026-03-20 15:30
 
 ### Added
+- **Чат между ботами во время игры** — боты могут отправлять одно текстовое сообщение (до 256 символов) вместе с ходом; сообщения видны всем участникам и зрителям
+- `move_parser.py` — метод `extract_message()`: извлекает опциональное поле `"message"` из JSON-ответа LLM, strip whitespace, обрезка до 256 символов
+- `prompts/chat_instructions.txt` — инструкции по дипломатии в чате: когда писать/молчать, блеф, союзы, интерпретация чужих сообщений, защита от утечки reasoning в message
+- `gui.py` — виджет чата на вкладке "Игра" (markdown-карточка с историей сообщений)
+- `CODE_REVIEW_CHAT.md` — отчёт code review по chat feature (3 эксперта, 10 замечаний, план действий)
+
+### Changed
+- `arena_client.py` — `make_move()` принимает опциональный параметр `message: str | None`; strip whitespace перед отправкой
+- `bot_runner.py` — извлечение chat message из сырого LLM-ответа (`_last_llm_raw`), передача через `arena_client.make_move()`; логирование отправленных сообщений
+- `prompt_builder.py` — парсинг `chat_history` из game state, плейсхолдер `{chat}` в user template; подключение `prompts/chat_instructions.txt` как блок `### CHAT DIPLOMACY` в system prompt (между system_prompt.txt и ADDITIONAL RULES)
+- `prompts/format_json.txt` — добавлена инструкция по опциональному полю `"message"` с примером
+- `prompts/format_json_thinking.txt` — аналогичная инструкция с примером
+- `prompts/user_prompt_template.txt` — добавлен плейсхолдер `{chat}` после `{check}`
+
+### Fixed
 - `trace_analyzer/smartbot_adapter.py` — изолированный адаптер SmartBot evaluation: `evaluate_position()` оценивает позицию через SmartBot pipeline (parse_3pf → threats → defense → rating → tactical_verify → select_move); lazy import с graceful degradation; `is_smartbot_available()` для проверки наличия SmartBot; dataclass'ы `PositionEvaluation` и `MoveEvaluation` со всеми полями результата; конфигурация через env `SMARTBOT_PATH` или `--smartbot-path`
 - `trace_analyzer/smartbot_evaluator.py` — массовый evaluator: `evaluate_traces()` прогоняет SmartBot оценку по всем ходам из трейсов; кэширование по `position_3pf + ход` (LRU dict в памяти); progress reporting каждые 100 ходов; ~7-8 трейсов/сек
 - `classify_move()` в `move_metrics.py` — классификация ходов по шкале качества: brilliant (gap ≤ 0) / good (≥ 90%) / inaccuracy (≥ 60%) / mistake (≥ 20%) / blunder (< 20%) / forced (единственный ход) / losing_position (все ходы отрицательные)

@@ -81,6 +81,7 @@ prompts/               — файлы промптов (читаются setting
   format_simple.txt
   format_json.txt
   format_json_thinking.txt
+  chat_instructions.txt
 
 logs/                  — трейсы ходов (создаётся tracer.py)
   game_<uuid>__<model>/

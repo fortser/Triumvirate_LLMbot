@@ -10,3 +10,4 @@ Legal moves:
 
 Last move: {last_move}
 {check}
+{chat}

@@ -13,4 +13,7 @@ In your thinking, consider:
 3. Does this move improve piece activity (lower buried level)?
 4. How does this move affect BOTH opponents — am I helping the third player?
 
+Optionally, you can add a short chat message (up to 256 chars) visible to all players:
+{"thinking": "...", "move_from": "W2/R2.3", "move_to": "C/W.R", "message": "Good luck!"}
+
 CRITICAL: Use ONLY coordinates from the legal moves list provided. Coordinates are case-sensitive uppercase.
