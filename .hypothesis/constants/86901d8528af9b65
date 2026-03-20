@@ -1,4 +1,0 @@
-# file: T:\test_python\Triumvirate_LLMbot\examples\decomp\pricing.py
-# hypothesis_version: 6.151.9
-
-[0.0, 1000000, '0', 'Authorization', 'Content-Type', 'application/json', 'completion', 'completion_per_1m', 'completion_tokens', 'data', 'id', 'input_cost_usd', 'none', 'not_openrouter', 'openrouter_api', 'output_cost_usd', 'pricing', 'prompt', 'prompt_per_1m', 'prompt_per_1m_usd', 'prompt_tokens', 'reasoning_cost_usd', 'reasoning_tokens', 'source', 'total_cost', 'total_cost_usd', 'total_tokens', 'usage', 'usage_raw']

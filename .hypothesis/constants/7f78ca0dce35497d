@@ -1,4 +1,0 @@
-# file: T:\test_python\Triumvirate_LLMbot\examples\decomp\tracer.py
-# hypothesis_version: 6.151.9
-
-[0.0, '%Y-%m-%dT%H:%M:%S', '[\\\\/:*?"<>|]', '_', 'attempt', 'completion_tokens', 'content', 'coordinates_found', 'cost', 'data', 'endpoint', 'from', 'game_id', 'llm_calls', 'llm_requests', 'llm_responses', 'llm_time_sec', 'messages', 'method', 'model_pricing', 'move_number', 'move_selected', 'outcome', 'pairs_tested', 'parser_attempts', 'promotion', 'prompt_chars', 'prompt_pipeline', 'prompt_tokens', 'raw_response', 'reasoning_tokens', 'response_chars', 'response_raw', 'retries', 'server_interactions', 'server_move_request', 'server_move_response', 'server_state_raw', 'statistics', 'status_code', 'time_sec', 'time_total_sec', 'timestamp', 'to', 'total_cost_usd', 'total_llm_chars', 'total_prompt_tokens', 'total_tokens', 'unknown', 'unknown_model', 'usage', 'utf-8', 'valid']

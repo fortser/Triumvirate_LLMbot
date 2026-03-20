@@ -1,12 +1,14 @@
 # Secrets
 .env
-.env.*
 
 # Settings with API keys
 llm_bot_gui_settings_v2.json
 
 # Logs
 logs/
+plans/
+.coverage/
+.hypothesis/
 
 # Python
 __pycache__/
@@ -29,6 +31,13 @@ code_review_report.md
 LLM_report.md
 оглавление_llmbot.md
 багрепорт для бота.txt
+гитхаб.txt
+ОТЧЁТ_ЧАТ.md
+
+# Duplicate files
+*— копия*
+Прогресс бар использованы статистики в текущей сессии Клод - кот.txt
+шаблон для разработки агентская системы по созданию тестов.txt
 tri/
 
 # OS

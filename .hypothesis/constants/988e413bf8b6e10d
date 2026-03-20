@@ -1,4 +1,0 @@
-# file: T:\test_python\Triumvirate_LLMbot\examples\decomp\move_parser.py
-# hypothesis_version: 6.151.9
-
-['"', ':', '=([QRBNMTD])', 'LMTDNP', 'NBRQKP', 'WBR', '[A-La-l]\\d{1,2}', '\\', '\\n', '\\r', '\\t', '```', 'b', 'bishop', 'd', 'drone', 'from', 'json', 'json_thinking', 'knight', 'm', 'marshal', 'move_from', 'move_to', 'n', 'noctis', 'promotion', 'q', 'queen', 'r', 'rook', 't', 'to', 'train', '{', '}']
