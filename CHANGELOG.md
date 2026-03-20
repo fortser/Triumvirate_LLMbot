@@ -6,9 +6,12 @@
 
 ---
 
-## [Unreleased] — 2026-03-20 15:30
+## [Unreleased] — 2026-03-20 16:45
 
 ### Added
+- `.claude/agents/chess-strategy-analyst.md` — Agent: глубокий анализ шахматной стратегии и тактики LLM-моделей по 7 аспектам (стратегия, тактика, угрозы, атаки, дебют, эндшпиль, адаптация) (`/analyze-strategy`)
+- `.claude/skills/chess-strategy-analyst/SKILL.md` — скилл для запуска агента шахматного анализа
+- `PROMPT_OPTIMIZATION_PLAN.md` — план оптимизации промптов: 13 выявленных проблем (threat recognition, one-move thinking, piece values, position passivity, opening development, endgame strategy, role adaptation, 3-player dynamics, format errors, chat overhead, thinking structure, token efficiency, coherence)
 - **Чат между ботами во время игры** — боты могут отправлять одно текстовое сообщение (до 256 символов) вместе с ходом; сообщения видны всем участникам и зрителям
 - `move_parser.py` — метод `extract_message()`: извлекает опциональное поле `"message"` из JSON-ответа LLM, strip whitespace, обрезка до 256 символов
 - `prompts/chat_instructions.txt` — инструкции по дипломатии в чате: когда писать/молчать, блеф, союзы, интерпретация чужих сообщений, защита от утечки reasoning в message

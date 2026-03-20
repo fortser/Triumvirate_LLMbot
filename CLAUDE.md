@@ -102,15 +102,17 @@ logs/evaluations/      — результаты metrics pipeline (автоген
 
 .claude/agents/        — агенты Claude Code
   model-evaluator.md   — Agent: шахматная оценка моделей (/evaluate-models)
+  chess-strategy-analyst.md — Agent: глубокий шахматный анализ 7 аспектов (/analyze-strategy)
   prompt-optimizer.md  — Agent: оптимизация промптов (/optimize-prompts)
   docs-keeper.md       — Agent: актуализация CHANGELOG и оглавления (/update-docs)
 
 .claude/skills/        — пользовательские скиллы
-  docs-keeper/         — скилл для /update-docs
+  chess-strategy-analyst/ — скилл для /analyze-strategy (7 аспектов: стратегия, тактика, угрозы, атаки, дебют, эндшпиль, адаптация)
+  docs-keeper/         — скилл для /update-docs (актуализация документации)
   project-test-generator/ — оркестратор генерации тестов
-  writing-tests/       — философия тестирования
-  pytest-patterns/     — паттерны pytest
-  property-based-testing/ — Hypothesis PBT
+  writing-tests/       — философия тестирования (Testing Trophy)
+  pytest-patterns/     — паттерны pytest (fixtures, parametrize, markers)
+  property-based-testing/ — Hypothesis property-based тестирование
 
 .claude/hooks/         — хуки автоматизации
   track_changes.py     — PostToolUse: логирует изменённые .py/.md в temp-файл
@@ -133,8 +135,10 @@ tri/                   — справочные текстовые файлы п
 ## Мульти-агентная система оценки
 
 ```
-python -m trace_analyzer.metrics  →  /evaluate-models  →  /optimize-prompts
-       (автометрики)                  (шахматная оценка)    (промпт-рекомендации)
+python -m trace_analyzer.metrics --smartbot  →  /evaluate-models  →  /analyze-strategy  →  /optimize-prompts
+     (автометрики + SmartBot оценка)              (метрики качества)    (7 аспектов: стратегия,      (промпт-
+                                                                          тактика, угрозы, атаки,     рекомендации)
+                                                                          дебют, эндшпиль, адаптация)
 ```
 
-Подробнее: `EVALUATION_AGENTS_GUIDE.md`
+Подробнее: `EVALUATION_AGENTS_GUIDE.md`, `PROMPT_OPTIMIZATION_PLAN.md`

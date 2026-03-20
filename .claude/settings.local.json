@@ -29,7 +29,11 @@
       "Bash(find logs:*)",
       "Bash(ls -la /t/test_python/Triumvirate_Smartbot/*.py)",
       "Bash(ls -d \"T:\\\\test_python\\\\Triumvirate_LLMbot\\\\examples\\\\decomp\\\\logs/game_\"*)",
-      "Bash(ls -d game_*/)"
+      "Bash(ls -d game_*/)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Bash(done)",
+      "Bash(for dir:*)"
     ]
   },
   "hooks": {
