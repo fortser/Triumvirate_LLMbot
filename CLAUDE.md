@@ -99,16 +99,19 @@ trace_analyzer/        — анализ логов: NiceGUI viewer + metrics pip
 
 logs/evaluations/      — результаты metrics pipeline (автогенерируемые)
   metrics.json, model_rankings.json, game_results.json
+  optimization_log.json  — лог фаз оптимизации (ведётся optimization-evaluator)
 
 .claude/agents/        — агенты Claude Code
   model-evaluator.md   — Agent: шахматная оценка моделей (/evaluate-models)
   chess-strategy-analyst.md — Agent: глубокий шахматный анализ 7 аспектов (/analyze-strategy)
   prompt-optimizer.md  — Agent: оптимизация промптов (/optimize-prompts)
   docs-keeper.md       — Agent: актуализация CHANGELOG и оглавления (/update-docs)
+  optimization-evaluator.md — Agent: оценка эффекта оптимизаций, Go/No-Go (/evaluate-optimization)
 
 .claude/skills/        — пользовательские скиллы
   chess-strategy-analyst/ — скилл для /analyze-strategy (7 аспектов: стратегия, тактика, угрозы, атаки, дебют, эндшпиль, адаптация)
   docs-keeper/         — скилл для /update-docs (актуализация документации)
+  optimization-evaluator/ — скилл для /evaluate-optimization (лог оптимизаций, метрики до/после)
   project-test-generator/ — оркестратор генерации тестов
   writing-tests/       — философия тестирования (Testing Trophy)
   pytest-patterns/     — паттерны pytest (fixtures, parametrize, markers)
@@ -140,5 +143,18 @@ python -m trace_analyzer.metrics --smartbot  →  /evaluate-models  →  /analyz
                                                                           тактика, угрозы, атаки,     рекомендации)
                                                                           дебют, эндшпиль, адаптация)
 ```
+
+### Pipeline оптимизации промптов
+
+```
+1. /evaluate-optimization baseline          ← зафиксировать текущие метрики
+2. Внести одно изменение в промпт/код
+3. python main.py --headless --bots 3 ...  ← прогнать 45 тестовых игр
+4. python -m trace_analyzer.metrics --smartbot
+5. /evaluate-optimization OPT-N            ← оценить эффект, Go/No-Go
+```
+
+Лог оптимизаций: `logs/evaluations/optimization_log.json`
+Карта оптимизаций: `OPTIMIZATION_ROADMAP.md`
 
 Подробнее: `EVALUATION_AGENTS_GUIDE.md`, `PROMPT_OPTIMIZATION_PLAN.md`

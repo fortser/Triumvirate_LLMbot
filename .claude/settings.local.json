@@ -33,7 +33,8 @@
       "Bash(for f:*)",
       "Bash(do echo:*)",
       "Bash(done)",
-      "Bash(for dir:*)"
+      "Bash(for dir:*)",
+      "Bash(find T:test_pythonTriumvirate_Smartbot -type f \\\\\\(-name *.md -o -name *.txt -o -name *.json \\\\\\))"
     ]
   },
   "hooks": {

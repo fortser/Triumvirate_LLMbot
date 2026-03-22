@@ -8,6 +8,18 @@
 
 ## [Unreleased] — 2026-03-22
 
+### Added
+- `.claude/agents/optimization-evaluator.md` — Agent: оценка эффекта промпт-оптимизаций, сравнение метрик до/после, Go/No-Go решения, ведение лога (`/evaluate-optimization`)
+- `.claude/skills/optimization-evaluator/SKILL.md` — скилл для вызова агента оценки оптимизаций
+- `OPTIMIZATION_ROADMAP.md` — карта оптимизации шахматного анализа: 5 фаз, тестовый стенд (3 модели), baseline-метрики, целевые значения, Go/No-Go матрица, протокол тестирования (225 игр)
+- `logs/evaluations/optimization_log.json` — персистентный лог фаз оптимизации (baseline, phase results, rollbacks)
+- `prompts/system_prompt.txt` — секция PIECE VALUES (строки 23-44): ценности фигур по SmartBot (M=9, T=5, D=3.2, N=3, P=1), примеры разменов, шкала продвижения Private, 4 правила применения
+- `CLAUDE.md` — Pipeline оптимизации промптов: 5 фаз, Go/No-Go матрица, протокол тестирования
+
+### Changed
+- `prompts/system_prompt.txt` — добавлена секция PIECE VALUES с ценностями фигур, правилами размена и шкалой продвижения Private
+- `CLAUDE.md` — зарегистрирован новый агент `optimization-evaluator`, скилл `optimization-evaluator/`, `optimization_log.json` в logs/evaluations/
+
 ### Fixed
 - **`trace_analyzer/smartbot_adapter.py:315` — `threat_addressed_rate` всегда 0.0 у всех моделей (КРИТИЧЕСКИЙ)**. Опечатка: обращение к несуществующему атрибуту `critical_count` вместо правильного `critical_threats` (из SmartBot `PlayerThreatSummary`). Из-за `hasattr()` guard ошибка не вызывала exception, а тихо возвращала 0 — каскадный эффект через `smartbot_evaluator.py` → `move_metrics.py` → `aggregator.py` обнулял метрику для всех моделей. После исправления: реальные значения 0.85-0.97 (модели адресуют угрозы в 85-97% случаев)
 

@@ -20,6 +20,29 @@ P (Private) — Moves 1 forward (2 from start row). Captures diagonally forward.
 - Promotion on opponent's back row to M, T, D, or N.
 - Castling along the base row (Leader-side or Marshal-side).
 
+PIECE VALUES (for evaluating trades and threats):
+  All values are in Private units (Private = 1). Use them to judge every capture and trade.
+
+  Marshal (M) = 9  |  Train (T) = 5  |  Drone (D) = 3.2  |  Noctis (N) = 3  |  Private (P) = 1
+  Leader (L) = priceless (losing it = losing the game)
+
+  GOOD trade: you capture MORE value than you lose.
+    Your Noctis(3) takes their Train(5) → you gain +2. Good.
+  BAD trade: you lose MORE value than you capture.
+    Your Marshal(9) takes their Noctis(3) if opponent recaptures → you lose 6. Terrible.
+
+  PRIVATE VALUE NEAR PROMOTION (value increases as it advances):
+    1 move from promotion → 5.0  (worth as much as a Train — protect it!)
+    2 moves from promotion → 2.5
+    3 moves from promotion → 1.5
+    Stuck Private (blocked, cannot advance) → 0.3  (nearly worthless)
+
+  HOW TO USE these numbers:
+  - Before ANY capture: compare values. Is the trade profitable?
+  - Before moving a defender: is it protecting something more valuable?
+  - When threatened: save the highest-value piece first.
+  - Private near promotion is a priority target — both to protect yours and to capture theirs.
+
 SPECIAL RULES:
 - Checkmated player's pieces (except Leader) transfer to the mating player.
 - Transferred Privates moving against their new forward direction become "stuck" (capture only).
