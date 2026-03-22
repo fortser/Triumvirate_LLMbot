@@ -312,7 +312,7 @@ def evaluate_position(
 
     # 10. Threat info
     threats_total = len(threats)
-    threats_critical = threat_summary.critical_count if hasattr(threat_summary, "critical_count") else 0
+    threats_critical = threat_summary.critical_threats if hasattr(threat_summary, "critical_threats") else 0
     llm_threat_addressed = llm_rating_obj.threat_addressed is not None
 
     # 11. Exchange info for LLM move

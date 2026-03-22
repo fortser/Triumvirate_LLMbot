@@ -6,6 +6,20 @@
 
 ---
 
+## [Unreleased] — 2026-03-22
+
+### Fixed
+- **`trace_analyzer/smartbot_adapter.py:315` — `threat_addressed_rate` всегда 0.0 у всех моделей (КРИТИЧЕСКИЙ)**. Опечатка: обращение к несуществующему атрибуту `critical_count` вместо правильного `critical_threats` (из SmartBot `PlayerThreatSummary`). Из-за `hasattr()` guard ошибка не вызывала exception, а тихо возвращала 0 — каскадный эффект через `smartbot_evaluator.py` → `move_metrics.py` → `aggregator.py` обнулял метрику для всех моделей. После исправления: реальные значения 0.85-0.97 (модели адресуют угрозы в 85-97% случаев)
+
+### Changed
+- `prompts/user_prompt_template.txt` — удалена строка `Position (3PF): {position_3pf}`, дублировавшая секцию Board в нечитаемом для LLM формате. Экономия ~100-200 токенов на ход
+- `settings.py` — удалена строка `Position (3PF)` из fallback-шаблона `_FALLBACK_USER_TEMPLATE` для консистентности с основным шаблоном
+- `.claude/agents/prompt-optimizer.md` — исправлены имена переменных шаблона: `{board_state}` → `{board}`, `{game_history}` → `{chat}`, добавлены `{move_number}`, `{current_player}`, `{check}`
+- `PROMPT_OPTIMIZATION_PLAN.md` — помечена проблема P-001 как опровергнутая (была основана на сломанной метрике), обновлены целевые значения `threat_addressed_rate`
+- `BUGFIX_PLAN.md` — создан план исправления 10 подтверждённых ошибок из анализа от 20 марта; обновлён по результатам выполнения
+
+---
+
 ## [Unreleased] — 2026-03-20 16:45
 
 ### Added

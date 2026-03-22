@@ -1,7 +1,5 @@
 Move #{move_number} | You are {current_player}
 
-Position (3PF): {position_3pf}
-
 Board:
 {board}
 

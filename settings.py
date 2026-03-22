@@ -51,7 +51,6 @@ _FALLBACK_SYSTEM = (
 
 _FALLBACK_USER_TEMPLATE = (
     "Move #{{move_number}} | You are {{current_player}}\n\n"
-    "Position (3PF): {{position_3pf}}\n\n"
     "Board:\n{{board}}\n\n"
     "Legal moves:\n{{legal_moves}}\n\n"
     "Last move: {{last_move}}\n"
